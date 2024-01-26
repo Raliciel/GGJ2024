@@ -7,7 +7,7 @@ public class CardUI : MonoBehaviour
 {
     int _i;
     private CardSO _cardInfo;
-    public TMP_Text name;
+    public new TMP_Text name;
     public TMP_Text description;
 
     public void DisplayCard(int i, CardSO cardInfo)
