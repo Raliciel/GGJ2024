@@ -518,6 +518,48 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: NG-Special_18
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 0
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bba6d1b1886f9b4283276d7b7ca738c
+      internalID: 774179387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NG-Special_19
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 0
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6140a8978965a8344bf8e575004a0799
+      internalID: 925325618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -539,6 +581,8 @@ TextureImporter:
       NG-Special_15: 1172424657
       NG-Special_16: 1750183124
       NG-Special_17: 2061935523
+      NG-Special_18: 774179387
+      NG-Special_19: 925325618
       NG-Special_2: -731995624
       NG-Special_3: -1966705681
       NG-Special_4: -1176212051
