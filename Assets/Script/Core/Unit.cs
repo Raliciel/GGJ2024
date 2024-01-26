@@ -56,4 +56,9 @@ public class Unit : MonoBehaviour
     public void receivedDamage(int damage) {
         currentHealthPoint -= damage;
     }
+
+    public void receivedAnger(int anger) {
+        currentAngerPoint += anger;
+        if(currentAngerPoint > angerPoint) currentAngerPoint = angerPoint;
+    }
 }

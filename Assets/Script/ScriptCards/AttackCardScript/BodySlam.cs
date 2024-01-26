@@ -12,6 +12,7 @@ public class BodySlam : CardSO
     {
         actor.payAngerCost(angerCost);
         int index = Randomizer.random(chance);
+        
         switch(index) {
             case 0: //Miss
                 Debug.Log(actor.name + " uses BodySlam. (Miss)");
