@@ -48,4 +48,12 @@ public class Unit : MonoBehaviour
     public void SetCurrentAngerPoint(int ap) {
         currentAngerPoint = ap;
     }
+    
+    public void payAngerCost(int angerCost) {
+        currentAngerPoint -= angerCost;
+    }
+
+    public void receivedDamage(int damage) {
+        currentHealthPoint -= damage;
+    }
 }
