@@ -7,13 +7,15 @@ public class CardUI : MonoBehaviour
 {
     int _i;
     private CardSO _cardInfo;
-    public TextMeshProUGUI textDisplayer;
+    public TMP_Text name;
+    public TMP_Text description;
 
     public void DisplayCard(int i, CardSO cardInfo)
     {
         _i = i;
         _cardInfo = cardInfo;
-        SetText(_cardInfo.cardName);
+        SetText(name, _cardInfo.cardName);
+        SetText(description, "Took the fun");
         gameObject.SetActive(true);
     }
 
@@ -30,8 +32,8 @@ public class CardUI : MonoBehaviour
         BoardManager.get.UseCard(_cardInfo);
     }
 
-    private void SetText(string text)
+    private void SetText(TMP_Text display, string text)
     {
-        textDisplayer.text = text;  
+        display.text = text;  
     }
 }
