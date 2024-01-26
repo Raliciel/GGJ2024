@@ -10,8 +10,8 @@ public class NormalAttack: CardSO
     public int[] chance = new int[3] {10, 80, 10};
 
     public override void DoAction(Unit actor, Unit enemy) {
-        int index = Randomizer.random(chance);
         actor.payAngerCost(angerCost);
+        int index = Randomizer.random(chance);
         switch(index) {
             case 0: //Miss
                 Debug.Log(actor.name + " uses NormalAttack. (Miss)");
