@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Unit : MonoBehaviour
 {
-    [SerializeField] protected int healthPoint;
-    [SerializeField] protected int angerPoint;
+    public int healthPoint;
+    [SerializeField] protected int currentHealthPoint;
+    public int angerPoint;
+    [SerializeField] protected int currentAngerPoint;
     // Update is called once per frame
     void Update()
     {
@@ -17,5 +19,15 @@ public class Unit : MonoBehaviour
         {
             GetComponent<SpriteRenderer>().color = Color.white;
         }
+    }
+
+    public int GetCurrentHealtPoint()
+    {
+        return currentHealthPoint;
+    }
+
+    public int GetCurrentAngerPoint()
+    {
+        return currentAngerPoint;
     }
 }
