@@ -9,9 +9,11 @@ public abstract class CardSO: ScriptableObject {
     //Animations are just sprite swappings so...
     /*
     public Sprite ngUse;
-    public Sprite ngReact;
+    public Sprite ngReact_n;
+    public Sprite ngReact_p;
     public Sprite mfUse;
-    public Sprite mfReact;
+    public Sprite mfReact_n;
+    public Sprite mfReact_p;
     */
     //uncomment this if everything is done.
 
