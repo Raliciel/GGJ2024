@@ -34,43 +34,29 @@ public class Unit : MonoBehaviour
            _renderer.color = Color.white;
     }
 
-    public int GetCurrentHealthPoint()
-    {
-        return currentHealthPoint;
-    }
+    public int GetCurrentHealthPoint() { return currentHealthPoint; }
 
-    public int GetCurrentAngerPoint()
-    {
-        return currentAngerPoint;
-    }
+    public int GetCurrentAngerPoint() { return currentAngerPoint; }
 
-    public void SetCurrentHealthPoint(int hp) {
-        currentHealthPoint = hp;
-    }
+    public void SetCurrentHealthPoint(int hp) { currentHealthPoint = hp; }
 
-    public void SetCurrentAngerPoint(int ap) {
-        currentAngerPoint = ap;
-    }
+    public void SetCurrentAngerPoint(int ap) { currentAngerPoint = ap; }
     
-    public void payAngerCost(int angerCost) {
-        currentAngerPoint -= angerCost;
-    }
+    public void payAngerCost(int angerCost) { currentAngerPoint -= angerCost; }
 
-    public void receivedDamage(int damage) {
-        if(!isDefend) currentHealthPoint -= damage;
-    }
+    public void payHPCost(int hpCost) { currentHealthPoint -= hpCost; }
+
+    public void receivedDamage(int damage) { if(!isDefend) currentHealthPoint -= damage; }
 
     public void receivedAnger(int anger) {
         currentAngerPoint += anger;
         if(currentAngerPoint > angerPoint) currentAngerPoint = angerPoint;
     }
 
-    public bool getIsDefend() {
-        return isDefend;
-    }
+    public void reducedAnger(int anger) { currentAngerPoint -= anger; }
 
-    public void setIsDefend(bool isDef) {
-        isDefend = isDef;
-    }
+    public bool getIsDefend() { return isDefend; }
+
+    public void setIsDefend(bool isDef) { isDefend = isDef; }
 
 }
