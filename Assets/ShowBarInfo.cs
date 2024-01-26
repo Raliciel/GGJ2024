@@ -21,7 +21,7 @@ public class ShowBarInfo : MonoBehaviour
         if ((int)barTarget == (int)BarTarget.health)
         {
             bar.maxValue = target.healthPoint;
-            bar.value = target.GetCurrentHealtPoint();
+            bar.value = target.GetCurrentHealthPoint();
         }
 
         else if ((int)barTarget == (int)BarTarget.anger)

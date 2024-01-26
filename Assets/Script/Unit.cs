@@ -21,7 +21,7 @@ public class Unit : MonoBehaviour
         }
     }
 
-    public int GetCurrentHealtPoint()
+    public int GetCurrentHealthPoint()
     {
         return currentHealthPoint;
     }
@@ -29,5 +29,13 @@ public class Unit : MonoBehaviour
     public int GetCurrentAngerPoint()
     {
         return currentAngerPoint;
+    }
+
+    public void SetCurrentHealthPoint(int hp) {
+        currentHealthPoint = hp;
+    }
+
+    public void SetCurrentAngerPoint(int ap) {
+        currentAngerPoint = ap;
     }
 }

@@ -7,6 +7,6 @@ public abstract class CardSO: ScriptableObject {
     [SerializeField] List<string> cardFlavor = new List<string>();
     [SerializeField] Sprite spriteAnimation;
 
-    public abstract void action();
+    public abstract void action(Unit actor, Unit target);
 }
 
