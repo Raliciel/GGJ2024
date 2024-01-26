@@ -9,6 +9,8 @@ public class Unit : MonoBehaviour
     public int angerPoint = 100;
     [SerializeField] protected int currentAngerPoint;
 
+    bool isDefend;
+
     SpriteRenderer _renderer;
 
     protected virtual void Start()
@@ -18,7 +20,8 @@ public class Unit : MonoBehaviour
     }
 
     private void ResetState()
-    {
+    {   
+        isDefend = false;
         currentHealthPoint = healthPoint;
         currentAngerPoint = angerPoint;
     }
@@ -54,11 +57,20 @@ public class Unit : MonoBehaviour
     }
 
     public void receivedDamage(int damage) {
-        currentHealthPoint -= damage;
+        if(!isDefend) currentHealthPoint -= damage;
     }
 
     public void receivedAnger(int anger) {
         currentAngerPoint += anger;
         if(currentAngerPoint > angerPoint) currentAngerPoint = angerPoint;
     }
+
+    public bool getIsDefend() {
+        return isDefend;
+    }
+
+    public void setIsDefend(bool isDef) {
+        isDefend = isDef;
+    }
+
 }
