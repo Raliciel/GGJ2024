@@ -2,13 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[CreateAssetMenu(fileName = "NormalAttack", menuName = "Card/NormalAttack", order = 1)]
 public class NormalAttack: CardSO {
-    [SerializeField] string cardName;
-    [SerializeField] List<string> cardFlavor = new List<string>();
-    [SerializeField] Sprite spriteAnimation;
+    public int hpModifier = -10;
+    public int angerModifier = 3;
 
-    public override void action(Unit actor, Unit enemy) {
-        enemy.SetCurrentHealthPoint(enemy.GetCurrentHealthPoint() - 10);
-        enemy.SetCurrentAngerPoint(enemy.GetCurrentAngerPoint() + 3);
+    public override void DoAction(Unit actor, Unit enemy) {
+        Debug.Log(actor.name + " modify " + hpModifier+  " hp to " + enemy.name);
+        Debug.Log(actor.name + " modify " + angerModifier + " anger to " + enemy.name);
+        enemy.SetCurrentHealthPoint(enemy.GetCurrentHealthPoint() + hpModifier);
+        enemy.SetCurrentAngerPoint(enemy.GetCurrentAngerPoint() + angerModifier);
     }
 }
