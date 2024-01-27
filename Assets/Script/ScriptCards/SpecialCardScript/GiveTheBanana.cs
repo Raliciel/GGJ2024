@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "GiveTheBanana", menuName = "Card/GiveTheBanana", order = 1)]
+[CreateAssetMenu(fileName = "GiveTheBanana", menuName = "Card/Special/GiveTheBanana", order = 1)]
 public class GiveTheBanana : CardSO 
 {
     public int angerCost = -10;

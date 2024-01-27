@@ -1,5 +1,5 @@
 using UnityEngine;
-[CreateAssetMenu(fileName = "BSOD", menuName = "Card/BSOD", order = 1)]
+[CreateAssetMenu(fileName = "BSOD", menuName = "Card/Special/BSOD", order = 1)]
 public class BSOD: CardSO
 {
     public int hpCost = 50;

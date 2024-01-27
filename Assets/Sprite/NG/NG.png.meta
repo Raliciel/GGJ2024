@@ -141,7 +141,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: NG-Special_0
+      name: NG_0
       rect:
         serializedVersion: 2
         x: 0
@@ -155,14 +155,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: da3f9788e1b153b42a5e47bd68cdca5e
-      internalID: -1839895373
+      spriteID: e12b72db9e59f804e91c41b9214812ed
+      internalID: 128470283
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NG-Special_1
+      name: NG_1
       rect:
         serializedVersion: 2
         x: 150
@@ -176,14 +176,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3664fe4650c4d1b458c77a236af31f25
-      internalID: -1366746187
+      spriteID: 984344100e1e8e7498582587a206dd92
+      internalID: 1257595026
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NG-Special_2
+      name: NG_2
       rect:
         serializedVersion: 2
         x: 300
@@ -197,14 +197,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 11e11b76f0164d94cb96056d68b68a1e
-      internalID: -731995624
+      spriteID: 89d944ffb9d194d4ea88daa06f033fbc
+      internalID: 728764579
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NG-Special_3
+      name: NG_3
       rect:
         serializedVersion: 2
         x: 450
@@ -218,14 +218,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0fcb76198d8d8e3428234abfd2803ded
-      internalID: -1966705681
+      spriteID: e33600f63458a12469686a8f868d6255
+      internalID: -1275527901
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NG-Special_4
+      name: NG_4
       rect:
         serializedVersion: 2
         x: 600
@@ -239,14 +239,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: beb581c447a36164396207f7178949ac
-      internalID: -1176212051
+      spriteID: 338279ed790fa594eb62da5a1232dac0
+      internalID: 563918855
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NG-Special_5
+      name: NG_5
       rect:
         serializedVersion: 2
         x: 0
@@ -260,14 +260,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2782d4051fa3fad4ab44a71db5c95e40
-      internalID: 942749172
+      spriteID: 5e26b0060c3b88840bfeee8bbb64d566
+      internalID: -1046655102
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NG-Special_6
+      name: NG_6
       rect:
         serializedVersion: 2
         x: 150
@@ -281,14 +281,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aaeb20bb96b9646498a7138333ea54a0
-      internalID: 684738040
+      spriteID: 1e9093e6fd6b60d498c5391f6d5414cc
+      internalID: 709791089
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NG-Special_7
+      name: NG_7
       rect:
         serializedVersion: 2
         x: 300
@@ -302,14 +302,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 16cb1ba66a619aa4e85bd847c2f35c43
-      internalID: -1342802629
+      spriteID: d537fdc29c1ac0840a56c2f2eb372457
+      internalID: 132245998
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NG-Special_8
+      name: NG_8
       rect:
         serializedVersion: 2
         x: 450
@@ -323,14 +323,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b4c76d052cd23d045b83f00f14b85814
-      internalID: 1614171904
+      spriteID: 57f6587d20f55d74884b29c73c6c4d5d
+      internalID: 1898772496
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NG-Special_9
+      name: NG_9
       rect:
         serializedVersion: 2
         x: 600
@@ -344,14 +344,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 30e25ea804fdecb4fb4e3772b61d2930
-      internalID: -1709356265
+      spriteID: cb042611b75d2f84cb2ccd84aab85f37
+      internalID: -31423135
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NG-Special_10
+      name: NG_10
       rect:
         serializedVersion: 2
         x: 0
@@ -365,14 +365,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4dc50a7ec89db9f4ea39aed1ea5323e7
-      internalID: 352125949
+      spriteID: 633716627ff301a4294b0b8e8bcf822d
+      internalID: 336477251
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NG-Special_11
+      name: NG_11
       rect:
         serializedVersion: 2
         x: 150
@@ -386,14 +386,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5e4a10306fda903409648d36e4eb1914
-      internalID: -1990622827
+      spriteID: 919496f9185e71549af266921e3bf8d1
+      internalID: -622639784
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NG-Special_12
+      name: NG_12
       rect:
         serializedVersion: 2
         x: 300
@@ -407,14 +407,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: da9fe6ac79d0ef94d970b52eb936f5af
-      internalID: -675316075
+      spriteID: 4596450f79d8185458817014b6357d3c
+      internalID: -52120991
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NG-Special_13
+      name: NG_13
       rect:
         serializedVersion: 2
         x: 450
@@ -428,14 +428,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 98f1be17b0ed272478c8eff6c262d4b1
-      internalID: 505136105
+      spriteID: 4c57d7997f6cad34796fe0ddc142f9d5
+      internalID: -1526588820
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NG-Special_14
+      name: NG_14
       rect:
         serializedVersion: 2
         x: 600
@@ -449,14 +449,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f56d8648b10f874798a46dc4b270ed5
-      internalID: 284122936
+      spriteID: a18029a2b594bfd48be6cc7661bdaba9
+      internalID: 1141020799
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NG-Special_15
+      name: NG_15
       rect:
         serializedVersion: 2
         x: 0
@@ -470,14 +470,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e0558d637caaabf4093576d8c18d332b
-      internalID: 1172424657
+      spriteID: a0eedb0b43a49874a88154cdc968d96c
+      internalID: 1175125688
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NG-Special_16
+      name: NG_16
       rect:
         serializedVersion: 2
         x: 150
@@ -491,14 +491,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f7fef1d29d82f79419371cc8a1b57feb
-      internalID: 1750183124
+      spriteID: 7b76910098ecd684e846c01b31221686
+      internalID: -1477388073
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NG-Special_17
+      name: NG_17
       rect:
         serializedVersion: 2
         x: 300
@@ -512,14 +512,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 917f7e320134de94fbcc4357f9085226
-      internalID: 2061935523
+      spriteID: f58185daecc79e34fbfd9a449b9397c9
+      internalID: -1177183817
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NG-Special_18
+      name: NG_18
       rect:
         serializedVersion: 2
         x: 450
@@ -533,14 +533,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5e1639dfa25cc6a4e915df989d07f016
-      internalID: 774179387
+      spriteID: c4123302de7835647a04b14083979243
+      internalID: 598146730
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NG-Special_19
+      name: NG_19
       rect:
         serializedVersion: 2
         x: 600
@@ -554,14 +554,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a88b9ac3da221e0479e5784030a96da7
-      internalID: 925325618
+      spriteID: 4bc481016a0a7fc49908729ac4092567
+      internalID: 1912575211
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NG-Special_20
+      name: NG_20
       rect:
         serializedVersion: 2
         x: 0
@@ -575,14 +575,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aee87133039add648b67fdac0819a51f
-      internalID: -244160918
+      spriteID: 5bd425876eddaa14f930d2fe6d6aa5c2
+      internalID: 1057232434
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NG-Special_21
+      name: NG_21
       rect:
         serializedVersion: 2
         x: 150
@@ -596,8 +596,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5676a4af9c651e646ba4ce37c56d9ef7
-      internalID: 730105558
+      spriteID: 10e3978e222c77048bf2eda04c80162a
+      internalID: -1845465509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NG_22
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 0
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11e3d5bb6688d3a4697e1dea48c41d02
+      internalID: -1016450607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NG_23
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 0
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7e277645434d284ebbe813bbb9b90a5
+      internalID: -832495478
       vertices: []
       indices: 
       edges: []
@@ -613,28 +655,30 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      NG-Special_0: -1839895373
-      NG-Special_1: -1366746187
-      NG-Special_10: 352125949
-      NG-Special_11: -1990622827
-      NG-Special_12: -675316075
-      NG-Special_13: 505136105
-      NG-Special_14: 284122936
-      NG-Special_15: 1172424657
-      NG-Special_16: 1750183124
-      NG-Special_17: 2061935523
-      NG-Special_18: 774179387
-      NG-Special_19: 925325618
-      NG-Special_2: -731995624
-      NG-Special_20: -244160918
-      NG-Special_21: 730105558
-      NG-Special_3: -1966705681
-      NG-Special_4: -1176212051
-      NG-Special_5: 942749172
-      NG-Special_6: 684738040
-      NG-Special_7: -1342802629
-      NG-Special_8: 1614171904
-      NG-Special_9: -1709356265
+      NG_0: 128470283
+      NG_1: 1257595026
+      NG_10: 336477251
+      NG_11: -622639784
+      NG_12: -52120991
+      NG_13: -1526588820
+      NG_14: 1141020799
+      NG_15: 1175125688
+      NG_16: -1477388073
+      NG_17: -1177183817
+      NG_18: 598146730
+      NG_19: 1912575211
+      NG_2: 728764579
+      NG_20: 1057232434
+      NG_21: -1845465509
+      NG_22: -1016450607
+      NG_23: -832495478
+      NG_3: -1275527901
+      NG_4: 563918855
+      NG_5: -1046655102
+      NG_6: 709791089
+      NG_7: 132245998
+      NG_8: 1898772496
+      NG_9: -31423135
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

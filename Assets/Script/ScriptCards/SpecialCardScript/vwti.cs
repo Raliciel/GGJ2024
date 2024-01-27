@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "vwti", menuName = "Card/vwti", order = 1)]
+[CreateAssetMenu(fileName = "vwti", menuName = "Card/Special/vwti", order = 1)]
 
 public class vwti : CardSO 
 {

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "StayHydrate", menuName = "Card/StayHydrate", order = 1)]
+[CreateAssetMenu(fileName = "StayHydrate", menuName = "Card/Defend/StayHydrate", order = 1)]
 public class StayHydrate : CardSO
 {
     public override void DoAction(Unit actor, Unit enemy)

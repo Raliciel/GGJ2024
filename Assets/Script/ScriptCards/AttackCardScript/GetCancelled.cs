@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "GetCancelled", menuName = "Card/GetCancelled", order = 1)]
+[CreateAssetMenu(fileName = "GetCancelled", menuName = "Card/Attack/GetCancelled", order = 1)]
 public class GetCancelled : CardSO
 {
     public int damage = 10;

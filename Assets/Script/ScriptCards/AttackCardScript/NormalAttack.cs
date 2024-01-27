@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "NormalAttack", menuName = "Card/NormalAttack", order = 1)]
+[CreateAssetMenu(fileName = "NormalAttack", menuName = "Card/Attack/NormalAttack", order = 1)]
 public class NormalAttack: CardSO 
 {
     public int damage = 5;

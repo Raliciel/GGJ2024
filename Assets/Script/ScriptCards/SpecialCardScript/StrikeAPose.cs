@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "StrikeAPose", menuName = "Card/StrikeAPose", order = 1)]
+[CreateAssetMenu(fileName = "StrikeAPose", menuName = "Card/Special/StrikeAPose", order = 1)]
 public class StrikeAPose : CardSO 
 {
     public int hpCost = 7;

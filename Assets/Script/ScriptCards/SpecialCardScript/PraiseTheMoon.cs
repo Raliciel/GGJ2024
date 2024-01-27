@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "PraiseTheMoon", menuName = "Card/PraiseTheMoon", order = 1)]
+[CreateAssetMenu(fileName = "PraiseTheMoon", menuName = "Card/Special/PraiseTheMoon", order = 1)]
 public class PraiseTheMoon : CardSO 
 {
     public int angerCost = 7;

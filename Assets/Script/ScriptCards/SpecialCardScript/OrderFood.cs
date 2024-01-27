@@ -1,5 +1,5 @@
 using UnityEngine;
-[CreateAssetMenu(fileName = "OrderFood", menuName = "Card/OrderFood", order = 1)]
+[CreateAssetMenu(fileName = "OrderFood", menuName = "Card/Special/OrderFood", order = 1)]
 public class OrderFood : CardSO 
 {
     public int angerCost = 10;

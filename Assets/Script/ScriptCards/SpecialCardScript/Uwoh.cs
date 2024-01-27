@@ -1,5 +1,5 @@
 using UnityEngine;
-[CreateAssetMenu(fileName = "Uwoh", menuName = "Card/Uwoh", order = 1)]
+[CreateAssetMenu(fileName = "Uwoh", menuName = "Card/Special/Uwoh", order = 1)]
 public class Uwoh: CardSO
 {
     public int reducedAnger = 5;

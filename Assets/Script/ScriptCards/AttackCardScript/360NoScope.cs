@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "NoScope360", menuName = "Card/NoScope360", order = 1)]
+[CreateAssetMenu(fileName = "NoScope360", menuName = "Card/Attack/NoScope360", order = 1)]
 public class NoScope360 : CardSO
 {
     public int damage = 75;

@@ -1,5 +1,5 @@
 using UnityEngine;
-[CreateAssetMenu(fileName = "ThinkMonkeyThink", menuName = "Card/ThinkMonkeyThink", order = 1)]
+[CreateAssetMenu(fileName = "ThinkMonkeyThink", menuName = "Card/Special/ThinkMonkeyThink", order = 1)]
 
 public class ThinkMonkeyThink: CardSO
 {

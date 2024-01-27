@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "GigaMonkeBreaker", menuName = "Card/GigaMonkeBreaker", order = 1)]
+[CreateAssetMenu(fileName = "GigaMonkeBreaker", menuName = "Card/Attack/GigaMonkeBreaker", order = 1)]
 public class GigaMonkeBreaker : CardSO
 {
     public int damage = 25;
