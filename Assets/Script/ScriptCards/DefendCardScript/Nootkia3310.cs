@@ -9,10 +9,16 @@ public class Nootkia3310 : CardSO
     public int receivedAnger = 5;
     public int[] chance = new int[2] { 30, 70 };
 
-    public override void DoAction(Unit actor, Unit enemy)
+    public override int[] DoAction(Unit actor, Unit enemy, int[] randomized = null)
     {
+        if (randomized.Length != 1 && randomized != null) { return null; }
+
+        int index;
+
         actor.payHPCost(hpCost);
-        int index = Randomizer.random(chance);
+        
+        if (randomized == null) index = Randomizer.random(chance);
+        else index = randomized[0];
 
         switch(index) {
             case 0:
@@ -24,5 +30,7 @@ public class Nootkia3310 : CardSO
                 actor.receivedAnger(receivedAnger);
                 break;
         }
+
+        return new int[1] { index };
     }
 }

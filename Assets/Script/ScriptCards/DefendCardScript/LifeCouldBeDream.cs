@@ -6,10 +6,14 @@ using UnityEngine;
 public class LifeCouldBeDream : CardSO
 {   
     public int angerCost = 15;
-    public override void DoAction(Unit actor, Unit enemy)
+    public override int[] DoAction(Unit actor, Unit enemy, int[] randomized = null)
     {
+        if(randomized != null) return null;
+
         actor.payAngerCost(angerCost);
         actor.setIsDefend(true);
         Debug.Log($"{actor.name} transform into a cube that can take you to a paradise up above.");
+
+        return null;
     }
 }
