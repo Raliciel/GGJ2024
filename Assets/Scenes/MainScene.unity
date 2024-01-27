@@ -373,6 +373,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 10a994d921d293c43890bd4529367f94, type: 2}
   - {fileID: 11400000, guid: 60355bb3fd88a4247b02959521acb27b, type: 2}
   - {fileID: 11400000, guid: 510e3574f6e346642b1d0b8233e4daff, type: 2}
+  - {fileID: 11400000, guid: 63dcadef9e58d5844becc6531bf3cd77, type: 2}
+  - {fileID: 11400000, guid: 510e3574f6e346642b1d0b8233e4daff, type: 2}
   cardPanel: {fileID: 1517583760}
 --- !u!4 &136884099
 Transform:
@@ -1195,9 +1197,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 818474229}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 5, y: -0.64, z: 0}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 317834363}
   m_RootOrder: 1

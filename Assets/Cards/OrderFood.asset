@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: OrderFood
   m_EditorClassIdentifier: 
   cardName: Order Food
-  cardFlavor: []
+  cardFlavor:
+  - Ba nana ba ba nana
   ngUse: {fileID: 1141020799, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
   ngReact1: {fileID: 1141020799, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
   ngReact2: {fileID: -52120991, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
@@ -25,4 +26,4 @@ MonoBehaviour:
   successHpRecover: 20
   receivedAnger: 5
   failedHpRecover: 15
-  chance: 14000000ac080000
+  chance: 14000000c80a0000

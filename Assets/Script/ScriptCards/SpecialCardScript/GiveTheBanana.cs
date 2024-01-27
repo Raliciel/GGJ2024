@@ -10,6 +10,7 @@ public class GiveTheBanana : CardSO
 
     public override int[] DoAction(Unit actor, Unit enemy, int[] randomized = null) 
     {
+        actor.ChangeSprite(this, PoseCatagory.use);
         if (randomized != null && randomized.Length != 1) { return null; }
 
         int index;
@@ -21,12 +22,14 @@ public class GiveTheBanana : CardSO
 
         switch(index) {
             case 0: //Rotten banana
+                enemy.ChangeSprite(this, PoseCatagory.react2);
                 Debug.Log(actor.name + " gives " + enemy.name + " a banana. Sadly, it's rotten.");
                 Debug.Log(enemy.name + " received " + receivedAnger + " anger.");
                 enemy.receivedAnger(receivedAnger);
                 break;
             
             case 1: //Normal
+                enemy.ChangeSprite(this, PoseCatagory.react1);
                 Debug.Log(actor.name + " gives " + enemy.name + " a banana.");
                 Debug.Log(enemy.name + " anger has reduced by " + reducedAnger);
                 enemy.reducedAnger(reducedAnger);

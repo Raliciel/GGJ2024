@@ -9,19 +9,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e0996cd134de4e409a852fa1921e339, type: 3}
-  m_Name: GiveTheBanana
+  m_Script: {fileID: 11500000, guid: b52f8d3cbc46f2f418f6393ad9f9bdd2, type: 3}
+  m_Name: DEJAVU
   m_EditorClassIdentifier: 
-  cardName: Give The Banana
+  cardName: DEJA VU
   cardFlavor:
-  - Woe! Banana be apon ye.
-  ngUse: {fileID: -1477388073, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
+  - I've seen this place before.
+  - Higher than the street
+  - GAS GAS GAS
+  ngUse: {fileID: -476451757, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
   ngReact1: {fileID: 128470283, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
   ngReact2: {fileID: 128470283, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
-  mfUse: {fileID: 21300000, guid: 2f9d4dc025f5a8a47823a1d43d17f1b8, type: 3}
+  mfUse: {fileID: 21300000, guid: c6f3f18985b34094e8e38ba0421ecde1, type: 3}
   mfReact1: {fileID: 21300000, guid: 2f9d4dc025f5a8a47823a1d43d17f1b8, type: 3}
   mfReact2: {fileID: 21300000, guid: 2f9d4dc025f5a8a47823a1d43d17f1b8, type: 3}
-  angerCost: -10
-  reducedAnger: 10
-  receivedAnger: 5
-  chance: 140000001c020000
+  angerCost: 5
+  hpCost: 5
+  recoil: 5
+  reducedAnger: 15
+  chance: 23000000320000000f000000

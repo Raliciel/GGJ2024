@@ -11,6 +11,7 @@ public class BSOD: CardSO
 
     public override int[] DoAction(Unit actor, Unit enemy, int[] randomized = null) 
     {
+        
         if (randomized != null && randomized.Length != 1) { return null; }
 
         int index;
@@ -23,6 +24,7 @@ public class BSOD: CardSO
 
         switch(index) {
             case 0: //Fail
+                actor.ChangeSprite(this, PoseCatagory.react2);
                 Debug.Log($"Blue Screen of Death has been backfired to {actor.name}");
                 Debug.Log($"{actor.name} damage {recoil} hp to {actor.name} and received {receivedAnger} anger");
                 actor.receivedDamage(recoil);
@@ -30,6 +32,8 @@ public class BSOD: CardSO
                 break;
 
             case 1: //Success
+                actor.ChangeSprite(this, PoseCatagory.use);
+                enemy.ChangeSprite(this, PoseCatagory.react1);
                 Debug.Log($"Blue Screen of Death has been casted upon {enemy.name}");
                 Debug.Log($"{actor.name} damage {damage} hp to {enemy.name}");
                 enemy.receivedDamage(damage);

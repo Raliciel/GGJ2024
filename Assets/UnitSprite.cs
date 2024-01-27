@@ -26,38 +26,19 @@ public class UnitSprite : MonoBehaviour
     }
     public void ShowNormal()
     {
-        if (sprite.sprite != normalSprite) sprite.sprite = normalSprite;
+        if (sprite.sprite.Equals(normalSprite)) sprite.sprite = normalSprite;
     }
     public void ShowAngry()
     {
-        if (sprite.sprite != angrySprite) sprite.sprite = angrySprite;
+        if (sprite.sprite.Equals(angrySprite)) sprite.sprite = angrySprite;
     }
     public void ShowHappy()
     {
         sprite.sprite = happySprite;
-        ShowHappyAura();
     }
 
     float _time = 0;
     float duration = 5;
-    private void ShowHappyAura()
-    {
-        GameObject shadow = new GameObject();
-        shadow.transform.parent = transform.parent;
-        shadow.transform.SetAsFirstSibling();
-        shadow.AddComponent<SpriteRenderer>();
-        shadow.GetComponent<SpriteRenderer>().sprite = sprite.sprite;
-        while (_time < duration)
-        {
-            Vector4 color = new Vector4(2, 211, 118, 100);
-            shadow.GetComponent<SpriteRenderer>().color = color;
-            shadow.transform.localScale = Vector3.one * _time;
-            _time += Time.deltaTime;
-        }
-        Destroy(shadow);
-        
-        
-    }
 
     public void ShowDeath()
     {

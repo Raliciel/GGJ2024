@@ -16,6 +16,7 @@ public class ApeWithMachineGun : CardSO
 
     public override int[] DoAction(Unit actor, Unit enemy, int[] randomized = null)
     {
+        actor.ChangeSprite(this, PoseCatagory.use);
         if(randomized != null && randomized.Length != 2) { return null; }
 
         int index;
@@ -38,12 +39,14 @@ public class ApeWithMachineGun : CardSO
 
         switch(index) {
             case 0: //Miss
+                enemy.ChangeSprite(this, PoseCatagory.react2);
                 Debug.Log($"{actor.name} use machine gun, but recoil of the gun is so hard it bounce back and hit his face.");
                 Debug.Log($"{actor.name} damage {recoil} to {actor.name}.");
                 actor.receivedDamage(recoil);
                 break;
             
             case 1: //Normal
+                enemy.ChangeSprite(this, PoseCatagory.react1);
                 Debug.Log($"{actor.name} use machine gun and hit {hit} out of {totalHit} shot.");
                 Debug.Log($"{actor.name} damage {damage * hit} to {enemy.name}, receiving {(int)Mathf.Ceil(receivedAnger * hit)} anger.");
                 enemy.receivedDamage(damage * hit);

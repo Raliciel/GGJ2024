@@ -11,6 +11,7 @@ public class BodySlam : CardSO
 
     public override int[] DoAction(Unit actor, Unit enemy, int[] randomized = null)
     {
+        actor.ChangeSprite(this, PoseCatagory.use);
         if (randomized != null && randomized.Length != 1) { return null; }
 
         int index;
@@ -22,14 +23,15 @@ public class BodySlam : CardSO
 
         switch (index) {
             case 0: //Miss
+                actor.ChangeSprite(this, PoseCatagory.react2);
                 Debug.Log($"{actor.name} body slams the ground so hard.");
                 Debug.Log($"{actor.name} damage {recoil * 2} hp to {actor.name}");
                 actor.receivedDamage(recoil * 2);
                 break;
             
             case 1:
+                enemy.ChangeSprite(this, PoseCatagory.react1);
                 Debug.Log($"{actor.name} body slams into {enemy.name} so hard they roll altogether.");
-                
                 Debug.Log($"{actor.name} damage {damage} hp to {enemy.name}, receiving {receivedAnger} anger.");
                 enemy.receivedDamage(damage);
                 enemy.receivedAnger(receivedAnger);

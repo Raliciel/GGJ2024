@@ -9,6 +9,7 @@ public class NormieAttack: CardSO
     public int[] chance = new int[3] {10, 80, 10};
 
     public override int[] DoAction(Unit actor, Unit enemy, int[] randomized = null) {
+        actor.ChangeSprite(this, PoseCatagory.use);
         if(randomized != null && randomized.Length != 1) { return null; }
 
         int index;
@@ -28,6 +29,7 @@ public class NormieAttack: CardSO
                 Debug.Log($"{actor.name} damage {damage} hp to {enemy.name}, receiving {receivedAnger} anger.");
                 enemy.receivedDamage(damage);
                 enemy.receivedAnger(receivedAnger);
+                enemy.ChangeSprite(this, PoseCatagory.react1);
                 break;
 
             case 2: //Crit
@@ -35,6 +37,7 @@ public class NormieAttack: CardSO
                 Debug.Log($"{actor.name} damage {damage * 2} hp to {enemy.name}, receiving {receivedAnger} anger.");
                 enemy.receivedDamage(damage * 2);
                 enemy.receivedAnger(receivedAnger);
+                enemy.ChangeSprite(this, PoseCatagory.react1);
                 break;
         }
 

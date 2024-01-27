@@ -9,20 +9,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae4ba5107e7d95f4a910f3dc929789f8, type: 3}
-  m_Name: BodySlam
+  m_Script: {fileID: 11500000, guid: fdce691a85c0f7342a06f477ff7550b4, type: 3}
+  m_Name: MonkeGambit
   m_EditorClassIdentifier: 
-  cardName: Body Slam
+  cardName: Monke Gambit
   cardFlavor:
-  - massive boobonger bigass bobongas
+  - Kakigurai school
+  - RNG BULLSHIT GO
   ngUse: {fileID: 128470283, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
   ngReact1: {fileID: 128470283, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
   ngReact2: {fileID: 128470283, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
-  mfUse: {fileID: 21300000, guid: 0ac66b4b912c3904ea9e77b3cd9c7ef3, type: 3}
-  mfReact1: {fileID: 128470283, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
-  mfReact2: {fileID: 128470283, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
-  damage: 20
-  recoil: 5
-  receivedAnger: 5
-  angerCost: 10
-  chance: 1e00000010090000
+  mfUse: {fileID: 21300000, guid: 2f9d4dc025f5a8a47823a1d43d17f1b8, type: 3}
+  mfReact1: {fileID: 21300000, guid: 2f9d4dc025f5a8a47823a1d43d17f1b8, type: 3}
+  mfReact2: {fileID: 21300000, guid: 2f9d4dc025f5a8a47823a1d43d17f1b8, type: 3}
+  damage: 10
+  chance: 210000002200000021000000

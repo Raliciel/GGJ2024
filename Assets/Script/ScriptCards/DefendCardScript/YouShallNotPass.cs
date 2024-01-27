@@ -10,6 +10,7 @@ public class YouShallNotPass : CardSO
     public int[] chance = new int[2] { 30, 70 };
     public override int[] DoAction(Unit actor, Unit enemy, int[] randomized = null)
     {
+        actor.ChangeSprite(this, PoseCatagory.use);
         if (randomized != null && randomized.Length != 1) { return null; }
 
         int index;
@@ -20,7 +21,8 @@ public class YouShallNotPass : CardSO
         else index = randomized[0];
 
         switch(index) {
-            case 0: 
+            case 0:
+                actor.ChangeSprite(this, PoseCatagory.react1);
                 Debug.Log($"{actor.name} try to summon Gandalf for help, and {enemy.name} not allow it.");
                 enemy.receivedAnger(receivedAnger);
                 break;

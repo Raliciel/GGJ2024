@@ -112,31 +112,32 @@ public class Unit : MonoBehaviour
 
     public void ChangeSprite(CardSO so, PoseCatagory pose)
     {
-        StartCoroutine(ChangeandWait(so, PoseCatagory.use));
+        StartCoroutine(ChangeandWait(so, pose));
     }
 
     [HideInInspector] public bool unoccupied = false;
     protected IEnumerator ChangeandWait(CardSO so, PoseCatagory pose)
     {
-        unoccupied = true;
+        Debug.Log("Pose: " + pose);
         Sprite oldsprite = GetComponent<SpriteRenderer>().sprite;
+        unoccupied = true;
         if (gameObject.name.Equals("Player"))
         {
             switch ((int)pose)
             {
-                case ((int)(PoseCatagory.use)): GetComponent<SpriteRenderer>().sprite = so.mfUse; break;
-                case ((int)(PoseCatagory.react1)): GetComponent<SpriteRenderer>().sprite = so.mfReact1; break;
-                case ((int)(PoseCatagory.react2)): GetComponent<SpriteRenderer>().sprite = so.mfReact2; break;
+                case ((int)PoseCatagory.use): GetComponent<SpriteRenderer>().sprite = so.mfUse; break;
+                case ((int)PoseCatagory.react1): GetComponent<SpriteRenderer>().sprite = so.mfReact1; break;
+                case ((int)PoseCatagory.react2): GetComponent<SpriteRenderer>().sprite = so.mfReact2; break;
             }
 
         }
-        else
+        else if (gameObject.name.Equals("Enemy"))
         {
             switch ((int)pose)
             {
-                case ((int)(PoseCatagory.use)): GetComponent<SpriteRenderer>().sprite = so.ngUse; break;
-                case ((int)(PoseCatagory.react1)): GetComponent<SpriteRenderer>().sprite = so.ngReact1; break;
-                case ((int)(PoseCatagory.react2)): GetComponent<SpriteRenderer>().sprite = so.ngReact2; break;
+                case ((int)PoseCatagory.use): GetComponent<SpriteRenderer>().sprite = so.ngUse; break;
+                case ((int)PoseCatagory.react1): GetComponent<SpriteRenderer>().sprite = so.ngReact1; break;
+                case ((int)PoseCatagory.react2): GetComponent<SpriteRenderer>().sprite = so.ngReact2; break;
             }
 
         }

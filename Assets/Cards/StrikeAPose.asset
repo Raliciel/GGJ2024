@@ -15,6 +15,7 @@ MonoBehaviour:
   cardName: Strike A Pose
   cardFlavor:
   - JOTAROOOOOO
+  - DIOOOOOOOOOOOO
   - A pose so fabulous it hurt your back.
   ngUse: {fileID: 336477251, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
   ngReact1: {fileID: 336477251, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
@@ -25,4 +26,4 @@ MonoBehaviour:
   hpCost: 7
   reducedAnger: 15
   receivedAnger: 5
-  chance: 190000000d020000
+  chance: 19000000b0040000

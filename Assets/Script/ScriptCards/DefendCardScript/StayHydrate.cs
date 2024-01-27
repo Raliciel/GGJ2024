@@ -8,7 +8,8 @@ public class StayHydrate : CardSO
     public int angerCost = 15;
     public int hpRecover = 10;
     public override int[] DoAction(Unit actor, Unit enemy, int[] randomized = null)
-    {   
+    {
+        actor.ChangeSprite(this, PoseCatagory.use);
         if(randomized != null) return null;
 
         actor.payAngerCost(angerCost);

@@ -9,6 +9,7 @@ public class PraiseTheSun : CardSO
 
     public override int[] DoAction(Unit actor, Unit enemy, int[] randomized = null)
     {
+        actor.ChangeSprite(this, PoseCatagory.use);
         if (randomized != null && randomized.Length != 1) { return null; }
 
         int index;
@@ -20,10 +21,12 @@ public class PraiseTheSun : CardSO
     
         switch(index) {
             case 0: //Miss
+                
                 Debug.Log(actor.name + " praise the sun and failed.");
                 break;
 
             case 1:
+                enemy.ChangeSprite(this, PoseCatagory.react1);
                 Debug.Log(actor.name + " praise the sun. " + enemy.name + " become calmer.");
                 Debug.Log(enemy.name + " anger has reduced by " + reducedAnger);
                 enemy.reducedAnger(reducedAnger);

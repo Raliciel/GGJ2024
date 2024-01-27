@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c806835f90efd354c986b7c032443828, type: 3}
   m_Name: ApeWithMachineGun
   m_EditorClassIdentifier: 
-  cardName: ApeWithMachineGun
-  cardFlavor: []
+  cardName: Ape With Machine Gun
+  cardFlavor:
+  - Machine Gun go brrrrrrrrrrrr
+  - AHHHHHHHH
   ngUse: {fileID: -1016450607, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
   ngReact1: {fileID: -52120991, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
   ngReact2: {fileID: 128470283, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
@@ -24,5 +26,5 @@ MonoBehaviour:
   totalHit: 10
   angerCost: 8
   receivedAnger: 1.3
-  chance: 0a00000078000000
+  chance: 0a00000086010000
   recoil: 5

@@ -10,7 +10,7 @@ public class StrikeAPose : CardSO
 
     public override int[] DoAction(Unit actor, Unit enemy, int[] randomized = null)
     {
-        ChangeSprite(actor, PoseCatagory.use);
+        actor.ChangeSprite(this, PoseCatagory.use);
 
         if (randomized != null && randomized.Length != 1) { return null; }
 
@@ -23,12 +23,14 @@ public class StrikeAPose : CardSO
     
         switch(index) {
             case 0: //Fail
+                enemy.ChangeSprite(this, PoseCatagory.react2);
                 Debug.Log(actor.name + " strike the pose fabulously. However, " + enemy.name + " is not a fan of JoJo.");
                 Debug.Log(enemy.name + " received " + receivedAnger + " anger.");
                 enemy.receivedAnger(receivedAnger);
                 break;
 
             case 1: //Normal
+                enemy.ChangeSprite(this, PoseCatagory.react1);
                 Debug.Log(actor.name + " strike the pose fabulously.");
                 Debug.Log(enemy.name + " anger has reduced by " + reducedAnger);
                 enemy.reducedAnger(reducedAnger);

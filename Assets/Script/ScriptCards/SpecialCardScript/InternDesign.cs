@@ -4,6 +4,7 @@ using UnityEngine;
 public class InternDesign: CardSO 
 {
     public override int[] DoAction(Unit actor, Unit enemy, int[] randomized = null) {
+        actor.ChangeSprite(this, PoseCatagory.use);
         if(randomized != null) return null;
 
         Debug.Log($"Upon interference of some interns, {actor.name} Hp and Anger are reseted");
