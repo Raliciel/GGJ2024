@@ -6,8 +6,13 @@ public class Uwoh: CardSO
     public int receivedAnger = 15;
     public int[] chance = new int[2] {60, 40};
 
-    public override void DoAction(Unit actor, Unit enemy) {
-        int index = Randomizer.random(chance);
+    public override int[] DoAction(Unit actor, Unit enemy, int[] randomized = null) {
+        if (randomized.Length != 1 && randomized != null) { return null; }
+
+        int index;
+
+        if (randomized == null) index = Randomizer.random(chance);
+        else index = randomized[0];
 
         switch(index) {
             case 0: //Fail
@@ -22,5 +27,7 @@ public class Uwoh: CardSO
                 enemy.reducedAnger(reducedAnger);
                 break;
         }
+
+        return new int[1] { index };
     } 
 }

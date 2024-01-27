@@ -9,10 +9,17 @@ public class OrderFood : CardSO
     public int failedHpRecover = 15;
     public int[] chance = new int[2] {20, 80}; 
 
-    public override void DoAction(Unit actor, Unit enemy) {
+    public override int[] DoAction(Unit actor, Unit enemy, int[] randomized = null) {
         ChangeSprite(actor, PoseCatagory.use);
+
+        if (randomized.Length != 1 && randomized != null) { return null; }
+
+        int index;
+
         actor.payAngerCost(angerCost);
-        int index = Randomizer.random(chance);
+        
+        if (randomized == null) index = Randomizer.random(chance);
+        else index = randomized[0];
 
         switch(index) {
             case 0: //Fail
@@ -32,5 +39,7 @@ public class OrderFood : CardSO
                 enemy.hpRecover(successHpRecover);
                 break;
         }
+
+        return new int[1] { index };
     }
 }

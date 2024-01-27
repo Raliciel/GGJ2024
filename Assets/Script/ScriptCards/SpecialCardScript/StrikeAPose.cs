@@ -8,11 +8,18 @@ public class StrikeAPose : CardSO
     public int receivedAnger = 5;
     public int[] chance = new int[2] {25, 75};
 
-    public override void DoAction(Unit actor, Unit enemy)
+    public override int[] DoAction(Unit actor, Unit enemy, int[] randomized = null)
     {
         ChangeSprite(actor, PoseCatagory.use);
+
+        if (randomized.Length != 1 && randomized != null) { return null; }
+
+        int index;
+
         actor.payHPCost(hpCost);
-        int index = Randomizer.random(chance);
+
+        if (randomized == null) index = Randomizer.random(chance);
+        else index = randomized[0];
     
         switch(index) {
             case 0: //Fail
@@ -27,5 +34,7 @@ public class StrikeAPose : CardSO
                 enemy.reducedAnger(reducedAnger);
                 break;
         }
+
+        return new int[1] { index };
     }
 }

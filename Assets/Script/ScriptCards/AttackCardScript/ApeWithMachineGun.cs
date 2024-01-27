@@ -44,11 +44,6 @@ public class ApeWithMachineGun : CardSO
                 break;
             
             case 1: //Normal
-                int hit = 0;
-                for(int i = 0; i < totalHit; i++) {
-                    if(UnityEngine.Random.Range(0, 1) >= 0.5) hit++;
-                }
-
                 Debug.Log($"{actor.name} use machine gun and hit {hit} out of {totalHit} shot.");
                 Debug.Log($"{actor.name} damage {damage * hit} to {enemy.name}, receiving {(int)Mathf.Ceil(receivedAnger * hit)} anger.");
                 enemy.receivedDamage(damage * hit);

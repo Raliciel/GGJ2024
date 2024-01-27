@@ -3,9 +3,13 @@ using UnityEngine;
 
 public class InternDesign: CardSO 
 {
-    public override void DoAction(Unit actor, Unit enemy) {
+    public override int[] DoAction(Unit actor, Unit enemy, int[] randomized = null) {
+        if(randomized != null) return null;
+
         Debug.Log($"Upon interference of some interns, {actor.name} Hp and Anger are reseted");
         actor.SetCurrentAngerPoint(actor.angerPoint);
         actor.SetCurrentHealthPoint(actor.healthPoint);
+    
+        return null;
     }
 }

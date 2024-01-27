@@ -28,7 +28,7 @@ public abstract class CardSO: ScriptableObject {
     
     //uncomment this if everything is done.
 
-    public abstract int[] DoAction(Unit actor, Unit target, int[] randomized);
+    public abstract int[] DoAction(Unit actor, Unit target, int[] randomized = null);
 
     public void OnEnable()
     {

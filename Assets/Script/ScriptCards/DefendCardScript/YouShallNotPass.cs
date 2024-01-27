@@ -30,5 +30,7 @@ public class YouShallNotPass : CardSO
                 actor.setIsDefend(true);
                 break;
         }
+
+        return new int[1] { index };
     }
 }

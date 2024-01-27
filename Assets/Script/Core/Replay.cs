@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class Replay : MonoBehaviour
 {
-    class ReplayTurn {
+    public class ReplayTurn {
         Unit actor;
         Unit enemy;
         CardSO move;
         int[] randomized;
 
-        ReplayTurn(Unit _actor, Unit _enemy, CardSO _move, int[] _randomized) {
+        public ReplayTurn(Unit _actor, Unit _enemy, CardSO _move, int[] _randomized) {
             actor = _actor;
             enemy = _enemy;
             move = _move;
@@ -24,7 +24,7 @@ public class Replay : MonoBehaviour
     }
 
     public void Record(Unit actor, Unit enemy, CardSO move, int[] randomized) {
-        replay.add(new ReplayTurn(actor, enemy, move, randomized));
+        replay.Add(new ReplayTurn(actor, enemy, move, randomized));
     }
 
     public void PlayReplay() {

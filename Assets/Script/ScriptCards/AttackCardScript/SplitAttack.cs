@@ -39,7 +39,6 @@ public class SplitAttack : CardSO
             
             case 2: //Chain Hit
                 Debug.Log($"{actor.name} hit {enemy.name} 2 times in a row, but it not 2 times anymore.");
-                int hit = 3 + Randomizer.random(addHit);
                 Debug.Log($"{actor.name} damage {damage * hit} hp to {enemy.name}, receiving {receivedAnger * hit} anger.");
                 enemy.receivedDamage(damage * hit);
                 enemy.receivedAnger(receivedAnger * hit);
