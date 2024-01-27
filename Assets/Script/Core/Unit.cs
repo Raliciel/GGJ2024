@@ -33,7 +33,6 @@ public class Unit : MonoBehaviour
         else
            _renderer.color = Color.white;
     }
-
     public int GetCurrentHealthPoint() { return currentHealthPoint; }
 
     public int GetCurrentAngerPoint() { return currentAngerPoint; }
@@ -47,6 +46,11 @@ public class Unit : MonoBehaviour
     public void payHPCost(int hpCost) { currentHealthPoint -= hpCost; }
 
     public void receivedDamage(int damage) { if(!isDefend) currentHealthPoint -= damage; }
+
+    public void hpRecover(int recover) {
+        currentHealthPoint += recover;
+        if(currentHealthPoint > healthPoint) currentHealthPoint = healthPoint;
+    }
 
     public void receivedAnger(int anger) {
         currentAngerPoint += anger;
