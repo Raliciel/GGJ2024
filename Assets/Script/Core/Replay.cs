@@ -55,6 +55,7 @@ public class Replay : MonoBehaviour
 
         for(int i = 0; i < replay.Count; i++) {
             CardSO currentMove = replay[i].move;
+            replay[i].actor.ResetState();
             currentMove.DoAction(replay[i].actor, replay[i].enemy, replay[i].randomized);
             yield return new WaitForSeconds(delay);
         }
