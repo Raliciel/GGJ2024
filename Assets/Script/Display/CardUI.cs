@@ -16,8 +16,7 @@ public class CardUI : MonoBehaviour
         _i = i;
         _cardInfo = cardInfo;
         SetText(name, _cardInfo.cardName);
-        if (_cardInfo.cardFlavor.Count == 0) SetText(description, "No context");
-        else SetText(description, _cardInfo.cardFlavor[(int)Random.Range(0, _cardInfo.cardFlavor.Count-1)]);
+        SetText(description, _cardInfo.GetFlavor());
         gameObject.SetActive(true);
     }
 

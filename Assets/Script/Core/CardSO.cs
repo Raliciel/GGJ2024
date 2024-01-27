@@ -32,5 +32,13 @@ public abstract class CardSO: ScriptableObject {
         mfReact1 = AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Sprite/NG/NG.png");
         mfReact2 = AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Sprite/NG/NG.png");
     }
+
+    public string GetFlavor()
+    {
+        if (cardFlavor == null || cardFlavor.Count == 0)
+            return "No context";
+        int r = UnityEngine.Random.Range(0, cardFlavor.Count);
+        return cardFlavor[r];
+    }
 }
 
