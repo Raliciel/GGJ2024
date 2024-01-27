@@ -14,7 +14,14 @@ public class ShowBarInfo : MonoBehaviour
 {
     [SerializeField] Unit target;
     [SerializeField] BarTarget barTarget;
-    Slider bar => GetComponent<Slider>();
+    [SerializeField] Gradient colorGradient;
+
+    private Slider bar;
+
+    private void Start()
+    {
+        bar = GetComponent<Slider>();
+    }
     // Update is called once per frame
     void Update()
     {
