@@ -11,6 +11,7 @@ public class vwti : CardSO
 
     public override int[] DoAction(Unit actor, Unit enemy, int[] randomized = null) 
     {
+        actor.ChangeSprite(this, PoseCatagory.use);
         if (randomized != null && randomized.Length != 1) { return null; }
 
         int index;
@@ -22,6 +23,7 @@ public class vwti : CardSO
 
         switch (index) {
             case 0: //Faile
+                enemy.ChangeSprite(this, PoseCatagory.use);
                 Debug.Log(actor.name + " try shitposting " + enemy.name + ". He's not enjoyed at all.");
                 Debug.Log(enemy.name + " received " + receivedAnger + " anger.");
                 enemy.receivedAnger(receivedAnger);

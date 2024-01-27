@@ -12,6 +12,7 @@ public class DEJAVU : CardSO
     public int[] chance = new int[3] { 35, 50, 15 };
     public override int[] DoAction(Unit actor, Unit enemy, int[] randomized = null)
     {
+        actor.ChangeSprite(this, PoseCatagory.use);
         if (randomized != null && randomized.Length != 1) { return null; }
 
         int index;
@@ -24,6 +25,7 @@ public class DEJAVU : CardSO
 
         switch(index) {
             case 0: //Fail
+                actor.ChangeSprite(this, PoseCatagory.react2);
                 Debug.Log($"Despite feeling DEJA VU, {actor.name} drive too fast and crash into the fence.");
                 actor.receivedDamage(recoil);
                 break;
@@ -32,6 +34,7 @@ public class DEJAVU : CardSO
                 actor.setIsDefend(true);
                 break;
             case 2: //Kanzen DORIFUTO
+                enemy.ChangeSprite(this, PoseCatagory.react1);
                 Debug.Log($"Kanzen DORIFUTO! With perfect drive, {actor.name} conquers the road and leaves everyone in awe.");
                 actor.setIsDefend(true);
                 enemy.reducedAnger(reducedAnger);

@@ -115,19 +115,12 @@ public class Unit : MonoBehaviour
         StartCoroutine(ChangeandWait(so, PoseCatagory.use));
     }
 
+    [HideInInspector] public bool unoccupied = false;
     protected IEnumerator ChangeandWait(CardSO so, PoseCatagory pose)
     {
+        unoccupied = true;
         Sprite oldsprite = GetComponent<SpriteRenderer>().sprite;
         if (gameObject.name.Equals("Player"))
-        {
-            switch ((int)pose)
-            {
-                case ((int)(PoseCatagory.use)): GetComponent<SpriteRenderer>().sprite = so.ngUse; break;
-                case ((int)(PoseCatagory.react1)): GetComponent<SpriteRenderer>().sprite = so.ngReact1; break;
-                case ((int)(PoseCatagory.react2)): GetComponent<SpriteRenderer>().sprite = so.ngReact2; break;
-            }
-        }
-        else
         {
             switch ((int)pose)
             {
@@ -135,11 +128,23 @@ public class Unit : MonoBehaviour
                 case ((int)(PoseCatagory.react1)): GetComponent<SpriteRenderer>().sprite = so.mfReact1; break;
                 case ((int)(PoseCatagory.react2)): GetComponent<SpriteRenderer>().sprite = so.mfReact2; break;
             }
+
+        }
+        else
+        {
+            switch ((int)pose)
+            {
+                case ((int)(PoseCatagory.use)): GetComponent<SpriteRenderer>().sprite = so.ngUse; break;
+                case ((int)(PoseCatagory.react1)): GetComponent<SpriteRenderer>().sprite = so.ngReact1; break;
+                case ((int)(PoseCatagory.react2)): GetComponent<SpriteRenderer>().sprite = so.ngReact2; break;
+            }
+
         }
 
         yield return new WaitForSeconds(0.7f);
 
         GetComponent<SpriteRenderer>().sprite = oldsprite;
+        unoccupied = true;
     }
 
     private void CheckIfUnitDie()

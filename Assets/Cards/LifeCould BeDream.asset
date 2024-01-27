@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: Life Could Be Dream
   cardFlavor: []
-  ngUse: {fileID: 128470283, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
-  ngReact1: {fileID: 128470283, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
-  ngReact2: {fileID: 128470283, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
-  mfUse: {fileID: 128470283, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
-  mfReact1: {fileID: 128470283, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
-  mfReact2: {fileID: 128470283, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
+  ngUse: {fileID: 1057232434, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
+  ngReact1: {fileID: -622639784, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
+  ngReact2: {fileID: -52120991, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
+  mfUse: {fileID: 21300000, guid: 04d6a2d9d587821438c6c30ba8f0a788, type: 3}
+  mfReact1: {fileID: 21300000, guid: d5071251b6673c342bceb51547353c71, type: 3}
+  mfReact2: {fileID: 21300000, guid: 8d7d7081a03a10f47a08050c5162bbe6, type: 3}
   angerCost: 15
