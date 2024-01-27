@@ -18,10 +18,11 @@ MonoBehaviour:
   ngUse: {fileID: 128470283, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
   ngReact1: {fileID: 128470283, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
   ngReact2: {fileID: 128470283, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
-  mfUse: {fileID: 128470283, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
+  mfUse: {fileID: 21300000, guid: 0ac66b4b912c3904ea9e77b3cd9c7ef3, type: 3}
   mfReact1: {fileID: 128470283, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
   mfReact2: {fileID: 128470283, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
   damage: 20
   recoil: 5
+  receivedAnger: 5
   angerCost: 10
-  chance: 1e000000fa000000
+  chance: 1e00000030070000

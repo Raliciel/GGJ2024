@@ -23,6 +23,7 @@ public class vwti : CardSO
 
         switch (index) {
             case 0: //Faile
+                enemy.ChangeSprite(this, PoseCatagory.use);
                 Debug.Log(actor.name + " try shitposting " + enemy.name + ". He's not enjoyed at all.");
                 Debug.Log(enemy.name + " received " + receivedAnger + " anger.");
                 enemy.receivedAnger(receivedAnger);
