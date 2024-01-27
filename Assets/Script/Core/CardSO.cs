@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEditor;
 
 public abstract class CardSO: ScriptableObject {
-    public string cardName = "Card Name";
+    public string cardName => this.name;
     public List<string> cardFlavor = new List<string>();
-    public Sprite spriteAnimation;  //Should not be this, as animations may be implementeted
+    //public Sprite spriteAnimation;  //Should not be this, as animations may be implementeted
                                     //Animations are just sprite swappings so...
 
     public Sprite ngUse;
@@ -22,12 +23,13 @@ public abstract class CardSO: ScriptableObject {
 
     public void OnEnable()
     {
-        ngUse = AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Sprite/NG/NG.png/NG_1");
-        ngReact1 = AssetDatabase.LoadAssetAtPath<Sprite>("Asset/Sprite/NG/NG_1");
-        ngReact2 = AssetDatabase.LoadAssetAtPath<Sprite>("Asset/Sprite/NG/NG_1");
-        mfUse = AssetDatabase.LoadAssetAtPath<Sprite>("Asset/Sprite/NG/NG_1");
-        mfReact1 = AssetDatabase.LoadAssetAtPath<Sprite>("Asset/Sprite/NG/NG_1");
-        mfReact2 = AssetDatabase.LoadAssetAtPath<Sprite>("Asset/Sprite/NG/NG_1");
+        Debug.Log("Create: " +  cardName);
+        ngUse = AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Sprite/NG/NG.png");
+        ngReact1 = AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Sprite/NG/NG.png");
+        ngReact2 = AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Sprite/NG/NG.png");
+        mfUse = AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Sprite/NG/NG.png");
+        mfReact1 = AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Sprite/NG/NG.png");
+        mfReact2 = AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Sprite/NG/NG.png");
     }
 }
 

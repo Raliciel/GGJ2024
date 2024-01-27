@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEditor;
 
 public class CardUI : MonoBehaviour
 {
     int _i;
-    private CardSO _cardInfo;
+    [SerializeField] private CardSO _cardInfo;
     public new TMP_Text name;
     public TMP_Text description;
 
@@ -37,4 +38,5 @@ public class CardUI : MonoBehaviour
     {
         display.text = text;  
     }
+
 }
