@@ -20,6 +20,7 @@ public class CardFlyAnimator : MonoBehaviour
     private static CardFlyAnimator _instance;
     public static CardFlyAnimator get => _instance;
 
+    private List<CardUI> _cards = new List<CardUI>();
 
     private void Awake()
     {
@@ -48,5 +49,14 @@ public class CardFlyAnimator : MonoBehaviour
         card.transform.localPosition = new Vector3(x,1200,0);
         card.transform.localScale = Vector3.one * backScale;
         card.transform.LeanMoveLocalY(backHeight, 0.4f);
+        _cards.Add(card);
+    }
+
+    public void ClearFalledCards()
+    {
+        for(int i = 0; i < _cards.Count; i++)
+        {
+            Destroy(_cards[i]);
+        }
     }
 }
