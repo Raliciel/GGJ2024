@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEditor;
 
 public abstract class CardSO: ScriptableObject {
-    public string cardName => this.name;
+    public string cardName;
     public List<string> cardFlavor = new List<string>();
     //public Sprite spriteAnimation;  //Should not be this, as animations may be implementeted
                                     //Animations are just sprite swappings so...
@@ -23,6 +23,7 @@ public abstract class CardSO: ScriptableObject {
 
     public void OnEnable()
     {
+        cardName = this.name;
         Debug.Log("Create: " +  cardName);
         ngUse = AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Sprite/NG/NG.png");
         ngReact1 = AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Sprite/NG/NG.png");
