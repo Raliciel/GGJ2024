@@ -25,7 +25,7 @@ public class BSOD: CardSO
             case 1: //Success
                 Debug.Log($"Blue Screen of Death has been casted upon {enemy.name}");
                 Debug.Log($"{actor.name} damage {damage} hp to {enemy.name}");
-                enemy.receivedDamage();
+                enemy.receivedDamage(damage);
                 break;
         }
     } 

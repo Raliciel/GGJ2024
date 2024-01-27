@@ -20,11 +20,13 @@ public class NoScope360 : CardSO
             case 0: //Miss
                 Debug.Log($"Nice attempt of 360 No Scope by {actor.name}, but he missed.");
                 actor.reducedAnger(reducedAnger);
+                break;
             
             case 1:
                 Debug.Log($"360 No Scope into {enemy.name}'s head by {actor.name}, what a spectacular.");
                 enemy.receivedDamage(damage);
                 enemy.receivedAnger(receivedAnger);
+                break;
 
         }
     }
