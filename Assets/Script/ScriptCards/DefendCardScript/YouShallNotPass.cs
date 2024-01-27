@@ -7,7 +7,7 @@ public class YouShallNotPass : CardSO
 {
     public int angerCost = -15;
     public int receivedAnger = 5;
-    public int[] chance = new int[2] {30, 70}
+    public int[] chance = new int[2] { 30, 70 };
     public override void DoAction(Unit actor, Unit enemy)
     {
         actor.payAngerCost(angerCost);
