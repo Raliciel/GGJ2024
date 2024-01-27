@@ -5,7 +5,7 @@ using UnityEditor;
 
 public class SetAudioSound : MonoBehaviour
 {
-    static SetAudioSound instance;
+    public static SetAudioSound instance;
     [SerializeField] AudioSource BGMaudio;
     [SerializeField] AudioSource SFXaudio;
     AudioSO so;

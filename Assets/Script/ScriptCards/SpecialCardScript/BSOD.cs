@@ -9,9 +9,12 @@ public class BSOD: CardSO
     public int receivedAnger = 15;
     public int[] chance = new int[2] {70, 30};
 
-    public override int[] DoAction(Unit actor, Unit enemy, int[] randomized = null) 
+    SetAudioSound audio = SetAudioSound.instance;
+
+    public override int[] DoAction(Unit actor, Unit enemy, int[] randomized = null)
     {
-        
+        if (base.sfx != null) audio.PlaySFX(base.sfx);
+
         if (randomized != null && randomized.Length != 1) { return null; }
 
         int index;

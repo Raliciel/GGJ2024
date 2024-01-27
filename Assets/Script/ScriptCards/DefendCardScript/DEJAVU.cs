@@ -10,8 +10,11 @@ public class DEJAVU : CardSO
     public int recoil = 5;
     public int reducedAnger = 15;
     public int[] chance = new int[3] { 35, 50, 15 };
+    SetAudioSound audio = SetAudioSound.instance;
+
     public override int[] DoAction(Unit actor, Unit enemy, int[] randomized = null)
     {
+        if (base.sfx != null) audio.PlaySFX(base.sfx);
         actor.ChangeSprite(this, PoseCatagory.use);
         if (randomized != null && randomized.Length != 1) { return null; }
 

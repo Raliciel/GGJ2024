@@ -9,9 +9,12 @@ public class MonkeBall : CardSO
     public int angerCost = 10;
     public int[] chance = new int[2] {50, 50};
 
+    SetAudioSound audio = SetAudioSound.instance;
+
     public override int[] DoAction(Unit actor, Unit enemy, int[] randomized = null)
     {
-        if(randomized != null && randomized.Length != 1) { return null; }
+        if (base.sfx != null) audio.PlaySFX(base.sfx);
+        if (randomized != null && randomized.Length != 1) { return null; }
 
         int index;
 

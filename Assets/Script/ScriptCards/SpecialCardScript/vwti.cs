@@ -9,8 +9,11 @@ public class vwti : CardSO
     public int receivedAnger = 5;
     public int[] chance = new int[2] {10, 90};
 
-    public override int[] DoAction(Unit actor, Unit enemy, int[] randomized = null) 
+    SetAudioSound audio = SetAudioSound.instance;
+
+    public override int[] DoAction(Unit actor, Unit enemy, int[] randomized = null)
     {
+        if (base.sfx != null) audio.PlaySFX(base.sfx);
         actor.ChangeSprite(this, PoseCatagory.use);
         if (randomized != null && randomized.Length != 1) { return null; }
 

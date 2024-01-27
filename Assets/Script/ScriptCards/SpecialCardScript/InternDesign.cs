@@ -3,7 +3,11 @@ using UnityEngine;
 
 public class InternDesign: CardSO 
 {
-    public override int[] DoAction(Unit actor, Unit enemy, int[] randomized = null) {
+    SetAudioSound audio = SetAudioSound.instance;
+
+    public override int[] DoAction(Unit actor, Unit enemy, int[] randomized = null)
+    {
+        if (base.sfx != null) audio.PlaySFX(base.sfx);
         actor.ChangeSprite(this, PoseCatagory.use);
         if(randomized != null) return null;
 

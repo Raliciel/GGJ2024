@@ -7,8 +7,11 @@ public class PraiseTheSun : CardSO
     public int reducedAnger = 15;
     public int[] chance = new int[2] {30, 70};
 
+    SetAudioSound audio = SetAudioSound.instance;
+
     public override int[] DoAction(Unit actor, Unit enemy, int[] randomized = null)
     {
+        if (base.sfx != null) audio.PlaySFX(base.sfx);
         actor.ChangeSprite(this, PoseCatagory.use);
         if (randomized != null && randomized.Length != 1) { return null; }
 

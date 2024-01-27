@@ -7,9 +7,12 @@ public class OrderFood : CardSO
     public int successHpRecover = 20;
     public int receivedAnger = 5;
     public int failedHpRecover = 15;
-    public int[] chance = new int[2] {20, 80}; 
+    public int[] chance = new int[2] {20, 80};
+    SetAudioSound audio = SetAudioSound.instance;
 
-    public override int[] DoAction(Unit actor, Unit enemy, int[] randomized = null) {
+    public override int[] DoAction(Unit actor, Unit enemy, int[] randomized = null)
+    {
+        if (base.sfx != null) audio.PlaySFX(base.sfx);
         ChangeSprite(actor, PoseCatagory.use);
 
         if (randomized != null && randomized.Length != 1) { return null; }
