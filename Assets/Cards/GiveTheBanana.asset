@@ -12,16 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e0996cd134de4e409a852fa1921e339, type: 3}
   m_Name: GiveTheBanana
   m_EditorClassIdentifier: 
-  cardName: Give The Banana
+  cardName: GiveTheBanana
   cardFlavor:
   - Woe! Banana be apon ye.
-  ngUse: {fileID: -1477388073, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
+  ngUse: {fileID: 1912575211, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
   ngReact1: {fileID: 1141020799, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
   ngReact2: {fileID: -52120991, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
   mfUse: {fileID: 21300000, guid: 1733f81a24665e0488d69b79bf5f1178, type: 3}
   mfReact1: {fileID: 21300000, guid: 2363de466f7a23142a10531092baefc3, type: 3}
   mfReact2: {fileID: 21300000, guid: 8d7d7081a03a10f47a08050c5162bbe6, type: 3}
+  sfx: {fileID: 0}
   angerCost: -10
   reducedAnger: 10
   receivedAnger: 5
-  chance: 1400000058020000
+  chance: 1400000080020000

@@ -12,18 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a599588182c0df64ab0d1508329cb3fd, type: 3}
   m_Name: StrikeAPose
   m_EditorClassIdentifier: 
-  cardName: Strike A Pose
+  cardName: StrikeAPose
   cardFlavor:
   - JOTAROOOOOO
   - DIOOOOOOOOOOOO
   - A pose so fabulous it hurt your back.
   ngUse: {fileID: 336477251, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
   ngReact1: {fileID: 336477251, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
-  ngReact2: {fileID: -52120991, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
+  ngReact2: {fileID: 728764579, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
   mfUse: {fileID: 21300000, guid: 05438ac07cd3fc14b8a02ba8488f2bc6, type: 3}
   mfReact1: {fileID: 21300000, guid: 05438ac07cd3fc14b8a02ba8488f2bc6, type: 3}
-  mfReact2: {fileID: 21300000, guid: 8d7d7081a03a10f47a08050c5162bbe6, type: 3}
+  mfReact2: {fileID: 21300000, guid: edf7755ec69249649b61fb1f14624ccb, type: 3}
+  sfx: {fileID: 0}
   hpCost: 7
   reducedAnger: 15
   receivedAnger: 5
-  chance: 19000000b0040000
+  chance: 19000000c9040000

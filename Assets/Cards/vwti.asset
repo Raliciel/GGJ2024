@@ -12,17 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cfbf8d902d80114a9958f004d8a6aba, type: 3}
   m_Name: vwti
   m_EditorClassIdentifier: 
-  cardName: vtwi;t
+  cardName: vwti
   cardFlavor:
   - ?????
   - Shitposting in real time.
   - Tag other with shitposts.
-  ngUse: {fileID: -1177183817, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
+  ngUse: {fileID: 1993855708, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
   ngReact1: {fileID: 598146730, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
   ngReact2: {fileID: 728764579, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
   mfUse: {fileID: 21300000, guid: 6a36493e2db1d824b87976d69730e4f7, type: 3}
   mfReact1: {fileID: 21300000, guid: c9ae863011840a14cae58ae9b466fa0b, type: 3}
-  mfReact2: {fileID: 21300000, guid: edf7755ec69249649b61fb1f14624ccb, type: 3}
+  mfReact2: {fileID: 21300000, guid: 8d7d7081a03a10f47a08050c5162bbe6, type: 3}
+  sfx: {fileID: 0}
   angerCost: 10
   reducedAnger: 10
   receivedAnger: 5

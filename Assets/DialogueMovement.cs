@@ -16,8 +16,8 @@ public class DialogueMovement : MonoBehaviour
     {
         if (unoccupied) return;
         unoccupied = true;
-        gameObject.transform.LeanMove(centerTransform.position - Vector3.one * 800, 0);
-        gameObject.transform.LeanMoveLocalY(centerTransform.position.y -200, .5f).setDelay(0.7f).setEaseInBack();
+        gameObject.transform.LeanMove(centerTransform.position - Vector3.up * 1000, 0);
+        gameObject.transform.LeanMoveLocalY(centerTransform.position.y -400, .5f).setDelay(0.7f).setEaseInBack();
         unoccupied = false;
     }
 
@@ -25,8 +25,8 @@ public class DialogueMovement : MonoBehaviour
     {
         if (unoccupied) return;
         unoccupied = true;
-        gameObject.transform.LeanMove(centerTransform.position - Vector3.one * 200, 0);
-        gameObject.transform.LeanMoveLocalY(centerTransform.position.y - 800, .5f).setDelay(0.7f).setEaseInBack();
+        gameObject.transform.LeanMove(centerTransform.position - Vector3.up * 400, 0);
+        gameObject.transform.LeanMoveLocalY(centerTransform.position.y - 1000, .5f).setDelay(0.7f).setEaseInBack();
         unoccupied = false;
     }
 }

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2595d25dfb838f848a8ec548e56c4599, type: 3}
   m_Name: NoScope360
   m_EditorClassIdentifier: 
-  cardName: No Scope 360
+  cardName: NoScope360
   cardFlavor:
   - Lak Hua KomKom
   ngUse: {fileID: -188670121, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
@@ -21,6 +21,7 @@ MonoBehaviour:
   mfUse: {fileID: 21300000, guid: b534e84713634aa4194116c11e5a0c2c, type: 3}
   mfReact1: {fileID: 21300000, guid: 0cca57eca8356ae4f9e8029e44497ee6, type: 3}
   mfReact2: {fileID: 21300000, guid: 8d7d7081a03a10f47a08050c5162bbe6, type: 3}
+  sfx: {fileID: 0}
   angerCost: -15
   damage: 50
   receivedAnger: 25

@@ -12,18 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3060fda6a51bfaf4491fa5c3e0c7a1de, type: 3}
   m_Name: GigaMonkeBreaker
   m_EditorClassIdentifier: 
-  cardName: Giga Monke Breaker
+  cardName: GigaMonkeBreaker
   cardFlavor:
   - '"My drill is the drill that will create HEAVENS!!!"'
   ngUse: {fileID: -832495478, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
-  ngReact1: {fileID: 728764579, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
-  ngReact2: {fileID: 1898772496, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
+  ngReact1: {fileID: 128470283, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
+  ngReact2: {fileID: -52120991, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
   mfUse: {fileID: 21300000, guid: 08744601f6991e54cb59dfd03f049bbf, type: 3}
-  mfReact1: {fileID: 21300000, guid: 0cca57eca8356ae4f9e8029e44497ee6, type: 3}
+  mfReact1: {fileID: 1898772496, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
   mfReact2: {fileID: 21300000, guid: 8d7d7081a03a10f47a08050c5162bbe6, type: 3}
+  sfx: {fileID: 0}
   damage: 25
   angerCost: 15
   receivedAnger: 25
-  chance: 460000001e000000
+  chance: 46000000aa000000
   recoil: 10
   recoilAnger: 5

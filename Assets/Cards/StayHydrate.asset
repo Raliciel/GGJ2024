@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9af6d7bac438a574bba20a034fbd3e0d, type: 3}
   m_Name: StayHydrate
   m_EditorClassIdentifier: 
-  cardName: Stay Hydrate
+  cardName: StayHydrate
   cardFlavor:
   - Can I offer you an egg in this trying time.
   ngUse: {fileID: -324558241, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
@@ -21,5 +21,6 @@ MonoBehaviour:
   mfUse: {fileID: 21300000, guid: fba9ecc0fcfd68a40bcef07174b0159b, type: 3}
   mfReact1: {fileID: 21300000, guid: 2f9d4dc025f5a8a47823a1d43d17f1b8, type: 3}
   mfReact2: {fileID: 21300000, guid: 2f9d4dc025f5a8a47823a1d43d17f1b8, type: 3}
+  sfx: {fileID: 0}
   angerCost: 15
   hpRecover: 10

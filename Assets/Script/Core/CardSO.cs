@@ -35,20 +35,6 @@ public abstract class CardSO: ScriptableObject {
 
     public abstract int[] DoAction(Unit actor, Unit target, int[] randomized = null);
 
-    public void OnEnable()
-    {
-        if (assignOnce) return;
-        cardName = this.name;
-        Debug.Log("Create: " +  cardName);
-        ngUse = AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Sprite/NG/NG.png");
-        ngReact1 = AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Sprite/NG/NG.png");
-        ngReact2 = AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Sprite/NG/NG.png");
-        mfUse = AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Sprite/MF/Normal.png");
-        mfReact1 = AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Sprite/MF/Normal.png");
-        mfReact2 = AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Sprite/MF/Normal.png");
-        assignOnce = true;
-    }
-
     public string GetFlavor()
     {
         if (cardFlavor == null || cardFlavor.Count == 0)
