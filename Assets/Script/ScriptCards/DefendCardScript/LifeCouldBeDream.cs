@@ -10,6 +10,6 @@ public class LifeCouldBeDream : CardSO
     {
         actor.payAngerCost(angerCost);
         actor.setIsDefend(true);
-        Debug.Log(actor.name + " use Life could be dream.");
+        Debug.Log($"{actor.name} transform into a cube that can take you to a paradise up above.");
     }
 }
