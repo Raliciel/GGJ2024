@@ -5,8 +5,13 @@ public class MonkeGambit : CardSO
     public int damage = 10;
     public int[] chance = new int[3] {33, 34, 33};
 
-    public override void DoAction(Unit actor, Unit enemy) {
-        int index = Randomizer.random(chance);
+    public override int[] DoAction(Unit actor, Unit enemy, int[] randomized = null) {
+        if(randomized.Length != 1 && randomized != null) { return null; }
+
+        int index;
+
+        if(randomized == null) index = Randomizer.random(chance);
+        else index = randomized[0];
 
         switch(index) {
             case 0: 
@@ -24,5 +29,7 @@ public class MonkeGambit : CardSO
                 break;
 
         }
+
+        return new int[1] {index};
     }
 }

@@ -14,10 +14,16 @@ public class GigaMonkeBreaker : CardSO
     public int recoil = 10;
     public int recoilAnger = 5;
 
-    public override void DoAction(Unit actor, Unit enemy)
+    public override int[] DoAction(Unit actor, Unit enemy, int[] randomized = null)
     {
+        if(randomized.Length != 1 && randomized != null) { return null; }
+
+        int index;
+
         actor.payAngerCost(angerCost);
-        int index = Randomizer.random(chance);
+
+        if(randomized == null) index = Randomizer.random(chance);
+        else index = randomized[0];
 
         switch(index) {
             case 0: //Miss
@@ -35,5 +41,7 @@ public class GigaMonkeBreaker : CardSO
                 break;
 
         }
+
+        return new int[1] {index};
     }
 }

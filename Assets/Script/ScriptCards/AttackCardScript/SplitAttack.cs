@@ -9,10 +9,21 @@ public class SplitAttack : CardSO
     public int[] chance = new int[3] {15, 60, 25};
     public int[] addHit = new int[3] {60, 30, 10};
 
-    public override void DoAction(Unit actor, Unit enemy)
+    public override int[] DoAction(Unit actor, Unit enemy, int[] randomized = null)
     {
+        if(randomized.Length != 2 && randomized != null) { return null; }
+        
+        int index;
+        int hit;
+
         actor.payAngerCost(angerCost);
-        int index = Randomizer.random(chance);
+        if(randomized == null) {
+            index = Randomizer.random(chance);
+            hit = 3 + Randomizer.random(addHit);
+        } else { 
+            index = randomized[0];
+            hit = randomized[1];
+        }
 
         switch(index) {
             case 0: //Miss
@@ -34,5 +45,7 @@ public class SplitAttack : CardSO
                 enemy.receivedAnger(receivedAnger * hit);
                 break;
         }
+
+        return new int[2] {index, hit};
     }
 }

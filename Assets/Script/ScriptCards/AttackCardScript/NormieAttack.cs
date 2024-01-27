@@ -8,9 +8,15 @@ public class NormieAttack: CardSO
     public int receivedAnger = 5;
     public int[] chance = new int[3] {10, 80, 10};
 
-    public override void DoAction(Unit actor, Unit enemy) {
+    public override int[] DoAction(Unit actor, Unit enemy, int[] randomized = null) {
+        if(randomized.Length != 1 && randomized != null) { return null; }
+
+        int index;
+
         actor.payAngerCost(angerCost);
-        int index = Randomizer.random(chance);
+
+        if(randomized == null) index = Randomizer.random(chance);
+        else index = randomized[0];
         
         switch(index) {
             case 0: //Miss
@@ -26,10 +32,12 @@ public class NormieAttack: CardSO
 
             case 2: //Crit
                 Debug.Log($"{actor.name} punches into {enemy.name} face heavily.");
-                Debug.Log($"{actor.name} damage {damage * 2} hp to {enemy.name} receiving {receivedAnger} anger.");
+                Debug.Log($"{actor.name} damage {damage * 2} hp to {enemy.name}, receiving {receivedAnger} anger.");
                 enemy.receivedDamage(damage * 2);
                 enemy.receivedAnger(receivedAnger);
                 break;
         }
+
+        return new int[1] {index};
     }
 }

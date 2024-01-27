@@ -14,10 +14,27 @@ public class ApeWithMachineGun : CardSO
 
     public int recoil = 5;
 
-    public override void DoAction(Unit actor, Unit enemy)
+    public override int[] DoAction(Unit actor, Unit enemy, int[] randomized = null)
     {
+        if(randomized.Length != 2 && randomized != null) { return null; }
+
+        int index;
+        int hit;
+
         actor.payAngerCost(angerCost);
-        int index = Randomizer.random(chance);
+
+        if(randomized == null) {
+            index = Randomizer.random(chance);
+            
+            hit = 0;
+            for(int i = 0; i < totalHit; i++) {
+                if(UnityEngine.Random.Range(0, 1) >= 0.5) hit++;
+            }
+
+        } else { 
+            index = randomized[0];
+            hit = randomized[1];
+        }
 
         switch(index) {
             case 0: //Miss
@@ -38,5 +55,7 @@ public class ApeWithMachineGun : CardSO
                 enemy.receivedAnger((int)Mathf.Ceil(receivedAnger * hit));
                 break;
         }
+
+        return new int[2] {index, hit};
     }
 }
