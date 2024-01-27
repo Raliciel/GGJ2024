@@ -11,6 +11,7 @@ public class BoardManager : MonoBehaviour
     private static BoardManager _instance;
     public static BoardManager get => _instance;
 
+    private Camera _cam;
 
     private void Awake()
     {
@@ -19,13 +20,13 @@ public class BoardManager : MonoBehaviour
 
     private void Start()
     {
-        Turn.get.OnChangeTurn += HideAllCards;
+        _cam = Camera.main;
         Turn.get.OnPlayerTurn += RandomDisplayCards;
 
         RandomDisplayCards(Turn.get.GetCurrentUnit());
     }
 
-    private void HideAllCards(Unit turnOwnerUnit)
+    private void HideAllCards()
     {
         for (int i = 0; i < cardUIs.Count; i++)
             cardUIs[i].HideCard();
@@ -42,19 +43,39 @@ public class BoardManager : MonoBehaviour
         cardPanel.SetActive(true);
     }
 
-    public void UseCard(CardSO cardInfo)
+    private IEnumerator UseCard(CardSO cardInfo, Unit actor, Unit target, float delay)
     {
-        Unit actor = Turn.get.GetCurrentUnit();
-        Unit target = Turn.get.GetCurrentOpponentUnit();
+        yield return new WaitForSeconds(delay);
+
+        float timeSpend = 0.5f; //Will get from Do action of cardInfo
         Debug.Log(actor.name + " use " + cardInfo.cardName);
         cardInfo.DoAction(actor, target);
 
-        //If normal condition, no double card
+        yield return new WaitForSeconds(timeSpend);
         Turn.get.EndTurn();
     }
+
+    public void UseCardOnBoard(CardSO cardInfo, CardUI card)
+    {
+        HideAllCards();
+
+        Unit actor = Turn.get.GetCurrentUnit();
+        Unit target = Turn.get.GetCurrentOpponentUnit();
+
+        float timeOnAnimation = CardFlyAnimator.get.FlyCardToFront(cardInfo, card.transform.position, 2.2f);
+        StartCoroutine(UseCard(cardInfo, actor, target, timeOnAnimation));
+    }
+
     public void UseRandomCard()
     {
-        UseCard(RandomGetACard());
+        HideAllCards();
+
+        Unit actor = Turn.get.GetCurrentUnit();
+        Unit target = Turn.get.GetCurrentOpponentUnit();
+        CardSO card = RandomGetACard();
+
+        float timeOnAnimation = CardFlyAnimator.get.FlyCardToFront(card, _cam.WorldToScreenPoint(actor.transform.position), 0.6f);
+        StartCoroutine(UseCard(card, actor, target, timeOnAnimation));
     }
 
     public CardSO RandomGetACard()
