@@ -9,34 +9,45 @@ public enum BarTarget
     anger
 }
 
-[RequireComponent(typeof(Slider))]
 public class ShowBarInfo : MonoBehaviour
 {
     [SerializeField] Unit target;
     [SerializeField] BarTarget barTarget;
     [SerializeField] Gradient colorGradient;
+    [SerializeField] float easeSpeed = 5f;
 
-    private Slider bar;
+    [SerializeField] private Image mainBar;
+    [SerializeField] private Image follwerBar;
 
-    private void Start()
-    {
-        bar = GetComponent<Slider>();
-        
-    }
+ 
     // Update is called once per frame
     void Update()
     {
+        float targetValue = 0;
         if ((int)barTarget == (int)BarTarget.health)
         {
-            bar.maxValue = target.healthPoint;
-            bar.value = target.GetCurrentHealthPoint();
-            
+            targetValue = target.GetCurrentHealthPoint() / (float)target.healthPoint;
         }
 
         else if ((int)barTarget == (int)BarTarget.anger)
         {
-            bar.maxValue = target.angerPoint;
-            bar.value = target.GetCurrentAngerPoint();
+            targetValue = target.GetCurrentAngerPoint() / (float)target.angerPoint;
+        }
+        if (mainBar)
+        {
+            mainBar.color = colorGradient.Evaluate(mainBar.fillAmount);
+            mainBar.fillAmount = Mathf.Lerp(mainBar.fillAmount, targetValue, Time.deltaTime * easeSpeed);
+        }
+        if (follwerBar)
+        {
+            if(targetValue > mainBar.fillAmount)
+            {
+                follwerBar.fillAmount = Mathf.Lerp(follwerBar.fillAmount, targetValue, Time.deltaTime * easeSpeed *3);
+            }
+            else
+            {
+                follwerBar.fillAmount = Mathf.Lerp(follwerBar.fillAmount, targetValue, Time.deltaTime * easeSpeed / 3);
+            }
         }
     }
 }

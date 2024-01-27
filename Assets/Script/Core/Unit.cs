@@ -78,9 +78,11 @@ public class Unit : MonoBehaviour
         CheckIfUnitDie();
     }
 
-    public void receivedDamage(int damage) { 
-        if(!isDefend) 
-            currentHealthPoint -= damage;
+    public void receivedDamage(int damage) {
+        if (isDefend)
+            return;
+        currentHealthPoint -= damage;
+        DamageDisplayer.get.ShowHealthDamage(this, damage);
         CheckIfUnitDie();
     }
 
@@ -99,7 +101,8 @@ public class Unit : MonoBehaviour
     }
 
     public void reducedAnger(int anger) { 
-        currentAngerPoint -= anger; 
+        currentAngerPoint -= anger;
+        DamageDisplayer.get.ShowAngerDamage(this,anger);
         CheckIfUnitDie(); 
     }
 
