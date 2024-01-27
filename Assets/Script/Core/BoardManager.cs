@@ -49,7 +49,9 @@ public class BoardManager : MonoBehaviour
 
         float timeSpend = 0.5f; //Will get from Do action of cardInfo
         Debug.Log(actor.name + " use " + cardInfo.cardName);
-        cardInfo.DoAction(actor, target);
+        int[] randomized = cardInfo.DoAction(actor, target);
+
+        Replay.get.Record(actor, target, cardInfo, randomized);
 
         yield return new WaitForSeconds(timeSpend);
         Turn.get.EndTurn();
