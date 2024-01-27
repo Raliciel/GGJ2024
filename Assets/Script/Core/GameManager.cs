@@ -9,6 +9,14 @@ public class GameManager : MonoBehaviour
     public Unit enemyUnit;
     public GameObject endingPad;
 
+    private static GameManager _instance;
+    public static GameManager get => _instance;
+
+    private void Awake()
+    {
+        _instance = this;
+    }
+
     private void Start()
     {
         StartGame();
