@@ -7,7 +7,7 @@ public class Nootkia3310 : CardSO
 {
     public int hpCost = 10;
     public int receivedAnger = 5;
-    public int[] chance = new int[2] {30, 70}
+    public int[] chance = new int[2] { 30, 70 };
 
     public override void DoAction(Unit actor, Unit enemy)
     {
@@ -18,11 +18,11 @@ public class Nootkia3310 : CardSO
             case 0:
                 Debug.Log($"{actor.name} try to contact Nootkia3310, got shocked instead.");
                 break;
-
             case 1:
                 Debug.Log($"{actor.name} obtains Nootkia3310, the material is so hard.");
                 actor.setIsDefend(true);
                 actor.receivedAnger(receivedAnger);
+                break;
         }
     }
 }

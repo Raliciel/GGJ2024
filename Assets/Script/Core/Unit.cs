@@ -107,6 +107,38 @@ public class Unit : MonoBehaviour
 
     public void setIsDefend(bool isDef) { isDefend = isDef; }
 
+    public void ChangeSprite(CardSO so, PoseCatagory pose)
+    {
+        StartCoroutine(ChangeandWait(so, PoseCatagory.use));
+    }
+
+    protected IEnumerator ChangeandWait(CardSO so, PoseCatagory pose)
+    {
+        Sprite oldsprite = GetComponent<SpriteRenderer>().sprite;
+        if (gameObject.name.Equals("Player"))
+        {
+            switch ((int)pose)
+            {
+                case ((int)(PoseCatagory.use)): GetComponent<SpriteRenderer>().sprite = so.ngUse; break;
+                case ((int)(PoseCatagory.react1)): GetComponent<SpriteRenderer>().sprite = so.ngReact1; break;
+                case ((int)(PoseCatagory.react2)): GetComponent<SpriteRenderer>().sprite = so.ngReact2; break;
+            }
+        }
+        else
+        {
+            switch ((int)pose)
+            {
+                case ((int)(PoseCatagory.use)): GetComponent<SpriteRenderer>().sprite = so.mfUse; break;
+                case ((int)(PoseCatagory.react1)): GetComponent<SpriteRenderer>().sprite = so.mfReact1; break;
+                case ((int)(PoseCatagory.react2)): GetComponent<SpriteRenderer>().sprite = so.mfReact2; break;
+            }
+        }
+
+        yield return new WaitForSeconds(0.7f);
+
+        GetComponent<SpriteRenderer>().sprite = oldsprite;
+    }
+
     private void CheckIfUnitDie()
     {
         if (currentHealthPoint <= 0)
