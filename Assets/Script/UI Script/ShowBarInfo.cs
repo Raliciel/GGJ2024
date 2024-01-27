@@ -21,6 +21,7 @@ public class ShowBarInfo : MonoBehaviour
     private void Start()
     {
         bar = GetComponent<Slider>();
+        
     }
     // Update is called once per frame
     void Update()
@@ -29,6 +30,7 @@ public class ShowBarInfo : MonoBehaviour
         {
             bar.maxValue = target.healthPoint;
             bar.value = target.GetCurrentHealthPoint();
+            
         }
 
         else if ((int)barTarget == (int)BarTarget.anger)

@@ -5,9 +5,10 @@ using UnityEngine.Events;
 
 public class Turn : MonoBehaviour
 {
-    static Unit turnOwner;
-    [SerializeField] Unit player;
-    [SerializeField] Unit enemy;
+    private Unit turnOwner;
+
+    private Unit player;
+    private Unit enemy;
     // Start is called before the first frame update
 
     public UnityAction<Unit> OnChangeTurn;
@@ -21,9 +22,12 @@ public class Turn : MonoBehaviour
         _instance = this;
     }
 
-    private void Start()
+    public void InitTurnUnits(Unit playerUnit, Unit enemyUnit)
     {
-        turnOwner = player;
+        player = playerUnit;
+        enemy = enemyUnit;
+
+        SetTurn(player);
     }
 
     public Unit GetCurrentUnit()

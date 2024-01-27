@@ -16,12 +16,12 @@ public class MonkeBall : CardSO
 
         switch(index) {
             case 0: //Miss
-                Debug.Log(actor.name + " uses MonkeBall. (Miss)");
+                Debug.Log( $"{actor.name} uses MonkeBall, and the Monke doesn't come out.");
                 break;
 
             case 1: //Normal
-                Debug.Log(actor.name + " uses MonkeBall. (Normal)");
-                Debug.Log(actor.name + " damage " + damage + " hp to " + enemy.name);
+                Debug.Log($"{actor.name} uses MonkeBall. It came out with a bat and hit it into {enemy.name} face");
+                Debug.Log($"{actor.name} damage {damage} to {enemy.name}");
                 enemy.receivedDamage(damage);
                 break;
 

@@ -7,11 +7,12 @@ public class GigaMonkeBreaker : CardSO
 {
     public int damage = 25;
     public int angerCost = 15;
+    public int receivedAnger = 25;
     public int[] chance = new int[2] {70, 30};
 
     [Header("Miss Parameter")]
     public int recoil = 10;
-    public int receivedAnger = 5;
+    public int recoilAnger = 5;
 
     public override void DoAction(Unit actor, Unit enemy)
     {
@@ -20,16 +21,17 @@ public class GigaMonkeBreaker : CardSO
 
         switch(index) {
             case 0: //Miss
-                Debug.Log(actor.name + " use GigaMonkeBreaker. (Miss)");
-                Debug.Log(actor.name + " damage " + recoil + " hp to " + actor.name);
+                Debug.Log($"{actor.name} uses GigaMonkeBreaker into {enemy.name}, however the drill exploded.");
+                Debug.Log($"{actor.name} damage {recoil} hp to {actor.name}, also received {recoilAnger} anger.");
                 actor.receivedDamage(recoil);
-                Debug.Log(actor.name + " received " + receivedAnger + " anger.");
-                actor.receivedAnger(receivedAnger);
+                actor.receivedAnger(recoilAnger);
                 break;
+
             case 1: //Normal
-                Debug.Log(actor.name + " use GigaMonkeBreaker. (Normal)");
-                Debug.Log(actor.name + " damage " + damage + " hp to " + enemy.name);
+                Debug.Log($"{actor.name} use GigaMonkeBreaker and drill {enemy.name} out of existence.");
+                Debug.Log($"{actor.name} damage {damage} hp to {enemy.name}, receiving {receivedAnger} anger.");
                 enemy.receivedDamage(damage);
+                enemy.receivedAnger(receivedAnger);
                 break;
 
         }
