@@ -42,6 +42,7 @@ public class Turn : MonoBehaviour
     public void EndTurn()
     {
         turnOwner = GetCurrentOpponentUnit();
+        if(turnOwner.getIsDefend()) turnOwner.setIsDefend(false);
         OnChangeTurn?.Invoke(turnOwner);
         if(turnOwner == player)
             OnPlayerTurn?.Invoke(turnOwner);
