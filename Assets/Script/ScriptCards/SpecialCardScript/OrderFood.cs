@@ -1,6 +1,6 @@
 using UnityEngine;
 [CreateAssetMenu(fileName = "OrderFood", menuName = "Card/Special/OrderFood", order = 1)]
-public class OrderFood : CardSO 
+public class OrderFood : CardSO
 {
     public int angerCost = 10;
     public int reducedAnger = 10;
@@ -10,6 +10,7 @@ public class OrderFood : CardSO
     public int[] chance = new int[2] {20, 80}; 
 
     public override void DoAction(Unit actor, Unit enemy) {
+        ChangeSprite(actor, PoseCatagory.use);
         actor.payAngerCost(angerCost);
         int index = Randomizer.random(chance);
 

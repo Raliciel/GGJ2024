@@ -9,19 +9,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae4ba5107e7d95f4a910f3dc929789f8, type: 3}
-  m_Name: BodySlam
+  m_Script: {fileID: 11500000, guid: 3b021f30b5fea784ca3ebe2ec2cbfeb1, type: 3}
+  m_Name: LastMonke
   m_EditorClassIdentifier: 
-  cardName: BodySlam
-  cardFlavor:
-  - massive boobonger bigass bobongas
+  cardName: Last Monke
+  cardFlavor: []
   ngUse: {fileID: 128470283, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
   ngReact1: {fileID: 128470283, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
   ngReact2: {fileID: 128470283, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
   mfUse: {fileID: 128470283, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
   mfReact1: {fileID: 128470283, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
   mfReact2: {fileID: 128470283, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
-  damage: 20
-  recoil: 5
-  angerCost: 10
-  chance: 1e000000fa000000
+  damage: 120

@@ -12,9 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30b158b4efcc7fc4cb9d019448abeb49, type: 3}
   m_Name: NormalAttack_version1
   m_EditorClassIdentifier: 
-  cardName: Card 2
+  cardName: Normal Attack
   cardFlavor: []
-  spriteAnimation: {fileID: 0}
+  ngUse: {fileID: 128470283, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
+  ngReact1: {fileID: 128470283, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
+  ngReact2: {fileID: 128470283, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
+  mfUse: {fileID: 128470283, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
+  mfReact1: {fileID: 128470283, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
+  mfReact2: {fileID: 128470283, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
   damage: 5
   angerCost: 3
-  chance: 0a000000500000000a000000
+  receivedAnger: 5
+  chance: 0a0000008200000030020000

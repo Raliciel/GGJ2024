@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5288d46b9c13dd4c8aa370a09f375e8, type: 3}
   m_Name: OrderFood
   m_EditorClassIdentifier: 
+  cardName: Order Food
   cardFlavor: []
-  ngUse: {fileID: 128470283, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
+  ngUse: {fileID: -1046655102, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
   ngReact1: {fileID: 128470283, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
   ngReact2: {fileID: 128470283, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
   mfUse: {fileID: 128470283, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
@@ -24,4 +25,4 @@ MonoBehaviour:
   successHpRecover: 20
   receivedAnger: 5
   failedHpRecover: 15
-  chance: 1400000050000000
+  chance: 140000007c010000
