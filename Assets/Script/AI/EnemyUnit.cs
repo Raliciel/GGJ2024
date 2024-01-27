@@ -12,9 +12,11 @@ public class EnemyUnit : Unit
 
     void OnChangeTurn(Unit unit)
     {
-        if(unit == this)
+        if(unit == this )
         {
-            StartCoroutine(EnemyDoAction());
+            //Is not die
+            if(unit.GetCurrentHealthPoint() > 0 && unit.GetCurrentAngerPoint() > 0)
+                StartCoroutine(EnemyDoAction());
         }
     }
 

@@ -7,7 +7,7 @@ using static UnityEngine.GraphicsBuffer;
 public class DamageDisplayer : MonoBehaviour
 {
     public GameObject damagePref;
-    private Canvas canvas;
+    public Canvas canvas;
     private Camera cam;
 
     private static DamageDisplayer _instance;
@@ -20,7 +20,6 @@ public class DamageDisplayer : MonoBehaviour
 
     private void Start()
     {
-        canvas = FindFirstObjectByType<Canvas>();
         cam = Camera.main;
     }
 
