@@ -70,11 +70,15 @@ public class Unit : MonoBehaviour
     
     public void payAngerCost(int angerCost) {
         currentAngerPoint -= angerCost;
+        if (currentAngerPoint < 0)
+            currentAngerPoint = 1;
         CheckIfUnitDie();
     }
 
     public void payHPCost(int hpCost) {
         currentHealthPoint -= hpCost;
+        if (currentHealthPoint < 0)
+            currentHealthPoint = 1;
         CheckIfUnitDie();
     }
 
@@ -82,27 +86,29 @@ public class Unit : MonoBehaviour
         if (isDefend)
             return;
         currentHealthPoint -= damage;
-        DamageDisplayer.get.ShowHealthDamage(this, damage);
+        DamageDisplayer.get.ShowHealthDamage(this, damage, Color.red);
         CheckIfUnitDie();
     }
 
     public void hpRecover(int recover) {
         currentHealthPoint += recover;
-        if(currentHealthPoint > healthPoint) 
+        DamageDisplayer.get.ShowHealthDamage(this, recover, Color.green);
+        if (currentHealthPoint > healthPoint) 
             currentHealthPoint = healthPoint;
         CheckIfUnitDie();
     }
 
     public void receivedAnger(int anger) {
         currentAngerPoint += anger;
-        if(currentAngerPoint > angerPoint) 
+        DamageDisplayer.get.ShowAngerDamage(this, anger, new Color(1, 0.2f, 0));
+        if (currentAngerPoint > angerPoint) 
             currentAngerPoint = angerPoint;
         CheckIfUnitDie();
     }
 
     public void reducedAnger(int anger) { 
         currentAngerPoint -= anger;
-        DamageDisplayer.get.ShowAngerDamage(this,anger);
+        DamageDisplayer.get.ShowAngerDamage(this,anger,Color.blue);
         CheckIfUnitDie(); 
     }
 

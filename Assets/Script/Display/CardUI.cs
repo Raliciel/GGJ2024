@@ -4,6 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEditor;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class CardUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
@@ -23,6 +24,7 @@ public class CardUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     public void DisplayCard(int i, CardSO cardInfo)
     {
         _i = i;
+        GetComponent<Button>().interactable = i > -1;
         _cardInfo = cardInfo;
         SetText(name, _cardInfo.cardName);
         SetText(description, _cardInfo.GetFlavor());

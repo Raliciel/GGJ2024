@@ -23,9 +23,9 @@ public class DamageDisplayer : MonoBehaviour
         cam = Camera.main;
     }
 
-    public void ShowHealthDamage(Unit target,int amount)
-    {
-        TextMeshProUGUI textNumber = DisplayText(amount.ToString(), cam.WorldToScreenPoint(target.transform.position), Color.green);
+    public void ShowHealthDamage(Unit target,int amount, Color color)
+    { 
+        TextMeshProUGUI textNumber = DisplayText(amount.ToString(), cam.WorldToScreenPoint(target.transform.position), color);
         NumberFlyer nf = textNumber.GetComponent<NumberFlyer>();
         if (nf != null )
         {
@@ -35,9 +35,9 @@ public class DamageDisplayer : MonoBehaviour
                 nf.FlyToRight();
         }
     }
-    public void ShowAngerDamage(Unit target, int amount)
+    public void ShowAngerDamage(Unit target, int amount, Color color)
     {
-        TextMeshProUGUI textNumber = DisplayText(amount.ToString(), cam.WorldToScreenPoint(target.transform.position),Color.red);
+        TextMeshProUGUI textNumber = DisplayText(amount.ToString(), cam.WorldToScreenPoint(target.transform.position),color);
         NumberFlyer nf = textNumber.GetComponent<NumberFlyer>();
         if (target == GameManager.get.playerUnit)
             nf.FlyToRight();
