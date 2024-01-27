@@ -12,7 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81e244932d0a2f648ab8ea28e4372b6e, type: 3}
   m_Name: LifeCould BeDream
   m_EditorClassIdentifier: 
-  cardName: Card Name
+  cardName: Life Could Be Dream
   cardFlavor: []
-  spriteAnimation: {fileID: 0}
+  ngUse: {fileID: 128470283, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
+  ngReact1: {fileID: 128470283, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
+  ngReact2: {fileID: 128470283, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
+  mfUse: {fileID: 128470283, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
+  mfReact1: {fileID: 128470283, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
+  mfReact2: {fileID: 128470283, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
   angerCost: 15

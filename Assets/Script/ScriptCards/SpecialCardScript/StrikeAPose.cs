@@ -10,6 +10,7 @@ public class StrikeAPose : CardSO
 
     public override void DoAction(Unit actor, Unit enemy)
     {
+        ChangeSprite(actor, PoseCatagory.use);
         actor.payHPCost(hpCost);
         int index = Randomizer.random(chance);
     

@@ -644,6 +644,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: NG_24
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 0
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c69b3b7923b5e1148a4272de52bbe6fd
+      internalID: -1626236957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -672,6 +693,7 @@ TextureImporter:
       NG_21: -1845465509
       NG_22: -1016450607
       NG_23: -832495478
+      NG_24: -1626236957
       NG_3: -1275527901
       NG_4: 563918855
       NG_5: -1046655102
