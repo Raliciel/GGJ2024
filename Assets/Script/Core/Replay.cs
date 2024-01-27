@@ -45,6 +45,8 @@ public class Replay : MonoBehaviour
         enemy.ResetState();
         enemy.ResetStats();
         
+        GameManager.get.endingPad.SetActive(false);
+
         StartCoroutine(IEReplay(1f));
     }
 
@@ -56,5 +58,7 @@ public class Replay : MonoBehaviour
             currentMove.DoAction(replay[i].actor, replay[i].enemy, replay[i].randomized);
             yield return new WaitForSeconds(delay);
         }
+
+        GameManager.get.EndGame();
     }
 }
