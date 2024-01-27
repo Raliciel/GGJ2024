@@ -38,9 +38,9 @@ public abstract class CardSO: ScriptableObject {
         ngUse = AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Sprite/NG/NG.png");
         ngReact1 = AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Sprite/NG/NG.png");
         ngReact2 = AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Sprite/NG/NG.png");
-        mfUse = AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Sprite/NG/NG.png");
-        mfReact1 = AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Sprite/NG/NG.png");
-        mfReact2 = AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Sprite/NG/NG.png");
+        mfUse = AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Sprite/MF/Normal.png");
+        mfReact1 = AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Sprite/MF/Normal.png");
+        mfReact2 = AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Sprite/MF/Normal.png");
         assignOnce = true;
     }
 

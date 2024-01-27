@@ -11,6 +11,7 @@ public class vwti : CardSO
 
     public override int[] DoAction(Unit actor, Unit enemy, int[] randomized = null) 
     {
+        actor.ChangeSprite(this, PoseCatagory.use);
         if (randomized != null && randomized.Length != 1) { return null; }
 
         int index;
