@@ -6,6 +6,7 @@ public class MonkeGambit : CardSO
     public int[] chance = new int[3] {33, 34, 33};
 
     public override int[] DoAction(Unit actor, Unit enemy, int[] randomized = null) {
+        
         if(randomized != null && randomized.Length != 1) { return null; }
 
         int index;
@@ -14,17 +15,20 @@ public class MonkeGambit : CardSO
         else index = randomized[0];
 
         switch(index) {
-            case 0: 
-                Debug.Log($"{actor.name} shot a gambit into himself, unlucky, he got shotted.");
+            case 0:
+                actor.ChangeSprite(this, PoseCatagory.react1);
+                DialogueSystem.Log($"{actor.name} shot a gambit into himself, unlucky, he got shotted.");
                 actor.receivedDamage(damage);
                 break;
 
             case 1:
-                Debug.Log($"{actor.name} shot a gambit and no one got hit.");
+                actor.ChangeSprite(this, PoseCatagory.use);
+                DialogueSystem.Log($"{actor.name} shot a gambit and no one got hit.");
                 break;
 
             case 2:
-                Debug.Log($"{actor.name} shot a gambit into {enemy.name} his knee, goddamn.");
+                enemy.ChangeSprite(this, PoseCatagory.react1);
+                DialogueSystem.Log($"{actor.name} shot a gambit into {enemy.name} his knee, goddamn.");
                 enemy.receivedDamage(damage);
                 break;
 

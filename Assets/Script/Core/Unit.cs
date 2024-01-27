@@ -151,6 +151,7 @@ public class Unit : MonoBehaviour
         yield return new WaitForSeconds(0.7f);
 
         GetComponent<SpriteRenderer>().sprite = oldsprite;
+        DialogueSystem.CloseLog();
         unoccupied = true;
     }
 

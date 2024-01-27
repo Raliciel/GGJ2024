@@ -23,12 +23,12 @@ public class YouShallNotPass : CardSO
         switch(index) {
             case 0:
                 actor.ChangeSprite(this, PoseCatagory.react1);
-                Debug.Log($"{actor.name} try to summon Gandalf for help, and {enemy.name} not allow it.");
+                DialogueSystem.Log($"{actor.name} try to summon Gandalf for help, and {enemy.name} not allow it.");
                 enemy.receivedAnger(receivedAnger);
                 break;
 
             case 1:
-                Debug.Log($"With the power of Gandalf in {actor.name}'s hand, {enemy.name} shall not pass.");
+                DialogueSystem.Log($"With the power of Gandalf in {actor.name}'s hand, {enemy.name} shall not pass.");
                 actor.setIsDefend(true);
                 break;
         }

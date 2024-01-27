@@ -21,11 +21,11 @@ public class NormieAttack: CardSO
         
         switch(index) {
             case 0: //Miss
-                Debug.Log($"{actor.name} try to attack {enemy.name} and misses.");
+                DialogueSystem.Log($"{actor.name} try to attack {enemy.name} and misses.");
                 break;
 
             case 1: //Normal
-                Debug.Log($"{actor.name} attacks {enemy.name}.");
+                DialogueSystem.Log($"{actor.name} attacks {enemy.name}.");
                 Debug.Log($"{actor.name} damage {damage} hp to {enemy.name}, receiving {receivedAnger} anger.");
                 enemy.receivedDamage(damage);
                 enemy.receivedAnger(receivedAnger);
@@ -33,7 +33,7 @@ public class NormieAttack: CardSO
                 break;
 
             case 2: //Crit
-                Debug.Log($"{actor.name} punches into {enemy.name} face heavily.");
+                DialogueSystem.Log($"{actor.name} punches into {enemy.name} face heavily.");
                 Debug.Log($"{actor.name} damage {damage * 2} hp to {enemy.name}, receiving {receivedAnger} anger.");
                 enemy.receivedDamage(damage * 2);
                 enemy.receivedAnger(receivedAnger);

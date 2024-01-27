@@ -22,13 +22,13 @@ public class MonkeBreaker : CardSO
 
         switch(index) {
             case 0: //Miss
-                Debug.Log($"{actor.name} uses MonkeBreaker into {enemy.name}, yet the punch is too soft to even felt.");
+                DialogueSystem.Log($"{actor.name} uses MonkeBreaker into {enemy.name}, yet the punch is too soft to even felt.");
                 Debug.Log($"{enemy.name} anger has reduced by {reducedAnger}.");
                 enemy.reducedAnger(reducedAnger);
                 break;
 
             case 1:
-                Debug.Log($"{actor.name} uses MonkeBreaker into {enemy.name}.");
+                DialogueSystem.Log($"{actor.name} uses MonkeBreaker into {enemy.name}.");
                 Debug.Log($"{actor.name} damage {damage} hp to {enemy.name}, receiving {receivedAnger} anger.");
                 enemy.receivedDamage(damage);
                 enemy.receivedAnger(receivedAnger);

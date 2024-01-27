@@ -24,14 +24,14 @@ public class StrikeAPose : CardSO
         switch(index) {
             case 0: //Fail
                 enemy.ChangeSprite(this, PoseCatagory.react2);
-                Debug.Log(actor.name + " strike the pose fabulously. However, " + enemy.name + " is not a fan of JoJo.");
+                DialogueSystem.Log(actor.name + " strike the pose fabulously. However, " + enemy.name + " is not a fan of JoJo.");
                 Debug.Log(enemy.name + " received " + receivedAnger + " anger.");
                 enemy.receivedAnger(receivedAnger);
                 break;
 
             case 1: //Normal
                 enemy.ChangeSprite(this, PoseCatagory.react1);
-                Debug.Log(actor.name + " strike the pose fabulously.");
+                DialogueSystem.Log(actor.name + " strike the pose fabulously.");
                 Debug.Log(enemy.name + " anger has reduced by " + reducedAnger);
                 enemy.reducedAnger(reducedAnger);
                 break;

@@ -26,16 +26,16 @@ public class DEJAVU : CardSO
         switch(index) {
             case 0: //Fail
                 actor.ChangeSprite(this, PoseCatagory.react2);
-                Debug.Log($"Despite feeling DEJA VU, {actor.name} drive too fast and crash into the fence.");
+                DialogueSystem.Log($"Despite feeling DEJA VU, {actor.name} drive too fast and crash into the fence.");
                 actor.receivedDamage(recoil);
                 break;
             case 1: //Deja Vu
-                Debug.Log($"While feeling DEJA VU, {actor.name} drive too fast for {enemy.name} to catch.");
+                DialogueSystem.Log($"While feeling DEJA VU, {actor.name} drive too fast for {enemy.name} to catch.");
                 actor.setIsDefend(true);
                 break;
             case 2: //Kanzen DORIFUTO
                 enemy.ChangeSprite(this, PoseCatagory.react1);
-                Debug.Log($"Kanzen DORIFUTO! With perfect drive, {actor.name} conquers the road and leaves everyone in awe.");
+                DialogueSystem.Log($"Kanzen DORIFUTO! With perfect drive, {actor.name} conquers the road and leaves everyone in awe.");
                 actor.setIsDefend(true);
                 enemy.reducedAnger(reducedAnger);
                 break;

@@ -23,14 +23,14 @@ public class GiveTheBanana : CardSO
         switch(index) {
             case 0: //Rotten banana
                 enemy.ChangeSprite(this, PoseCatagory.react2);
-                Debug.Log(actor.name + " gives " + enemy.name + " a banana. Sadly, it's rotten.");
+                DialogueSystem.Log(actor.name + " gives " + enemy.name + " a banana. Sadly, it's rotten.");
                 Debug.Log(enemy.name + " received " + receivedAnger + " anger.");
                 enemy.receivedAnger(receivedAnger);
                 break;
             
             case 1: //Normal
                 enemy.ChangeSprite(this, PoseCatagory.react1);
-                Debug.Log(actor.name + " gives " + enemy.name + " a banana.");
+                DialogueSystem.Log(actor.name + " gives " + enemy.name + " a banana.");
                 Debug.Log(enemy.name + " anger has reduced by " + reducedAnger);
                 enemy.reducedAnger(reducedAnger);
                 break;

@@ -12,17 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 828edbeae0202984fb7dd45cc1acb64e, type: 3}
   m_Name: BSOD
   m_EditorClassIdentifier: 
-  cardName: 
+  cardName: Blue Screen of Death
   cardFlavor: []
-  ngUse: {fileID: 128470283, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
-  ngReact1: {fileID: 128470283, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
+  ngUse: {fileID: -1626236957, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
+  ngReact1: {fileID: 1372921150, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
   ngReact2: {fileID: 128470283, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
-  mfUse: {fileID: 21300000, guid: 2f9d4dc025f5a8a47823a1d43d17f1b8, type: 3}
-  mfReact1: {fileID: 21300000, guid: 2f9d4dc025f5a8a47823a1d43d17f1b8, type: 3}
+  mfUse: {fileID: 21300000, guid: 683d0156eae5b264ab0bd6aedfec8e70, type: 3}
+  mfReact1: {fileID: 21300000, guid: 0de1760783b577747876495d620b697b, type: 3}
   mfReact2: {fileID: 21300000, guid: 2f9d4dc025f5a8a47823a1d43d17f1b8, type: 3}
   hpCost: 15
   angerCost: 15
   damage: 100
   recoil: 15
   receivedAnger: 15
-  chance: 460000001e000000
+  chance: 4600000036010000

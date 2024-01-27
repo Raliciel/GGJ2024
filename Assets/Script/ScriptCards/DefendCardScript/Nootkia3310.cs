@@ -23,10 +23,10 @@ public class Nootkia3310 : CardSO
 
         switch(index) {
             case 0:
-                Debug.Log($"{actor.name} try to contact Nootkia3310, got shocked instead.");
+                DialogueSystem.Log($"{actor.name} try to contact Nootkia3310, got shocked instead.");
                 break;
             case 1:
-                Debug.Log($"{actor.name} obtains Nootkia3310, the material is so hard.");
+                DialogueSystem.Log($"{actor.name} obtains Nootkia3310, the material is so hard.");
                 actor.setIsDefend(true);
                 actor.receivedAnger(receivedAnger);
                 break;

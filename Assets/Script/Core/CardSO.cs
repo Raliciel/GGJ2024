@@ -15,14 +15,19 @@ public abstract class CardSO: ScriptableObject {
     public string cardName;
     public List<string> cardFlavor = new List<string>();
     //public Sprite spriteAnimation;  //Should not be this, as animations may be implementeted
-                                    //Animations are just sprite swappings so...
+    //Animations are just sprite swappings so...
 
+    [Header("NG Sprite")]
     public Sprite ngUse;
     public Sprite ngReact1;
     public Sprite ngReact2;
+    [Header("MF Sprite")]
     public Sprite mfUse;
     public Sprite mfReact1;
     public Sprite mfReact2;
+
+    [Header("Sound")]
+    public AudioClip sfx;
 
     private bool assignOnce = false;
     

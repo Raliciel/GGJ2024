@@ -13,7 +13,7 @@ public class StayHydrate : CardSO
         if(randomized != null) return null;
 
         actor.payAngerCost(angerCost);
-        Debug.Log($"{actor.name} drinks some water to stay hydrate, recover {hpRecover} hp.");
+        DialogueSystem.Log($"{actor.name} drinks some water to stay hydrate, recover {hpRecover} hp.");
         actor.hpRecover(hpRecover);
 
         return null;

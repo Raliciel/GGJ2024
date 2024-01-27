@@ -20,11 +20,11 @@ public class PraiseTheMoon : CardSO
     
         switch(index) {
             case 0: //Miss
-                Debug.Log(actor.name + " praise the moon and failed.");
+                DialogueSystem.Log(actor.name + " praise the moon and failed.");
                 break;
 
             case 1:
-                Debug.Log(actor.name + " praise the moon. " + enemy.name + " become calmer.");
+                DialogueSystem.Log(actor.name + " praise the moon. " + enemy.name + " become calmer.");
                 Debug.Log(enemy.name + " anger has reduced by " + reducedAnger);
                 enemy.reducedAnger(reducedAnger);
                 break;

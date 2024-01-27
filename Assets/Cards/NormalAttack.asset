@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30b158b4efcc7fc4cb9d019448abeb49, type: 3}
   m_Name: NormalAttack
   m_EditorClassIdentifier: 
-  cardName: Normal Attack
+  cardName: Normie Attack
   cardFlavor:
   - Do you dare to punch a friend !?
   ngUse: {fileID: 128470283, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
@@ -24,4 +24,4 @@ MonoBehaviour:
   damage: 5
   angerCost: 3
   receivedAnger: 5
-  chance: 0a0000009a01000044200000
+  chance: 0a000000ae01000096230000

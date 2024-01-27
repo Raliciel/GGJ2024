@@ -27,18 +27,18 @@ public class SplitAttack : CardSO
 
         switch(index) {
             case 0: //Miss
-                Debug.Log($"{actor.name} try to hit {enemy.name}, hit the ground instead.");
+                DialogueSystem.Log($"{actor.name} try to hit {enemy.name}, hit the ground instead.");
                 break;
 
             case 1: //Normal
-                Debug.Log($"{actor.name} hit {enemy.name} 2 times in a row, unbelievable.");
+                DialogueSystem.Log($"{actor.name} hit {enemy.name} 2 times in a row, unbelievable.");
                 Debug.Log($"{actor.name} damage {damage * 2} hp to {enemy.name}, receiving {receivedAnger * 2} anger.");
                 enemy.receivedDamage(damage * 2);
                 enemy.receivedAnger(receivedAnger * 2);
                 break;
             
             case 2: //Chain Hit
-                Debug.Log($"{actor.name} hit {enemy.name} 2 times in a row, but it not 2 times anymore.");
+                DialogueSystem.Log($"{actor.name} hit {enemy.name} 2 times in a row, but it not 2 times anymore.");
                 Debug.Log($"{actor.name} damage {damage * hit} hp to {enemy.name}, receiving {receivedAnger * hit} anger.");
                 enemy.receivedDamage(damage * hit);
                 enemy.receivedAnger(receivedAnger * hit);

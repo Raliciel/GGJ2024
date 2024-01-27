@@ -23,14 +23,14 @@ public class ThinkMonkeyThink: CardSO
         switch(index) {
             case 0: //Fail
                 enemy.ChangeSprite(this, PoseCatagory.react2);
-                Debug.Log($"{actor.name} is gaslighting {enemy.name}. He failed miserably.");
+                DialogueSystem.Log($"{actor.name} is gaslighting {enemy.name}. He failed miserably.");
                 Debug.Log($"{enemy.name} received {receivedAnger} anger.");
                 enemy.receivedAnger(receivedAnger);
                 break;
 
             case 1: //Success
                 enemy.ChangeSprite(this, PoseCatagory.react1);
-                Debug.Log($"{actor.name} is gaslighting {enemy.name}, and he confused so hard he blushed.");
+                DialogueSystem.Log($"{actor.name} is gaslighting {enemy.name}, and he confused so hard he blushed.");
                 Debug.Log($"{enemy.name} anger has reduced by {reducedAnger}.");
                 enemy.reducedAnger(reducedAnger);
                 break;

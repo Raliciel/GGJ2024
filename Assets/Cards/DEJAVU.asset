@@ -18,13 +18,13 @@ MonoBehaviour:
   - Higher than the street
   - GAS GAS GAS
   ngUse: {fileID: -476451757, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
-  ngReact1: {fileID: 128470283, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
-  ngReact2: {fileID: 128470283, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
+  ngReact1: {fileID: -31423135, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
+  ngReact2: {fileID: -476451757, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
   mfUse: {fileID: 21300000, guid: c6f3f18985b34094e8e38ba0421ecde1, type: 3}
-  mfReact1: {fileID: 21300000, guid: 2f9d4dc025f5a8a47823a1d43d17f1b8, type: 3}
-  mfReact2: {fileID: 21300000, guid: 2f9d4dc025f5a8a47823a1d43d17f1b8, type: 3}
+  mfReact1: {fileID: 21300000, guid: 4fed585b551efba4cb4bbd2669bda4cc, type: 3}
+  mfReact2: {fileID: 21300000, guid: c6f3f18985b34094e8e38ba0421ecde1, type: 3}
   angerCost: 5
   hpCost: 5
   recoil: 5
   reducedAnger: 15
-  chance: 23000000320000000f000000
+  chance: 230000009b00000077010000

@@ -23,7 +23,7 @@ public class OrderFood : CardSO
 
         switch(index) {
             case 0: //Fail
-                Debug.Log($"{actor.name} orders food to eat, but seem he has to eat alone.");
+                DialogueSystem.Log($"{actor.name} orders food to eat, but seem he has to eat alone.");
                 Debug.Log($"{enemy.name} received {receivedAnger} anger.");
                 enemy.receivedAnger(receivedAnger);
                 Debug.Log($"{actor.name} has recovered {failedHpRecover} HP.");
@@ -31,7 +31,7 @@ public class OrderFood : CardSO
                 break;
 
             case 1: //Success
-                Debug.Log($"{actor.name} orders food to eat with {enemy.name}, both seem enjoyed.");
+                DialogueSystem.Log($"{actor.name} orders food to eat with {enemy.name}, both seem enjoyed.");
                 Debug.Log($"{enemy.name} anger has reduced by {reducedAnger}.");
                 enemy.reducedAnger(reducedAnger);
                 Debug.Log($"Both units recover {successHpRecover} HP.");
