@@ -16,7 +16,7 @@ public class ApeWithMachineGun : CardSO
 
     public override int[] DoAction(Unit actor, Unit enemy, int[] randomized = null)
     {
-        if(randomized.Length != 2 && randomized != null) { return null; }
+        if(randomized != null && randomized.Length != 2) { return null; }
 
         int index;
         int hit;

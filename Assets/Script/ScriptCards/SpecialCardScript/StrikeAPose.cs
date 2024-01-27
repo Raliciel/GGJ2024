@@ -12,7 +12,7 @@ public class StrikeAPose : CardSO
     {
         ChangeSprite(actor, PoseCatagory.use);
 
-        if (randomized.Length != 1 && randomized != null) { return null; }
+        if (randomized != null && randomized.Length != 1) { return null; }
 
         int index;
 

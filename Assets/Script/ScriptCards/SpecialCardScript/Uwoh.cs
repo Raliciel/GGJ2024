@@ -7,7 +7,7 @@ public class Uwoh: CardSO
     public int[] chance = new int[2] {60, 40};
 
     public override int[] DoAction(Unit actor, Unit enemy, int[] randomized = null) {
-        if (randomized.Length != 1 && randomized != null) { return null; }
+        if (randomized != null && randomized.Length != 1) { return null; }
 
         int index;
 

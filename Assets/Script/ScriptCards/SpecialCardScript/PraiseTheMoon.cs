@@ -9,7 +9,7 @@ public class PraiseTheMoon : CardSO
 
     public override int[] DoAction(Unit actor, Unit enemy, int[] randomized = null)
     {
-        if (randomized.Length != 1 && randomized != null) { return null; }
+        if (randomized != null && randomized.Length != 1) { return null; }
 
         int index;
 
