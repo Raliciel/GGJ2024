@@ -5,11 +5,13 @@ public class Uwoh: CardSO
     public int reducedAnger = 5;
     public int receivedAnger = 15;
     public int[] chance = new int[2] {60, 40};
+    SetAudioSound audio = SetAudioSound.instance;
 
     public override int[] DoAction(Unit actor, Unit enemy, out float timeSpent, int[] randomized = null) 
     {
         timeSpent = 2;
 
+        if (base.sfx != null) audio.PlaySFX(base.sfx);
         actor.ChangeSprite(this, PoseCatagory.use);
         if (randomized != null && randomized.Length != 1) { return null; }
 

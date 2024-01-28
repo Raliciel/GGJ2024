@@ -14,10 +14,13 @@ public class GigaMonkeBreaker : CardSO
     public int recoil = 10;
     public int recoilAnger = 5;
 
+    SetAudioSound audio = SetAudioSound.instance;
+
     public override int[] DoAction(Unit actor, Unit enemy, out float timeSpent, int[] randomized = null)
     {
         timeSpent = 2;
-        
+
+        if (base.sfx != null) audio.PlaySFX(base.sfx);
         actor.ChangeSprite(this, PoseCatagory.use);
         if(randomized != null && randomized.Length != 1) { return null; }
 

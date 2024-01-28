@@ -10,12 +10,14 @@ public class NoScope360 : CardSO
     public int receivedAnger = 25;
     public int reducedAnger = 25;
     public int[] chance = new int[2] {85, 15};
+    SetAudioSound audio = SetAudioSound.instance;
 
     public override int[] DoAction(Unit actor, Unit enemy, out float timeSpent, int[] randomized = null)
     {
         timeSpent = 2;
 
-        if(randomized != null && randomized.Length != 1) { return null; }
+        if (base.sfx != null) audio.PlaySFX(base.sfx);
+        if (randomized != null && randomized.Length != 1) { return null; }
 
         int index;
 

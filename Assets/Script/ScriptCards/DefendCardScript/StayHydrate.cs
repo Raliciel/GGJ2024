@@ -7,10 +7,12 @@ public class StayHydrate : CardSO
 {
     public int angerCost = 15;
     public int hpRecover = 10;
+    SetAudioSound audio = SetAudioSound.instance;
     public override int[] DoAction(Unit actor, Unit enemy, out float timeSpent, int[] randomized = null)
     {
         timeSpent = 2;
 
+        if (base.sfx != null) audio.PlaySFX(base.sfx);
         actor.ChangeSprite(this, PoseCatagory.use);
         if(randomized != null) return null;
 
