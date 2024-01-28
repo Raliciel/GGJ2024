@@ -184,7 +184,7 @@ MonoBehaviour:
   m_text: Test Dialogue
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: edac7da7f97e0b04dafa0a06b0a68ca8, type: 2}
-  m_sharedMaterial: {fileID: 4320822626425951264, guid: edac7da7f97e0b04dafa0a06b0a68ca8, type: 2}
+  m_sharedMaterial: {fileID: 2872063734055237867, guid: edac7da7f97e0b04dafa0a06b0a68ca8, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -501,7 +501,32 @@ MonoBehaviour:
   - {fileID: 1185006690}
   - {fileID: 145883991}
   cardPool:
+  - {fileID: 11400000, guid: b41d60cc4b82f914484676271c42f02e, type: 2}
+  - {fileID: 11400000, guid: 6745bbd0c9c90604fa073df8d8561ea1, type: 2}
+  - {fileID: 11400000, guid: 49c29e0f9b097ac428c7bc96940ab259, type: 2}
+  - {fileID: 11400000, guid: 63dcadef9e58d5844becc6531bf3cd77, type: 2}
+  - {fileID: 11400000, guid: db8e536719ee4ba448d1b73c71c52c6e, type: 2}
+  - {fileID: 11400000, guid: c877b7852539ed440a964c303e161c92, type: 2}
+  - {fileID: 11400000, guid: 10a994d921d293c43890bd4529367f94, type: 2}
+  - {fileID: 11400000, guid: 28ca3d27eefa4f3428fdcaa86873a661, type: 2}
+  - {fileID: 11400000, guid: 2ec9bdd609995a947b90441f5ccc9aec, type: 2}
+  - {fileID: 11400000, guid: c46fb4edae52c074aa9cd005d9d90a59, type: 2}
+  - {fileID: 11400000, guid: deb9300cd043ef347ae91ab2304a10b5, type: 2}
+  - {fileID: 11400000, guid: 11d8e469a2309a04898135e8a9d4855a, type: 2}
+  - {fileID: 11400000, guid: abbe5bafd01b3454dbd8cfa061539efc, type: 2}
+  - {fileID: 11400000, guid: 84941754c689ae7439ccd9560a94545a, type: 2}
+  - {fileID: 11400000, guid: dbbcf684acbc1b045a395622612c77d4, type: 2}
+  - {fileID: 11400000, guid: 602e3019801c50b47a2c5bba468c5d99, type: 2}
+  - {fileID: 11400000, guid: 60355bb3fd88a4247b02959521acb27b, type: 2}
+  - {fileID: 11400000, guid: 605a55c2defb14d429c042a710cff3ac, type: 2}
   - {fileID: 11400000, guid: 14961751baefb9744a0fffd651d6d747, type: 2}
+  - {fileID: 11400000, guid: 61757d4a92b543b49b2baa33cd3a3699, type: 2}
+  - {fileID: 11400000, guid: 2a709404c50843a42aaf36b7d11ff9cb, type: 2}
+  - {fileID: 11400000, guid: 510e3574f6e346642b1d0b8233e4daff, type: 2}
+  - {fileID: 11400000, guid: 489eab4d0f5c28f4783be3900f6434dd, type: 2}
+  - {fileID: 11400000, guid: cbe601b35efeca14bbb7c1b489fb5f70, type: 2}
+  - {fileID: 11400000, guid: dfa44d39fea0c5c408b5e27035e31cda, type: 2}
+  - {fileID: 11400000, guid: 3eebd37769f4f2244959f953327ef078, type: 2}
   cardPanel: {fileID: 1517583760}
 --- !u!4 &136884099
 Transform:
@@ -780,7 +805,7 @@ MonoBehaviour:
   m_text: Battle Replay
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: edac7da7f97e0b04dafa0a06b0a68ca8, type: 2}
-  m_sharedMaterial: {fileID: 4320822626425951264, guid: edac7da7f97e0b04dafa0a06b0a68ca8, type: 2}
+  m_sharedMaterial: {fileID: 2872063734055237867, guid: edac7da7f97e0b04dafa0a06b0a68ca8, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2355,7 +2380,7 @@ MonoBehaviour:
   m_text: Fight Again
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: edac7da7f97e0b04dafa0a06b0a68ca8, type: 2}
-  m_sharedMaterial: {fileID: 4320822626425951264, guid: edac7da7f97e0b04dafa0a06b0a68ca8, type: 2}
+  m_sharedMaterial: {fileID: 2872063734055237867, guid: edac7da7f97e0b04dafa0a06b0a68ca8, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

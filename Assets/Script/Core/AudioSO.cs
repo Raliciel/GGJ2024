@@ -8,4 +8,9 @@ public class AudioSO : ScriptableSingleton<AudioSO>
 {
     public float BGM_value = 0.5f;
     public float SFX_value = 0.5f;
+
+    public AudioClip bgm;
+    public AudioClip bgmFight;
+    public AudioClip bgmEnd1;
+    public AudioClip bgmEnd2;
 }

@@ -14,3 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BGM_value: 0.5
   SFX_value: 0.5
+  bgm: {fileID: 0}
+  bgmFight: {fileID: 0}
+  bgmEnd1: {fileID: 0}
+  bgmEnd2: {fileID: 0}
