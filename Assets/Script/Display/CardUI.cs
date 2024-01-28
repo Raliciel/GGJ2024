@@ -13,6 +13,7 @@ public class CardUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     public GameObject cardObj;
     public new TMP_Text name;
     public TMP_Text description;
+    private string _flavor;
 
     float originalY = 0;
 
@@ -21,14 +22,23 @@ public class CardUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         originalY = cardObj.transform.localPosition.y;
     }
 
-    public void DisplayCard(int i, CardSO cardInfo)
+    public void DisplayCard(int i, CardSO cardInfo, string flavor = null)
     {
         _i = i;
         GetComponent<Button>().interactable = i > -1;
         _cardInfo = cardInfo;
         SetText(name, _cardInfo.cardName);
-        SetText(description, _cardInfo.GetFlavor());
+        if (flavor == null)
+            _flavor = _cardInfo.GetFlavor();
+        else
+            _flavor = flavor;
+        SetText(description, _flavor);
         gameObject.SetActive(true);
+    }
+
+    public string GetFlavor()
+    {
+        return _flavor;
     }
 
     public void HideCard()

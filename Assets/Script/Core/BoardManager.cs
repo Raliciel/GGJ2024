@@ -66,7 +66,7 @@ public class BoardManager : MonoBehaviour
         Unit actor = Turn.get.GetCurrentUnit();
         Unit target = Turn.get.GetCurrentOpponentUnit();
 
-        float timeOnAnimation = CardFlyAnimator.get.FlyCardToFront(cardInfo, card.transform.position, 2.2f);
+        float timeOnAnimation = CardFlyAnimator.get.FlyCardToFront(cardInfo, card.transform.position, 2.2f, card.GetFlavor());
         StartCoroutine(UseCard(cardInfo, actor, target, timeOnAnimation));
     }
 

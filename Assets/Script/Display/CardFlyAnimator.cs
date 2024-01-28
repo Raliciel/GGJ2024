@@ -27,12 +27,15 @@ public class CardFlyAnimator : MonoBehaviour
         _instance = this;
     }
 
-    public float FlyCardToFront(CardSO cardInfo, Vector3 startPosition, float startSize)
+    public float FlyCardToFront(CardSO cardInfo, Vector3 startPosition, float startSize, string flavor = null)
     {
         CardUI card = Instantiate(cardPref, overlayCanvas.transform).GetComponent<CardUI>();
         card.transform.position = startPosition;
         card.transform.localScale = Vector3.one * startSize;
-        card.DisplayCard(-1,cardInfo);
+        if(flavor == null)
+            card.DisplayCard(-1,cardInfo);
+        else
+            card.DisplayCard(-1, cardInfo, flavor);
 
         card.transform.LeanMove(centerTransform.position, 0.25f);
         card.gameObject.LeanScale(Vector3.one * 2.4f, 0.5f).setDelay(0.2f).setEaseOutBack();
