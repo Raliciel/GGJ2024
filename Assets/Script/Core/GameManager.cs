@@ -1,7 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Reflection;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -26,8 +29,11 @@ public class GameManager : MonoBehaviour
         playerUnit.OnLaugh += () => { OnUnitDeath(enemyUnit, playerUnit); };
         enemyUnit.OnLaugh += () => { OnUnitDeath(playerUnit, enemyUnit); };
     }
-    public void EndGame()
+    public void EndGame(Unit winner = null)
     {
+        TMP_Text retryText = endingPad.transform.GetChild(0).GetComponentInChildren<TMP_Text>();
+        if(winner == playerUnit) retryText.text = "Next Battle";
+        else retryText.text = "Fight Again";
         endingPad.SetActive(true);
     }
     public void Restart()
@@ -37,7 +43,7 @@ public class GameManager : MonoBehaviour
     public void OnUnitDeath(Unit winner, Unit loser)
     {
         Debug.Log(winner.name + " win!");
-        EndGame();
+        EndGame(winner);
     }
 
     private void StartGame()

@@ -34,7 +34,7 @@ public class ApeWithMachineGun : CardSO
             
             hit = 0;
             for(int i = 0; i < totalHit; i++) {
-                if(UnityEngine.Random.Range(0, 1) >= 0.5) hit++;
+                if(UnityEngine.Random.Range(0f, 1f) >= 0.5) hit++;
             }
 
         } else { 

@@ -3,14 +3,17 @@ using UnityEngine;
 public static class Randomizer 
 {
     public static int random (int[] weight) {
+        int total = 0;
         for(int i = 1; i < weight.Length; i++) {
-            weight[i] += weight[i - 1];
+            total += weight[i];
         }
-        //[20, 25, 30, 25] => [20, 45, 75. 100]
+        //[20, 25, 30, 25] => total: 100
 
-        int weight_r = UnityEngine.Random.Range(0, weight[weight.Length - 1]);
+        int weight_r = UnityEngine.Random.Range(0, total);
+        Debug.Log($"{weight}, Random Weight: {weight_r}");
         for(int i = 0; i < weight.Length; i++) {
-            if(weight_r < weight[i]) return i;
+            weight_r -= weight[i];
+            if(weight_r < 0) return i;
         }
 
         return 0;
