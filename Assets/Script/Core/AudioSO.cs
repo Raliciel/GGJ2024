@@ -13,4 +13,12 @@ public class AudioSO : ScriptableSingleton<AudioSO>
     public AudioClip bgmFight;
     public AudioClip bgmEnd1;
     public AudioClip bgmEnd2;
+
+    public void OnEnable()
+    {
+        bgm = AssetDatabase.LoadAssetAtPath<AudioClip>("Assets/Sound/questionablepadthai.mp3");
+        bgmFight = AssetDatabase.LoadAssetAtPath<AudioClip>("Assets/Sound/primitiveangery.mp3");
+        bgmEnd1 = AssetDatabase.LoadAssetAtPath<AudioClip>("Assets/Sound/nofight.mp3");
+        bgmEnd2 = AssetDatabase.LoadAssetAtPath<AudioClip>("Assets/Sound/nofriend.mp3");
+    }
 }
