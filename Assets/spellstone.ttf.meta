@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 074e95731c8c3784ebabe46f255246f7
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Spellstone
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 5353233a02bf00a40a21081643d18e51, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

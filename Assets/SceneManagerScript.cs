@@ -19,4 +19,9 @@ public class SceneManagerScript : MonoBehaviour
         if (target.activeSelf) target.SetActive(false);
         else target.SetActive(true);
     }
+
+    public static void TransverseScene(int i)
+    {
+        SceneManager.LoadScene(i);
+    }
 }
