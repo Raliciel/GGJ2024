@@ -23,14 +23,14 @@ public class Uwoh: CardSO
         switch(index) {
             case 0: //Fail
                 enemy.ChangeSprite(this, PoseCatagory.react2);
-                Debug.Log($"{actor.name} want to calm {enemy.name} down with cute anime girl. He thinks he is a pedo instead, GL :D");
+                DialogueSystem.DisplayDialogue($"{actor.name} want to calm {enemy.name} down with cute anime girl. He thinks he is a pedo instead, GL :D");
                 Debug.Log($"{enemy.name} received {receivedAnger} anger.");
                 enemy.RecoverAnger(receivedAnger);
                 break;
 
             case 1: //Success
                 enemy.ChangeSprite(this, PoseCatagory.react1);
-                Debug.Log($"{actor.name} with power of god and anime on his side, he calm {enemy.name} down. Good Job!!");
+                DialogueSystem.DisplayDialogue($"{actor.name} with power of god and anime on his side, he calm {enemy.name} down. Good Job!!");
                 Debug.Log($"{enemy.name} anger has reduced by {reducedAnger}.");
                 enemy.ReduceAnger(reducedAnger);
                 break;
