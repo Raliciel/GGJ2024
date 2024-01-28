@@ -38,7 +38,7 @@ public class GameManager : MonoBehaviour
 
     IEnumerator DelayedEnd(Unit winner)
     {
-        yield return new WaitForSeconds(0.25f);
+        yield return new WaitForSeconds(1f);
         Instantiate(endingCanvasPref);
 
         TMP_Text retryText = endingPad.transform.GetChild(0).GetComponentInChildren<TMP_Text>();
@@ -52,7 +52,7 @@ public class GameManager : MonoBehaviour
     }
     public void OnUnitDeath(Unit winner, Unit loser)
     {
-        Debug.Log(winner.name + " win!");
+        Debug.Log(winner.name + " win!, on death");
         EndGame(winner);
     }
 

@@ -57,9 +57,8 @@ public class Replay : MonoBehaviour
             CardSO currentMove = replay[i].move;
             replay[i].actor.ResetState();
             currentMove.DoAction(replay[i].actor, replay[i].enemy, out float timeSpent, replay[i].randomized);
-            yield return new WaitForSeconds(timeSpent);
+            yield return new WaitForSeconds(timeSpent + 0.5f);
+            DialogueSystem.HideDialogue();
         }
-
-        GameManager.get.EndGame();
     }
 }
