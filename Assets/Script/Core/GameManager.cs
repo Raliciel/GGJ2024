@@ -57,6 +57,7 @@ public class GameManager : MonoBehaviour
     }
     public void Restart()
     {
+        Replay.get.ClearReplay();
         StartGame();
     }
     public void OnUnitDeath(Unit winner, Unit loser)

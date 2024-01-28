@@ -36,6 +36,12 @@ public class Replay : MonoBehaviour
         replay.Add(new ReplayTurn(actor, enemy, move, randomized));
     }
 
+    public void ClearReplay()
+    {
+        if(replay != null)
+            replay.Clear();
+    }
+
     public void PlayReplay() {
         Unit actor = replay[0].actor;
         Unit enemy = replay[0].enemy;
@@ -59,7 +65,7 @@ public class Replay : MonoBehaviour
             CardSO currentMove = replay[i].move;
             replay[i].actor.ResetState();
             currentMove.DoAction(replay[i].actor, replay[i].enemy, out float timeSpent, replay[i].randomized);
-            yield return new WaitForSeconds(timeSpent + 0.5f);
+            yield return new WaitForSeconds(timeSpent + 0.2f);
             DialogueSystem.HideDialogue();
         }
     }
