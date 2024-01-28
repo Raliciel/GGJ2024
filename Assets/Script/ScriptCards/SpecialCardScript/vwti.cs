@@ -28,13 +28,13 @@ public class vwti : CardSO
         switch (index) {
             case 0: //Faile
                 enemy.ChangeSprite(this, PoseCatagory.use);
-                Debug.Log(actor.name + " try shitposting " + enemy.name + ". He's not enjoyed at all.");
+                DialogueSystem.DisplayDialogue(actor.name + " try shitposting " + enemy.name + ". He's not enjoyed at all.");
                 Debug.Log(enemy.name + " received " + receivedAnger + " anger.");
                 enemy.RecoverAnger(receivedAnger);
                 break;
             
             case 1: //Normal
-                Debug.Log(actor.name + "  try shitposting " + enemy.name + ". It's a success.");
+                DialogueSystem.DisplayDialogue(actor.name + "  try shitposting " + enemy.name + ". It's a success.");
                 Debug.Log(enemy.name + " anger has reduced by " + reducedAnger);
                 enemy.ReduceAnger(reducedAnger);
                 break;

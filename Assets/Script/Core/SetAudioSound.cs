@@ -27,12 +27,12 @@ public class SetAudioSound : MonoBehaviour
     {
         switch (level)
         {
-            case (0):BGMaudio.clip = so.bgm; break;
+            case (0): BGMaudio.clip = so.bgm; break;
             case (1): BGMaudio.clip = so.bgmFight; break;
             case (2): BGMaudio.clip = so.bgmEnd1; break;
             case (3): BGMaudio.clip = so.bgmEnd2; break;
         }
-            
+
     }
 
     public void ChangeBGM(AudioClip clip)

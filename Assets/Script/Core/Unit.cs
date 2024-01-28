@@ -11,14 +11,17 @@ public class Unit : MonoBehaviour
     [SerializeField] protected int currentAngerPoint;
 
     bool isDefending;
+    bool isDied;
 
     public UnityAction OnDeath;
     public UnityAction OnLaugh;
     SpriteRenderer _renderer;
+    Sprite _sprite;
 
     private void OnEnable()
     {
         _renderer = GetComponent<SpriteRenderer>();
+        _sprite = _renderer.sprite;
         Turn.get.OnChangeTurn += OnChangeTurn;
     }
 
@@ -45,10 +48,12 @@ public class Unit : MonoBehaviour
     public void ResetState()
     {   
         isDefending = false;
+        _renderer.sprite = _sprite;
     }
 
     public void ResetStats()
     {
+        isDied = false;
         currentHealthPoint = healthPoint;
         currentAngerPoint = angerPoint;
     }
@@ -82,22 +87,39 @@ public class Unit : MonoBehaviour
         CheckIfUnitDie();
     }
 
-    public IEnumerator DelayedReduceHP(int damage, float delay)
+    public void DelayedReduceHP(int amount, float delay)
+    {
+        StartCoroutine(ReduceHPRoutine(amount, delay));
+    }
+    public void DelayedRecoverHP(int amount, float delay)
+    {
+        StartCoroutine(RecoverHPRoutine(amount, delay));
+    }
+    public void DelayedReduceAnger(int amount, float delay)
+    {
+        StartCoroutine(ReduceAngerRoutine(amount, delay));
+    }
+    public void DelayedRecoverAnger(int amount, float delay)
+    {
+        StartCoroutine(RecoverAngerRoutine(amount,delay));
+    }
+
+    IEnumerator ReduceHPRoutine(int damage, float delay)
     {
         yield return new WaitForSeconds(delay);
         ReduceHP(damage);
     }
-    public IEnumerator DelayedRecoverHP(int amount, float delay)
+    IEnumerator RecoverHPRoutine(int amount, float delay)
     {
         yield return new WaitForSeconds(delay);
         RecoverHP(amount);
     }
-    public IEnumerator DelayedReduceAnger(int amount, float delay)
+    IEnumerator ReduceAngerRoutine(int amount, float delay)
     {
         yield return new WaitForSeconds(delay);
         ReduceAnger(amount);
     }
-    public IEnumerator DelayedRecoverAnger(int amount, float delay)
+    IEnumerator RecoverAngerRoutine(int amount, float delay)
     {
         yield return new WaitForSeconds(delay);
         RecoverAnger(amount);
@@ -178,16 +200,25 @@ public class Unit : MonoBehaviour
         unoccupied = true;
     }
 
+    public bool IsDied()
+    {
+        return isDied;
+    }
+
     private void CheckIfUnitDie()
     {
+        if (IsDied())
+            return;
         if (currentHealthPoint <= 0)
         {
+            isDied = true;
             currentHealthPoint = 0;
             OnDeath?.Invoke();
             return;
         }
         if (currentAngerPoint <= 0)
         {
+            isDied = true;
             currentAngerPoint = 0;
             OnLaugh?.Invoke();
         }

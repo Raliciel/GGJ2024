@@ -14,8 +14,7 @@ public class EnemyUnit : Unit
     {
         if(unit == this )
         {
-            //Is not die
-            if(unit.GetCurrentHealthPoint() > 0 && unit.GetCurrentAngerPoint() > 0)
+            if(!unit.IsDied())
                 StartCoroutine(EnemyDoAction());
         }
     }

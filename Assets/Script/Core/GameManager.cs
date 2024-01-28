@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
 {
     public Unit playerUnit;
     public Unit enemyUnit;
+    public GameObject endingCanvasPref;
     public GameObject endingPad;
 
     private static GameManager _instance;
@@ -31,8 +32,17 @@ public class GameManager : MonoBehaviour
     }
     public void EndGame(Unit winner = null)
     {
+        Turn.get.StopTurn();
+        StartCoroutine(DelayedEnd(winner));
+    }
+
+    IEnumerator DelayedEnd(Unit winner)
+    {
+        yield return new WaitForSeconds(0.25f);
+        Instantiate(endingCanvasPref);
+
         TMP_Text retryText = endingPad.transform.GetChild(0).GetComponentInChildren<TMP_Text>();
-        if(winner == playerUnit) retryText.text = "Next Battle";
+        if (winner == playerUnit) retryText.text = "Next Battle";
         else retryText.text = "Fight Again";
         endingPad.SetActive(true);
     }
@@ -48,6 +58,7 @@ public class GameManager : MonoBehaviour
 
     private void StartGame()
     {
+        //CardFlyAnimator.get.ClearFalledCards();
         Turn.get.InitTurnUnits(playerUnit,enemyUnit);
         playerUnit.ResetState();
         enemyUnit.ResetState();

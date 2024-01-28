@@ -5,7 +5,7 @@ using UnityEngine;
 public class BoardManager : MonoBehaviour
 {
     public List<CardUI> cardUIs = new List<CardUI>();
-    public List<CardSO> cardPool = new List<CardSO>();
+    public CardPoolSO cardPool;
     public GameObject cardPanel;
 
     private static BoardManager _instance;
@@ -38,7 +38,7 @@ public class BoardManager : MonoBehaviour
         //Assume we have 5 cards
         for(int i =0; i < cardUIs.Count; i++)
         {
-            cardUIs[i].DisplayCard(i, RandomGetACard());
+            cardUIs[i].DisplayCard(i, cardPool.RandomGetACard());
         }
         cardPanel.SetActive(true);
     }
@@ -76,17 +76,9 @@ public class BoardManager : MonoBehaviour
 
         Unit actor = Turn.get.GetCurrentUnit();
         Unit target = Turn.get.GetCurrentOpponentUnit();
-        CardSO card = RandomGetACard();
+        CardSO card = cardPool.RandomGetACard();
 
         float timeOnAnimation = CardFlyAnimator.get.FlyCardToFront(card, _cam.WorldToScreenPoint(actor.transform.position), 0.6f);
         StartCoroutine(UseCard(card, actor, target, timeOnAnimation));
-    }
-
-    public CardSO RandomGetACard()
-    {
-        int r = Random.Range(0, cardPool.Count);
-        CardSO card = cardPool[r];
-        //Random flavour and effect value here
-        return card;
     }
 }

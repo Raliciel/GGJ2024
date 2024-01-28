@@ -55,10 +55,10 @@ public class ApeWithMachineGun : CardSO
                 Debug.Log($"{actor.name} damage {damage * hit} to {enemy.name}, receiving {(int)Mathf.Ceil(receivedAnger * hit)} anger.");
 
                 for(int i = 0; i < hit; i++) {
-                    enemy.ChangeSprite(this, PoseCatagory.react1, 0.1f);
-                    enemy.ReduceHP(damage);
+                    enemy.ChangeSprite(this, PoseCatagory.react1, 0.1f, 0.2f * i);
+                    enemy.DelayedReduceHP(damage, 0.2f * i);
                 }
-                enemy.RecoverAnger((int)Mathf.Ceil(receivedAnger * hit));
+                enemy.RecoverAnger((int)Mathf.Ceil(receivedAnger));
 
                 timeSpent = 4;
                 break;

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BGM_value: 0.5
   SFX_value: 0.5
-  bgm: {fileID: 0}
-  bgmFight: {fileID: 0}
-  bgmEnd1: {fileID: 0}
-  bgmEnd2: {fileID: 0}
+  bgm: {fileID: 8300000, guid: 37ff3a8a32e5c93448ed98d4592a4c2f, type: 3}
+  bgmFight: {fileID: 8300000, guid: ce41dda66f7bb724ca24d49f8fd931c7, type: 3}
+  bgmEnd1: {fileID: 8300000, guid: e1f7b5ea227ff7a44beb42a30f7049b3, type: 3}
+  bgmEnd2: {fileID: 8300000, guid: ea95d718061c8f94d96ea92cedf6470c, type: 3}
