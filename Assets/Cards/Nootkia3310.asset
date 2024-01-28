@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14bca9c7a3e060e45b6ac7abb2cd3e87, type: 3}
+  m_Name: Nootkia3310
+  m_EditorClassIdentifier: 
+  cardName: Nootkia3310
+  cardFlavor:
+  - A rare hooman phone
+  - Non-destructable object to be known by man.
+  - Classic. Strong.
+  ngUse: {fileID: 1175125688, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
+  ngReact1: {fileID: -31423135, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
+  ngReact2: {fileID: 128470283, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
+  mfUse: {fileID: 21300000, guid: 5efcdb3cdf00a9f4c9b92d6011a01bad, type: 3}
+  mfReact1: {fileID: 21300000, guid: 4fed585b551efba4cb4bbd2669bda4cc, type: 3}
+  mfReact2: {fileID: 21300000, guid: 2f9d4dc025f5a8a47823a1d43d17f1b8, type: 3}
+  sfx: {fileID: 8300000, guid: d252b833c605fc340b1ecf0e4ebe2224, type: 3}
+  hpCost: 10
+  receivedAnger: 5
+  chance: 1e00000046000000

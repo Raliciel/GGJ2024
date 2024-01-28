@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2595d25dfb838f848a8ec548e56c4599, type: 3}
+  m_Name: NoScope360
+  m_EditorClassIdentifier: 
+  cardName: NoScope360
+  cardFlavor:
+  - Lak Hua KomKom
+  - MLG NO SCOPE 360 GET REKT M8
+  - Zoom is for the weak.
+  ngUse: {fileID: -188670121, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
+  ngReact1: {fileID: 1898772496, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
+  ngReact2: {fileID: -52120991, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
+  mfUse: {fileID: 21300000, guid: b534e84713634aa4194116c11e5a0c2c, type: 3}
+  mfReact1: {fileID: 21300000, guid: 0cca57eca8356ae4f9e8029e44497ee6, type: 3}
+  mfReact2: {fileID: 21300000, guid: 8d7d7081a03a10f47a08050c5162bbe6, type: 3}
+  sfx: {fileID: 8300000, guid: e44976acd5fe4104d81e4fc20ea31695, type: 3}
+  angerCost: -15
+  damage: 50
+  receivedAnger: 25
+  reducedAnger: 25
+  chance: 550000000f000000

@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ec0b7c0f1ff8c74cb5327ce611e5f4f, type: 3}
+  m_Name: ThinkMonkeyThink
+  m_EditorClassIdentifier: 
+  cardName: ThinkMonkeyThink
+  cardFlavor:
+  - Don't think Monke.
+  - Think... Monke.
+  ngUse: {fileID: 1293143045, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
+  ngReact1: {fileID: -622639784, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
+  ngReact2: {fileID: 598146730, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
+  mfUse: {fileID: 21300000, guid: a4ed0ac29cc7dcf4aaf9a2aba0a92dde, type: 3}
+  mfReact1: {fileID: 21300000, guid: d5071251b6673c342bceb51547353c71, type: 3}
+  mfReact2: {fileID: 21300000, guid: c9ae863011840a14cae58ae9b466fa0b, type: 3}
+  sfx: {fileID: 8300000, guid: 7774127e4fc33744791242c6dc0e75be, type: 3}
+  angerCost: 5
+  reducedAnger: 20
+  receivedAnger: 5
+  chance: 4100000023000000

@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae4ba5107e7d95f4a910f3dc929789f8, type: 3}
+  m_Name: BodySlam
+  m_EditorClassIdentifier: 
+  cardName: BodySlam
+  cardFlavor:
+  - massive boobonger bigass bobongas
+  - Monke's ELBOWWWWW
+  - Smash Or Pass
+  ngUse: {fileID: 1293143045, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
+  ngReact1: {fileID: 1898772496, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
+  ngReact2: {fileID: -622639784, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
+  mfUse: {fileID: 21300000, guid: 0ac66b4b912c3904ea9e77b3cd9c7ef3, type: 3}
+  mfReact1: {fileID: 21300000, guid: 0cca57eca8356ae4f9e8029e44497ee6, type: 3}
+  mfReact2: {fileID: 21300000, guid: d5071251b6673c342bceb51547353c71, type: 3}
+  sfx: {fileID: 8300000, guid: dee2ebb148c1155469e88b8602faf296, type: 3}
+  damage: 20
+  recoil: 5
+  receivedAnger: 5
+  angerCost: 10
+  chance: 1e00000046000000
