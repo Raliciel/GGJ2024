@@ -34,7 +34,7 @@ public class GigaMonkeBreaker : CardSO
         switch(index) {
             case 0: //Miss
                 enemy.ChangeSprite(this, PoseCatagory.react2);
-                Debug.Log($"{actor.name} uses GigaMonkeBreaker into {enemy.name}, however the drill exploded.");
+                DialogueSystem.DisplayDialogue($"{actor.name} uses GigaMonkeBreaker into {enemy.name}, however the drill exploded.");
                 Debug.Log($"{actor.name} damage {recoil} hp to {actor.name}, also received {recoilAnger} anger.");
                 actor.ReduceHP(recoil);
                 actor.RecoverAnger(recoilAnger);
@@ -42,7 +42,7 @@ public class GigaMonkeBreaker : CardSO
 
             case 1: //Normal
                 enemy.ChangeSprite(this, PoseCatagory.react1);
-                Debug.Log($"{actor.name} use GigaMonkeBreaker and drill {enemy.name} out of existence.");
+                DialogueSystem.DisplayDialogue($"{actor.name} use GigaMonkeBreaker and drill {enemy.name} out of existence.");
                 Debug.Log($"{actor.name} damage {damage} hp to {enemy.name}, receiving {receivedAnger} anger.");
                 enemy.ReduceHP(damage);
                 enemy.RecoverAnger(receivedAnger);

@@ -16,7 +16,6 @@ public class DEJAVU : CardSO
         timeSpent = 2;
 
         if (base.sfx != null) audio.PlaySFX(base.sfx);
-        actor.ChangeSprite(this, PoseCatagory.use);
         if (randomized != null && randomized.Length != 1) { return null; }
 
         int index;
@@ -34,10 +33,12 @@ public class DEJAVU : CardSO
                 actor.ReduceHP(recoil);
                 break;
             case 1: //Deja Vu
+                actor.ChangeSprite(this, PoseCatagory.use);
                 DialogueSystem.DisplayDialogue($"While feeling DEJA VU, {actor.name} drive too fast for {enemy.name} to catch.");
                 actor.SetDefendState(true);
                 break;
             case 2: //Kanzen DORIFUTO
+                actor.ChangeSprite(this, PoseCatagory.use);
                 enemy.ChangeSprite(this, PoseCatagory.react1);
                 DialogueSystem.DisplayDialogue($"Kanzen DORIFUTO! With perfect drive, {actor.name} conquers the road and leaves everyone in awe.");
                 actor.SetDefendState(true);

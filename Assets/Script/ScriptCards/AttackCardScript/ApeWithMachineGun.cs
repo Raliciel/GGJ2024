@@ -51,10 +51,13 @@ public class ApeWithMachineGun : CardSO
                 break;
             
             case 1: //Normal
-                enemy.ChangeSprite(this, PoseCatagory.react1);
                 DialogueSystem.DisplayDialogue($"{actor.name} use machine gun and hit {hit} out of {totalHit} shot.");
                 Debug.Log($"{actor.name} damage {damage * hit} to {enemy.name}, receiving {(int)Mathf.Ceil(receivedAnger * hit)} anger.");
-                enemy.ReduceHP(damage * hit);
+
+                for(int i = 0; i < hit; i++) {
+                    enemy.ChangeSprite(this, PoseCatagory.react1, 0.1f);
+                    enemy.ReduceHP(damage);
+                }
                 enemy.RecoverAnger((int)Mathf.Ceil(receivedAnger * hit));
 
                 timeSpent = 4;

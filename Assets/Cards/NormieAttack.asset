@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 30b158b4efcc7fc4cb9d019448abeb49, type: 3}
-  m_Name: NormalAttack
+  m_Name: NormieAttack
   m_EditorClassIdentifier: 
-  cardName: NormalAttack
+  cardName: NormieAttack
   cardFlavor:
   - Do you dare to punch a friend !?
+  - Eat the fist, my friend.
   ngUse: {fileID: -1114854290, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
   ngReact1: {fileID: 1898772496, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
   ngReact2: {fileID: -52120991, guid: 2fa8b583817567e41892b69073c6b378, type: 3}

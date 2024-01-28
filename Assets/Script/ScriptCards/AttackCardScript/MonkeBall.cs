@@ -15,6 +15,7 @@ public class MonkeBall : CardSO
         timeSpent = 2;
         
         if (base.sfx != null) audio.PlaySFX(base.sfx);
+        actor.ChangeSprite(this, PoseCatagory.use);
         if (randomized != null && randomized.Length != 1) { return null; }
 
         int index;
@@ -26,10 +27,12 @@ public class MonkeBall : CardSO
 
         switch(index) {
             case 0: //Miss
+                enemy.ChangeSprite(this, PoseCatagory.react2);
                 DialogueSystem.DisplayDialogue( $"{actor.name} uses MonkeBall, and the Monke doesn't come out.");
                 break;
 
             case 1: //Normal
+                enemy.ChangeSprite(this, PoseCatagory.react1);
                 DialogueSystem.DisplayDialogue($"{actor.name} uses MonkeBall. It came out with a bat and hit it into {enemy.name} face");
                 Debug.Log($"{actor.name} damage {damage} to {enemy.name}");
                 enemy.ReduceHP(damage);

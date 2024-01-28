@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 395c9651eb399b94c952d2d8ef914b74, type: 3}
+  m_Name: SplitAttack
+  m_EditorClassIdentifier: 
+  cardName: 
+  cardFlavor: []
+  ngUse: {fileID: 0}
+  ngReact1: {fileID: 0}
+  ngReact2: {fileID: 0}
+  mfUse: {fileID: 0}
+  mfReact1: {fileID: 0}
+  mfReact2: {fileID: 0}
+  sfx: {fileID: 0}
+  damage: 5
+  receivedAnger: 3
+  angerCost: 7
+  chance: 0f0000003c00000019000000
+  addHit: 3c0000001e0000000a000000

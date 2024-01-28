@@ -16,6 +16,7 @@ MonoBehaviour:
   cardFlavor:
   - Machine Gun go brrrrrrrrrrrr
   - AHHHHHHHH
+  - Monke with a gun, what could go wrong.
   ngUse: {fileID: -1016450607, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
   ngReact1: {fileID: -31423135, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
   ngReact2: {fileID: -52120991, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
