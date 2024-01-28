@@ -7,13 +7,13 @@ public class StrikeAPose : CardSO
     public int reducedAnger = 15;
     public int receivedAnger = 5;
     public int[] chance = new int[2] {25, 75};
-    SetAudioSound audio = SetAudioSound.instance;
+    
 
     public override int[] DoAction(Unit actor, Unit enemy, out float timeSpent, int[] randomized = null)
     {
         timeSpent = 2;
 
-        if (base.sfx != null) audio.PlaySFX(base.sfx);
+        if (base.sfx != null) SetAudioSound.instance.PlaySFX(base.sfx);
         actor.ChangeSprite(this, PoseCatagory.use);
 
         if (randomized != null && randomized.Length != 1) { return null; }

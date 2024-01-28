@@ -20,7 +20,7 @@ MonoBehaviour:
   mfUse: {fileID: 0}
   mfReact1: {fileID: 0}
   mfReact2: {fileID: 0}
-  sfx: {fileID: 0}
+  sfx: {fileID: 8300000, guid: 5ad4f7d9e0a712b48a3d7741148c1245, type: 3}
   angerCost: -15
   receivedAnger: 5
   chance: 1e00000046000000

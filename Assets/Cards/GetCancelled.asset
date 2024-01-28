@@ -20,7 +20,7 @@ MonoBehaviour:
   mfUse: {fileID: 0}
   mfReact1: {fileID: 0}
   mfReact2: {fileID: 0}
-  sfx: {fileID: 0}
+  sfx: {fileID: 8300000, guid: 8a3b8ed924527664c87994ceed068d17, type: 3}
   damage: 10
   angerCost: 5
   receivedAnger: 10
