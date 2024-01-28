@@ -14,6 +14,7 @@ public class Turn : MonoBehaviour
     public UnityAction<Unit> OnChangeTurn;
     public UnityAction<Unit> OnPlayerTurn;
 
+
     private static Turn _instance;
     public static Turn get => _instance;
 
@@ -30,6 +31,10 @@ public class Turn : MonoBehaviour
         SetTurn(player);
     }
 
+    public void StopTurn()
+    {
+        SetTurn(null);
+    }
     public Unit GetCurrentUnit()
     {
         return turnOwner;
@@ -45,6 +50,8 @@ public class Turn : MonoBehaviour
 
     public void EndTurn()
     {
+        if (GetCurrentUnit() == null)
+            return;
         turnOwner = GetCurrentOpponentUnit();
         if(turnOwner.IsDefending()) turnOwner.SetDefendState(false);
         OnChangeTurn?.Invoke(turnOwner);

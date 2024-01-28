@@ -57,6 +57,8 @@ public class CardFlyAnimator : MonoBehaviour
 
     public void ClearFalledCards()
     {
+        if (_cards == null)
+            return;
         for(int i = 0; i < _cards.Count; i++)
         {
             Destroy(_cards[i]);

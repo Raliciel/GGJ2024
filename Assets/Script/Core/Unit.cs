@@ -16,10 +16,12 @@ public class Unit : MonoBehaviour
     public UnityAction OnDeath;
     public UnityAction OnLaugh;
     SpriteRenderer _renderer;
+    Sprite _sprite;
 
     private void OnEnable()
     {
         _renderer = GetComponent<SpriteRenderer>();
+        _sprite = _renderer.sprite;
         Turn.get.OnChangeTurn += OnChangeTurn;
     }
 
@@ -46,6 +48,7 @@ public class Unit : MonoBehaviour
     public void ResetState()
     {   
         isDefending = false;
+        _renderer.sprite = _sprite;
     }
 
     public void ResetStats()

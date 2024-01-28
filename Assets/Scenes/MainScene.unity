@@ -184,7 +184,7 @@ MonoBehaviour:
   m_text: Test Dialogue
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: edac7da7f97e0b04dafa0a06b0a68ca8, type: 2}
-  m_sharedMaterial: {fileID: 2872063734055237867, guid: edac7da7f97e0b04dafa0a06b0a68ca8, type: 2}
+  m_sharedMaterial: {fileID: -2943775880741470165, guid: edac7da7f97e0b04dafa0a06b0a68ca8, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -543,6 +543,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerUnit: {fileID: 1768967591}
   enemyUnit: {fileID: 818474233}
+  endingCanvasPref: {fileID: 7814412331082166605, guid: d049acdd4e1055e4eb0a18a6d4b4c3d3, type: 3}
   endingPad: {fileID: 232148841}
 --- !u!114 &136884102
 MonoBehaviour:
@@ -779,7 +780,7 @@ MonoBehaviour:
   m_text: Battle Replay
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: edac7da7f97e0b04dafa0a06b0a68ca8, type: 2}
-  m_sharedMaterial: {fileID: 2872063734055237867, guid: edac7da7f97e0b04dafa0a06b0a68ca8, type: 2}
+  m_sharedMaterial: {fileID: -2943775880741470165, guid: edac7da7f97e0b04dafa0a06b0a68ca8, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2354,7 +2355,7 @@ MonoBehaviour:
   m_text: Fight Again
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: edac7da7f97e0b04dafa0a06b0a68ca8, type: 2}
-  m_sharedMaterial: {fileID: 2872063734055237867, guid: edac7da7f97e0b04dafa0a06b0a68ca8, type: 2}
+  m_sharedMaterial: {fileID: -2943775880741470165, guid: edac7da7f97e0b04dafa0a06b0a68ca8, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
