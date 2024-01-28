@@ -15,6 +15,8 @@ public class SplitAttack : CardSO
 
         if (base.sfx != null) SetAudioSound.instance.PlaySFX(base.sfx);
         if (randomized != null && randomized.Length != 2) { return null; }
+
+        actor.ChangeSprite(this, PoseCatagory.use);
         
         int index;
         int hit;
@@ -30,25 +32,34 @@ public class SplitAttack : CardSO
 
         switch(index) {
             case 0: //Miss
+                enemy.ChangeSprite(this, PoseCatagory.react2);
                 DialogueSystem.DisplayDialogue($"{actor.name} try to hit {enemy.name}, hit the ground instead.");
                 break;
 
             case 1: //Normal
                 DialogueSystem.DisplayDialogue($"{actor.name} hit {enemy.name} 2 times in a row, unbelievable.");
                 Debug.Log($"{actor.name} damage {damage * 2} hp to {enemy.name}, receiving {receivedAnger * 2} anger.");
-                enemy.ReduceHP(damage * 2);
-                enemy.RecoverAnger(receivedAnger * 2);
+                
+                for(int i = 0; i < 2; i++) {
+                    enemy.ChangeSprite(this, PoseCatagory.react1, 0.2f, 0.3f * i);
+                    enemy.DelayedReduceHP(damage, 0.3f * i);
+                    enemy.DelayedRecoverAnger(receivedAnger, 0.3f * i);
+                }
 
-                timeSpent = 4;
+                timeSpent = 2f;
                 break;
             
             case 2: //Chain Hit
                 DialogueSystem.DisplayDialogue($"{actor.name} hit {enemy.name} 2 times in a row, but it not 2 times anymore.");
                 Debug.Log($"{actor.name} damage {damage * hit} hp to {enemy.name}, receiving {receivedAnger * hit} anger.");
-                enemy.ReduceHP(damage * hit);
-                enemy.RecoverAnger(receivedAnger * hit);
+                
+                for(int i = 0; i < hit; i++) {
+                    enemy.ChangeSprite(this, PoseCatagory.react1, 0.2f, 0.3f * i);
+                    enemy.DelayedReduceHP(damage, 0.3f * i);
+                    enemy.DelayedRecoverAnger(receivedAnger, 0.3f * i);
+                }
 
-                timeSpent = 5;
+                timeSpent = 2f;
                 break;
         }
 

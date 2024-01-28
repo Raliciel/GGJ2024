@@ -14,8 +14,6 @@ public class ApeWithMachineGun : CardSO
 
     public int recoil = 5;
 
-    
-
     public override int[] DoAction(Unit actor, Unit enemy, out float timeSpent, int[] randomized = null)
     {
         timeSpent = 2;
@@ -60,7 +58,7 @@ public class ApeWithMachineGun : CardSO
                 }
                 enemy.RecoverAnger((int)Mathf.Ceil(receivedAnger));
 
-                timeSpent = 4;
+                timeSpent = 3f;
                 break;
         }
 

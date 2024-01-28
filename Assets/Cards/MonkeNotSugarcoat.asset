@@ -18,10 +18,10 @@ MonoBehaviour:
   - Monke is not gonna sugarcoat it.
   ngUse: {fileID: -1098880185, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
   ngReact1: {fileID: -1275527901, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
-  ngReact2: {fileID: 21300000, guid: 8d7d7081a03a10f47a08050c5162bbe6, type: 3}
+  ngReact2: {fileID: 1257595026, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
   mfUse: {fileID: 21300000, guid: 0fe850d088e571c4aadba364e1e23140, type: 3}
   mfReact1: {fileID: 21300000, guid: b55a76522a9987747a8fdd814795c563, type: 3}
-  mfReact2: {fileID: 0}
+  mfReact2: {fileID: 21300000, guid: 8d7d7081a03a10f47a08050c5162bbe6, type: 3}
   sfx: {fileID: 8300000, guid: 9708361a606604244ba78a1a8ba12560, type: 3}
   angerCost: 20
   damage: 10
