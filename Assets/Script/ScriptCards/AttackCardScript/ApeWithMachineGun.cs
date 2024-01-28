@@ -14,8 +14,10 @@ public class ApeWithMachineGun : CardSO
 
     public int recoil = 5;
 
-    public override int[] DoAction(Unit actor, Unit enemy, int[] randomized = null)
+    public override int[] DoAction(Unit actor, Unit enemy, out float timeSpent, int[] randomized = null)
     {
+        timeSpent = 2;
+
         actor.ChangeSprite(this, PoseCatagory.use);
         if(randomized != null && randomized.Length != 2) { return null; }
 
@@ -51,6 +53,8 @@ public class ApeWithMachineGun : CardSO
                 Debug.Log($"{actor.name} damage {damage * hit} to {enemy.name}, receiving {(int)Mathf.Ceil(receivedAnger * hit)} anger.");
                 enemy.receivedDamage(damage * hit);
                 enemy.receivedAnger((int)Mathf.Ceil(receivedAnger * hit));
+
+                timeSpent = 4;
                 break;
         }
 

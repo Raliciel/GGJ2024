@@ -33,7 +33,7 @@ public abstract class CardSO: ScriptableObject {
     
     //uncomment this if everything is done.
 
-    public abstract int[] DoAction(Unit actor, Unit target, int[] randomized = null);
+    public abstract int[] DoAction(Unit actor, Unit target, out float timeSpent, int[] randomized = null);
 
     public string GetFlavor()
     {

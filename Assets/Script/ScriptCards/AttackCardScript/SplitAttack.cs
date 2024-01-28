@@ -9,8 +9,10 @@ public class SplitAttack : CardSO
     public int[] chance = new int[3] {15, 60, 25};
     public int[] addHit = new int[3] {60, 30, 10};
 
-    public override int[] DoAction(Unit actor, Unit enemy, int[] randomized = null)
+    public override int[] DoAction(Unit actor, Unit enemy, out float timeSpent, int[] randomized = null)
     {
+        timeSpent = 2;
+
         if(randomized != null && randomized.Length != 2) { return null; }
         
         int index;
@@ -35,6 +37,8 @@ public class SplitAttack : CardSO
                 Debug.Log($"{actor.name} damage {damage * 2} hp to {enemy.name}, receiving {receivedAnger * 2} anger.");
                 enemy.receivedDamage(damage * 2);
                 enemy.receivedAnger(receivedAnger * 2);
+
+                timeSpent = 4;
                 break;
             
             case 2: //Chain Hit
@@ -42,6 +46,8 @@ public class SplitAttack : CardSO
                 Debug.Log($"{actor.name} damage {damage * hit} hp to {enemy.name}, receiving {receivedAnger * hit} anger.");
                 enemy.receivedDamage(damage * hit);
                 enemy.receivedAnger(receivedAnger * hit);
+
+                timeSpent = 5;
                 break;
         }
 

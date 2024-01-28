@@ -6,8 +6,10 @@ using UnityEngine;
 public class LifeCouldBeDream : CardSO
 {   
     public int angerCost = 15;
-    public override int[] DoAction(Unit actor, Unit enemy, int[] randomized = null)
+    public override int[] DoAction(Unit actor, Unit enemy, out float timeSpent, int[] randomized = null)
     {
+        timeSpent = 2;
+
         actor.ChangeSprite(this, PoseCatagory.use);
         enemy.ChangeSprite(this, PoseCatagory.react1);
         if (randomized != null) return null;

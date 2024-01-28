@@ -9,7 +9,10 @@ public class OrderFood : CardSO
     public int failedHpRecover = 15;
     public int[] chance = new int[2] {20, 80}; 
 
-    public override int[] DoAction(Unit actor, Unit enemy, int[] randomized = null) {
+    public override int[] DoAction(Unit actor, Unit enemy, out float timeSpent, int[] randomized = null) 
+    {
+        timeSpent = 2;
+        
         ChangeSprite(actor, PoseCatagory.use);
 
         if (randomized != null && randomized.Length != 1) { return null; }

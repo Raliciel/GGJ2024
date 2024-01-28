@@ -7,8 +7,10 @@ public class StayHydrate : CardSO
 {
     public int angerCost = 15;
     public int hpRecover = 10;
-    public override int[] DoAction(Unit actor, Unit enemy, int[] randomized = null)
+    public override int[] DoAction(Unit actor, Unit enemy, out float timeSpent, int[] randomized = null)
     {
+        timeSpent = 2;
+
         actor.ChangeSprite(this, PoseCatagory.use);
         if(randomized != null) return null;
 

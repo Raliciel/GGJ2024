@@ -9,9 +9,10 @@ public class BSOD: CardSO
     public int receivedAnger = 15;
     public int[] chance = new int[2] {70, 30};
 
-    public override int[] DoAction(Unit actor, Unit enemy, int[] randomized = null) 
+    public override int[] DoAction(Unit actor, Unit enemy, out float timeSpent, int[] randomized = null) 
     {
-        
+        timeSpent = 2;
+
         if (randomized != null && randomized.Length != 1) { return null; }
 
         int index;

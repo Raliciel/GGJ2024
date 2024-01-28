@@ -9,8 +9,10 @@ public class MonkeBall : CardSO
     public int angerCost = 10;
     public int[] chance = new int[2] {50, 50};
 
-    public override int[] DoAction(Unit actor, Unit enemy, int[] randomized = null)
+    public override int[] DoAction(Unit actor, Unit enemy, out float timeSpent, int[] randomized = null)
     {
+        timeSpent = 2;
+        
         if(randomized != null && randomized.Length != 1) { return null; }
 
         int index;
