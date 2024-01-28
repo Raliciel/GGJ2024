@@ -29,14 +29,14 @@ public class BodySlam : CardSO
         switch (index) {
             case 0: //Miss
                 actor.ChangeSprite(this, PoseCatagory.react2);
-                Debug.Log($"{actor.name} body slams the ground so hard.");
+                DialogueSystem.DisplayDialogue($"{actor.name} body slams the ground so hard.");
                 Debug.Log($"{actor.name} damage {recoil * 2} hp to {actor.name}");
                 actor.ReduceHP(recoil * 2);
                 break;
             
             case 1:
                 enemy.ChangeSprite(this, PoseCatagory.react1);
-                Debug.Log($"{actor.name} body slams into {enemy.name} so hard they roll altogether.");
+                DialogueSystem.DisplayDialogue($"{actor.name} body slams into {enemy.name} so hard they roll altogether.");
                 Debug.Log($"{actor.name} damage {damage} hp to {enemy.name}, receiving {receivedAnger} anger.");
                 enemy.ReduceHP(damage);
                 enemy.RecoverAnger(receivedAnger);
