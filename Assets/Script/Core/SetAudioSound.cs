@@ -9,6 +9,7 @@ public class SetAudioSound : MonoBehaviour
     [SerializeField] AudioSource BGMaudio;
     [SerializeField] AudioSource SFXaudio;
     public AudioSO so;
+    int l;
 
     public void Awake()
     {
@@ -25,14 +26,15 @@ public class SetAudioSound : MonoBehaviour
 
     private void OnLevelWasLoaded(int level)
     {
-        switch (level)
+        l = SceneManager.GetActiveScene().buildIndex;
+        switch (l)
         {
             case (0): BGMaudio.clip = so.bgm; break;
             case (1): BGMaudio.clip = so.bgmFight; break;
             case (2): BGMaudio.clip = so.bgmEnd1; break;
             case (3): BGMaudio.clip = so.bgmEnd2; break;
         }
-
+        BGMaudio.Play();
     }
 
     public void ChangeBGM(AudioClip clip)

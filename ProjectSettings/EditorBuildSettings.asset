@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/PacificeEnd.unity
+    guid: f389f379c9bb58149918f01e62421ad5
+  - enabled: 1
+    path: Assets/Scenes/GenocideEnd.unity
+    guid: 0500ae94bec67ab4f98c8b3b70d8f940
   m_configObjects: {}
