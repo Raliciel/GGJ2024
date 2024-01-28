@@ -21,7 +21,6 @@ public class GigaMonkeBreaker : CardSO
         timeSpent = 2;
 
         if (base.sfx != null) SetAudioSound.instance.PlaySFX(base.sfx);
-        actor.ChangeSprite(this, PoseCatagory.use);
         if(randomized != null && randomized.Length != 1) { return null; }
 
         int index;
@@ -41,6 +40,7 @@ public class GigaMonkeBreaker : CardSO
                 break;
 
             case 1: //Normal
+                actor.ChangeSprite(this, PoseCatagory.use);
                 enemy.ChangeSprite(this, PoseCatagory.react1);
                 DialogueSystem.DisplayDialogue($"{actor.name} use GigaMonkeBreaker and drill {enemy.name} out of existence.");
                 Debug.Log($"{actor.name} damage {damage} hp to {enemy.name}, receiving {receivedAnger} anger.");

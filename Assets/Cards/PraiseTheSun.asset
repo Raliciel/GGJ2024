@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: PraiseTheSun
   m_EditorClassIdentifier: 
   cardName: PraiseTheSun
-  cardFlavor: []
+  cardFlavor:
+  - For the Sun
   ngUse: {fileID: -1046655102, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
   ngReact1: {fileID: -1046655102, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
   ngReact2: {fileID: 128470283, guid: 2fa8b583817567e41892b69073c6b378, type: 3}

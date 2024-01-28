@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: ThinkMonkeyThink
   cardFlavor:
-  - Strike a pose.
+  - Don't think Monke.
+  - Think... Monke.
   ngUse: {fileID: 1293143045, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
   ngReact1: {fileID: -622639784, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
   ngReact2: {fileID: 598146730, guid: 2fa8b583817567e41892b69073c6b378, type: 3}

@@ -15,6 +15,7 @@ MonoBehaviour:
   cardName: Uwoh
   cardFlavor:
   - C CUNNYYYYYY!!!!
+  - Show him your motivation.
   ngUse: {fileID: -1526588820, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
   ngReact1: {fileID: 132245998, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
   ngReact2: {fileID: -52120991, guid: 2fa8b583817567e41892b69073c6b378, type: 3}

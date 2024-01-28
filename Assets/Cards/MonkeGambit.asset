@@ -16,6 +16,7 @@ MonoBehaviour:
   cardFlavor:
   - Kakigurai school
   - RNG BULLSHIT GO
+  - Let's roll the dice.
   ngUse: {fileID: 1220942241, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
   ngReact1: {fileID: 1960510320, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
   ngReact2: {fileID: 598146730, guid: 2fa8b583817567e41892b69073c6b378, type: 3}

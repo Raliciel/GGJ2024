@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: GetCancelled
   m_EditorClassIdentifier: 
   cardName: Get Cancelled
-  cardFlavor: []
+  cardFlavor:
+  - Use the power of the internet
+  - We live in the society
   ngUse: {fileID: 1993855708, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
   ngReact1: {fileID: -52120991, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
   ngReact2: {fileID: -52120991, guid: 2fa8b583817567e41892b69073c6b378, type: 3}

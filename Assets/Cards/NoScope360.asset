@@ -16,6 +16,7 @@ MonoBehaviour:
   cardFlavor:
   - Lak Hua KomKom
   - MLG NO SCOPE 360 GET REKT M8
+  - Zoom is for the weak.
   ngUse: {fileID: -188670121, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
   ngReact1: {fileID: 1898772496, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
   ngReact2: {fileID: -52120991, guid: 2fa8b583817567e41892b69073c6b378, type: 3}

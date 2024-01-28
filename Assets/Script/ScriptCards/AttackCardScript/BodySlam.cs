@@ -16,7 +16,6 @@ public class BodySlam : CardSO
         timeSpent = 2;
         
         if (base.sfx != null) SetAudioSound.instance.PlaySFX(base.sfx);
-        actor.ChangeSprite(this, PoseCatagory.use);
         if (randomized != null && randomized.Length != 1) { return null; }
 
         int index;
@@ -35,6 +34,7 @@ public class BodySlam : CardSO
                 break;
             
             case 1:
+                actor.ChangeSprite(this, PoseCatagory.use);
                 enemy.ChangeSprite(this, PoseCatagory.react1);
                 DialogueSystem.DisplayDialogue($"{actor.name} body slams into {enemy.name} so hard they roll altogether.");
                 Debug.Log($"{actor.name} damage {damage} hp to {enemy.name}, receiving {receivedAnger} anger.");

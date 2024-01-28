@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b320472d96987584d9920a2e256eba8c, type: 3}
   m_Name: MonkeNotSugarcoat
   m_EditorClassIdentifier: 
-  cardName: I'm Not Gonna Sugarcoat It
+  cardName: Not Sugarcoat It
   cardFlavor:
   - 'F,N,D,D/F+2 ~ Damn!! '
-  - Monke is not gonna sugarcoat it.
+  - He's not gonna
   ngUse: {fileID: -1098880185, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
   ngReact1: {fileID: -1275527901, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
   ngReact2: {fileID: 1257595026, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
