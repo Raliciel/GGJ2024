@@ -33,7 +33,7 @@ public class MonkeBall : CardSO
 
             case 1: //Normal
                 enemy.ChangeSprite(this, PoseCatagory.react1);
-                DialogueSystem.DisplayDialogue($"{actor.name} uses MonkeBall. It came out with a bat and hit it into {enemy.name} face");
+                DialogueSystem.DisplayDialogue($"{enemy.name} had been forcefully taken in to the ball but it won't fit.");
                 Debug.Log($"{actor.name} damage {damage} to {enemy.name}");
                 enemy.ReduceHP(damage);
                 break;
