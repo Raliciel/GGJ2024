@@ -2301,7 +2301,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: And S0n1c The Hedgehog
+  m_text: And an expired Copyright.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: edac7da7f97e0b04dafa0a06b0a68ca8, type: 2}
   m_sharedMaterial: {fileID: 2872063734055237867, guid: edac7da7f97e0b04dafa0a06b0a68ca8, type: 2}
