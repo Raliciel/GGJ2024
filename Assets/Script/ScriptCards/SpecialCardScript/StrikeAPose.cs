@@ -20,7 +20,7 @@ public class StrikeAPose : CardSO
 
         int index;
 
-        actor.payHPCost(hpCost);
+        actor.PayHPCost(hpCost);
 
         if (randomized == null) index = Randomizer.random(chance);
         else index = randomized[0];
@@ -28,16 +28,16 @@ public class StrikeAPose : CardSO
         switch(index) {
             case 0: //Fail
                 enemy.ChangeSprite(this, PoseCatagory.react2);
-                DialogueSystem.Log(actor.name + " strike the pose fabulously. However, " + enemy.name + " is not a fan of JoJo.");
+                DialogueSystem.DisplayDialogue(actor.name + " strike the pose fabulously. However, " + enemy.name + " is not a fan of JoJo.");
                 Debug.Log(enemy.name + " received " + receivedAnger + " anger.");
-                enemy.receivedAnger(receivedAnger);
+                enemy.RecoverAnger(receivedAnger);
                 break;
 
             case 1: //Normal
                 enemy.ChangeSprite(this, PoseCatagory.react1);
-                DialogueSystem.Log(actor.name + " strike the pose fabulously.");
+                DialogueSystem.DisplayDialogue(actor.name + " strike the pose fabulously.");
                 Debug.Log(enemy.name + " anger has reduced by " + reducedAnger);
-                enemy.reducedAnger(reducedAnger);
+                enemy.ReduceAnger(reducedAnger);
                 break;
         }
 

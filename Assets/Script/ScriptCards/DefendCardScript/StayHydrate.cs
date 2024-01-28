@@ -16,9 +16,9 @@ public class StayHydrate : CardSO
         actor.ChangeSprite(this, PoseCatagory.use);
         if(randomized != null) return null;
 
-        actor.payAngerCost(angerCost);
-        DialogueSystem.Log($"{actor.name} drinks some water to stay hydrate, recover {hpRecover} hp.");
-        actor.hpRecover(hpRecover);
+        actor.PayAngerCost(angerCost);
+        DialogueSystem.DisplayDialogue($"{actor.name} drinks some water to stay hydrate, recover {hpRecover} hp.");
+        actor.RecoverHP(hpRecover);
 
         return null;
     }

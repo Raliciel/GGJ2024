@@ -18,23 +18,23 @@ public class MonkeBreaker : CardSO
 
         int index;
 
-        actor.payAngerCost(angerCost);
+        actor.PayAngerCost(angerCost);
 
         if(randomized == null) index = Randomizer.random(chance);
         else index = randomized[0];
 
         switch(index) {
             case 0: //Miss
-                DialogueSystem.Log($"{actor.name} uses MonkeBreaker into {enemy.name}, yet the punch is too soft to even felt.");
+                DialogueSystem.DisplayDialogue($"{actor.name} uses MonkeBreaker into {enemy.name}, yet the punch is too soft to even felt.");
                 Debug.Log($"{enemy.name} anger has reduced by {reducedAnger}.");
-                enemy.reducedAnger(reducedAnger);
+                enemy.ReduceAnger(reducedAnger);
                 break;
 
             case 1:
-                DialogueSystem.Log($"{actor.name} uses MonkeBreaker into {enemy.name}.");
+                DialogueSystem.DisplayDialogue($"{actor.name} uses MonkeBreaker into {enemy.name}.");
                 Debug.Log($"{actor.name} damage {damage} hp to {enemy.name}, receiving {receivedAnger} anger.");
-                enemy.receivedDamage(damage);
-                enemy.receivedAnger(receivedAnger);
+                enemy.ReduceHP(damage);
+                enemy.RecoverAnger(receivedAnger);
                 break;
         }
 

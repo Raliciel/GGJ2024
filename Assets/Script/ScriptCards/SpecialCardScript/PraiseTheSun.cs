@@ -18,7 +18,7 @@ public class PraiseTheSun : CardSO
 
         int index;
         
-        actor.payAngerCost(angerCost);
+        actor.PayAngerCost(angerCost);
 
         if (randomized == null) index = Randomizer.random(chance);
         else index = randomized[0];
@@ -26,14 +26,14 @@ public class PraiseTheSun : CardSO
         switch(index) {
             case 0: //Miss
 
-                DialogueSystem.Log(actor.name + " praise the sun and failed.");
+                DialogueSystem.DisplayDialogue(actor.name + " praise the sun and failed.");
                 break;
 
             case 1:
                 enemy.ChangeSprite(this, PoseCatagory.react1);
-                DialogueSystem.Log(actor.name + " praise the sun. " + enemy.name + " become calmer.");
+                DialogueSystem.DisplayDialogue(actor.name + " praise the sun. " + enemy.name + " become calmer.");
                 Debug.Log(enemy.name + " anger has reduced by " + reducedAnger);
-                enemy.reducedAnger(reducedAnger);
+                enemy.ReduceAnger(reducedAnger);
                 break;
         }
 

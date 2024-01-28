@@ -19,29 +19,29 @@ public class NormieAttack: CardSO
 
         int index;
 
-        actor.payAngerCost(angerCost);
+        actor.PayAngerCost(angerCost);
 
         if(randomized == null) index = Randomizer.random(chance);
         else index = randomized[0];
         
         switch(index) {
             case 0: //Miss
-                DialogueSystem.Log($"{actor.name} try to attack {enemy.name} and misses.");
+                DialogueSystem.DisplayDialogue($"{actor.name} try to attack {enemy.name} and misses.");
                 break;
 
             case 1: //Normal
-                DialogueSystem.Log($"{actor.name} attacks {enemy.name}.");
+                DialogueSystem.DisplayDialogue($"{actor.name} attacks {enemy.name}.");
                 Debug.Log($"{actor.name} damage {damage} hp to {enemy.name}, receiving {receivedAnger} anger.");
-                enemy.receivedDamage(damage);
-                enemy.receivedAnger(receivedAnger);
+                enemy.ReduceHP(damage);
+                enemy.RecoverAnger(receivedAnger);
                 enemy.ChangeSprite(this, PoseCatagory.react1);
                 break;
 
             case 2: //Crit
-                DialogueSystem.Log($"{actor.name} punches into {enemy.name} face heavily.");
+                DialogueSystem.DisplayDialogue($"{actor.name} punches into {enemy.name} face heavily.");
                 Debug.Log($"{actor.name} damage {damage * 2} hp to {enemy.name}, receiving {receivedAnger} anger.");
-                enemy.receivedDamage(damage * 2);
-                enemy.receivedAnger(receivedAnger);
+                enemy.ReduceHP(damage * 2);
+                enemy.RecoverAnger(receivedAnger);
                 enemy.ChangeSprite(this, PoseCatagory.react1);
                 break;
         }

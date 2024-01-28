@@ -26,7 +26,7 @@ public class GigaMonkeBreaker : CardSO
 
         int index;
 
-        actor.payAngerCost(angerCost);
+        actor.PayAngerCost(angerCost);
 
         if(randomized == null) index = Randomizer.random(chance);
         else index = randomized[0];
@@ -36,16 +36,16 @@ public class GigaMonkeBreaker : CardSO
                 enemy.ChangeSprite(this, PoseCatagory.react2);
                 Debug.Log($"{actor.name} uses GigaMonkeBreaker into {enemy.name}, however the drill exploded.");
                 Debug.Log($"{actor.name} damage {recoil} hp to {actor.name}, also received {recoilAnger} anger.");
-                actor.receivedDamage(recoil);
-                actor.receivedAnger(recoilAnger);
+                actor.ReduceHP(recoil);
+                actor.RecoverAnger(recoilAnger);
                 break;
 
             case 1: //Normal
                 enemy.ChangeSprite(this, PoseCatagory.react1);
                 Debug.Log($"{actor.name} use GigaMonkeBreaker and drill {enemy.name} out of existence.");
                 Debug.Log($"{actor.name} damage {damage} hp to {enemy.name}, receiving {receivedAnger} anger.");
-                enemy.receivedDamage(damage);
-                enemy.receivedAnger(receivedAnger);
+                enemy.ReduceHP(damage);
+                enemy.RecoverAnger(receivedAnger);
                 break;
 
         }

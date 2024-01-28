@@ -21,7 +21,7 @@ public class GetCancelled : CardSO
 
         int index;
 
-        actor.payAngerCost(angerCost);
+        actor.PayAngerCost(angerCost);
         
         if(randomized == null) index = Randomizer.random(chance);
         else index = randomized[0];
@@ -30,15 +30,15 @@ public class GetCancelled : CardSO
             case 0: // Drama Backfire
                 Debug.Log($"{actor.name} try to cancel {enemy.name}. However, the plan backfire and the social cancelled him instead.");
                 Debug.Log($"{actor.name} damage {damage} to {actor.name} and received {receivedAnger} anger.");
-                actor.receivedDamage(damage);
-                actor.receivedAnger(receivedAnger);
+                actor.ReduceHP(damage);
+                actor.RecoverAnger(receivedAnger);
                 break;
 
             case 1: // Normal
                 Debug.Log($"With the help of social networks, {actor.name} successfully cancel {enemy.name}.");
                 Debug.Log($"{actor.name} damage {damage} to {enemy.name}, receiving {receivedAnger} anger.");
-                enemy.receivedDamage(damage);
-                enemy.receivedAnger(receivedAnger);
+                enemy.ReduceHP(damage);
+                enemy.RecoverAnger(receivedAnger);
                 break;
         }
 

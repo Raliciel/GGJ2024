@@ -49,11 +49,13 @@ public class BoardManager : MonoBehaviour
 
         Debug.Log(actor.name + " use " + cardInfo.cardName);
         int[] randomized = cardInfo.DoAction(actor, target, out float timeSpent);
-        //Debug.Log(timeSpent);
 
         Replay.get.Record(actor, target, cardInfo, randomized);
 
-        yield return new WaitForSeconds(timeSpent);
+        yield return new WaitForSeconds(timeSpent + 1);
+        DialogueSystem.HideDialogue();
+
+        yield return new WaitForSeconds(0.5f);
         Turn.get.EndTurn();
     }
 

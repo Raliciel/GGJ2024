@@ -10,7 +10,7 @@ public class Unit : MonoBehaviour
     public int angerPoint = 100;
     [SerializeField] protected int currentAngerPoint;
 
-    bool isDefend;
+    bool isDefending;
 
     public UnityAction OnDeath;
     public UnityAction OnLaugh;
@@ -44,7 +44,7 @@ public class Unit : MonoBehaviour
 
     public void ResetState()
     {   
-        isDefend = false;
+        isDefending = false;
     }
 
     public void ResetStats()
@@ -68,29 +68,37 @@ public class Unit : MonoBehaviour
         CheckIfUnitDie();
     }
     
-    public void payAngerCost(int angerCost) {
+    public void PayAngerCost(int angerCost) {
         currentAngerPoint -= angerCost;
         if (currentAngerPoint < 0)
             currentAngerPoint = 1;
         CheckIfUnitDie();
     }
 
-    public void payHPCost(int hpCost) {
+    public void PayHPCost(int hpCost) {
         currentHealthPoint -= hpCost;
         if (currentHealthPoint < 0)
             currentHealthPoint = 1;
         CheckIfUnitDie();
     }
 
-    public void receivedDamage(int damage) {
-        if (isDefend)
+    public void ReduceHP(int damage) {
+        if (isDefending)
             return;
         currentHealthPoint -= damage;
         DamageDisplayer.get.ShowHealthDamage(this, damage, Color.red);
         CheckIfUnitDie();
     }
 
-    public void hpRecover(int recover) {
+    public void ReduceAnger(int anger)
+    {
+        currentAngerPoint -= anger;
+        DamageDisplayer.get.ShowAngerDamage(this, anger, Color.blue);
+        CheckIfUnitDie();
+    }
+
+
+    public void RecoverHP(int recover) {
         currentHealthPoint += recover;
         DamageDisplayer.get.ShowHealthDamage(this, recover, Color.green);
         if (currentHealthPoint > healthPoint) 
@@ -98,7 +106,7 @@ public class Unit : MonoBehaviour
         CheckIfUnitDie();
     }
 
-    public void receivedAnger(int anger) {
+    public void RecoverAnger(int anger) {
         currentAngerPoint += anger;
         DamageDisplayer.get.ShowAngerDamage(this, anger, new Color(1, 0.2f, 0));
         if (currentAngerPoint > angerPoint) 
@@ -106,52 +114,46 @@ public class Unit : MonoBehaviour
         CheckIfUnitDie();
     }
 
-    public void reducedAnger(int anger) { 
-        currentAngerPoint -= anger;
-        DamageDisplayer.get.ShowAngerDamage(this,anger,Color.blue);
-        CheckIfUnitDie(); 
-    }
+    public bool IsDefending() { return isDefending; }
 
-    public bool getIsDefend() { return isDefend; }
+    public void SetDefendState(bool isDef) { isDefending = isDef; }
 
-    public void setIsDefend(bool isDef) { isDefend = isDef; }
-
-    public void ChangeSprite(CardSO so, PoseCatagory pose)
+    public void ChangeSprite(CardSO so, PoseCatagory pose, float duration = 1, float delay = 0)
     {
-        StartCoroutine(ChangeandWait(so, pose));
+        StartCoroutine(ChangeandWait(so, pose, duration, delay));
     }
 
     [HideInInspector] public bool unoccupied = false;
-    protected IEnumerator ChangeandWait(CardSO so, PoseCatagory pose)
+    protected IEnumerator ChangeandWait(CardSO so, PoseCatagory pose, float duration, float delay = 0)
     {
+        yield return new WaitForSeconds(delay);
         Debug.Log("Pose: " + pose);
-        Sprite oldsprite = GetComponent<SpriteRenderer>().sprite;
+        Sprite oldsprite = _renderer.sprite;
         unoccupied = true;
         if (gameObject.name.Equals("Player"))
         {
-            switch ((int)pose)
+            switch (pose)
             {
-                case ((int)PoseCatagory.use): GetComponent<SpriteRenderer>().sprite = so.mfUse; break;
-                case ((int)PoseCatagory.react1): GetComponent<SpriteRenderer>().sprite = so.mfReact1; break;
-                case ((int)PoseCatagory.react2): GetComponent<SpriteRenderer>().sprite = so.mfReact2; break;
+                case PoseCatagory.use: _renderer.sprite = so.mfUse; break;
+                case PoseCatagory.react1: _renderer.sprite = so.mfReact1; break;
+                case PoseCatagory.react2: _renderer.sprite = so.mfReact2; break;
             }
 
         }
         else if (gameObject.name.Equals("Enemy"))
         {
-            switch ((int)pose)
+            switch (pose)
             {
-                case ((int)PoseCatagory.use): GetComponent<SpriteRenderer>().sprite = so.ngUse; break;
-                case ((int)PoseCatagory.react1): GetComponent<SpriteRenderer>().sprite = so.ngReact1; break;
-                case ((int)PoseCatagory.react2): GetComponent<SpriteRenderer>().sprite = so.ngReact2; break;
+                case PoseCatagory.use: _renderer.sprite = so.ngUse; break;
+                case PoseCatagory.react1: _renderer.sprite = so.ngReact1; break;
+                case PoseCatagory.react2: _renderer.sprite = so.ngReact2; break;
             }
 
         }
 
-        yield return new WaitForSeconds(0.7f);
+        yield return new WaitForSeconds(duration);
 
-        GetComponent<SpriteRenderer>().sprite = oldsprite;
-        DialogueSystem.CloseLog();
+        _renderer.sprite = oldsprite;
         unoccupied = true;
     }
 

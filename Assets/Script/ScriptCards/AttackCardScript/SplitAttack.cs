@@ -19,7 +19,7 @@ public class SplitAttack : CardSO
         int index;
         int hit;
 
-        actor.payAngerCost(angerCost);
+        actor.PayAngerCost(angerCost);
         if(randomized == null) {
             index = Randomizer.random(chance);
             hit = 3 + Randomizer.random(addHit);
@@ -30,23 +30,23 @@ public class SplitAttack : CardSO
 
         switch(index) {
             case 0: //Miss
-                DialogueSystem.Log($"{actor.name} try to hit {enemy.name}, hit the ground instead.");
+                DialogueSystem.DisplayDialogue($"{actor.name} try to hit {enemy.name}, hit the ground instead.");
                 break;
 
             case 1: //Normal
-                DialogueSystem.Log($"{actor.name} hit {enemy.name} 2 times in a row, unbelievable.");
+                DialogueSystem.DisplayDialogue($"{actor.name} hit {enemy.name} 2 times in a row, unbelievable.");
                 Debug.Log($"{actor.name} damage {damage * 2} hp to {enemy.name}, receiving {receivedAnger * 2} anger.");
-                enemy.receivedDamage(damage * 2);
-                enemy.receivedAnger(receivedAnger * 2);
+                enemy.ReduceHP(damage * 2);
+                enemy.RecoverAnger(receivedAnger * 2);
 
                 timeSpent = 4;
                 break;
             
             case 2: //Chain Hit
-                DialogueSystem.Log($"{actor.name} hit {enemy.name} 2 times in a row, but it not 2 times anymore.");
+                DialogueSystem.DisplayDialogue($"{actor.name} hit {enemy.name} 2 times in a row, but it not 2 times anymore.");
                 Debug.Log($"{actor.name} damage {damage * hit} hp to {enemy.name}, receiving {receivedAnger * hit} anger.");
-                enemy.receivedDamage(damage * hit);
-                enemy.receivedAnger(receivedAnger * hit);
+                enemy.ReduceHP(damage * hit);
+                enemy.RecoverAnger(receivedAnger * hit);
 
                 timeSpent = 5;
                 break;

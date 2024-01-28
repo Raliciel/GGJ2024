@@ -20,7 +20,7 @@ public class vwti : CardSO
 
         int index;
 
-        actor.payAngerCost(angerCost);
+        actor.PayAngerCost(angerCost);
 
         if (randomized == null) index = Randomizer.random(chance);
         else index = randomized[0];
@@ -30,13 +30,13 @@ public class vwti : CardSO
                 enemy.ChangeSprite(this, PoseCatagory.use);
                 Debug.Log(actor.name + " try shitposting " + enemy.name + ". He's not enjoyed at all.");
                 Debug.Log(enemy.name + " received " + receivedAnger + " anger.");
-                enemy.receivedAnger(receivedAnger);
+                enemy.RecoverAnger(receivedAnger);
                 break;
             
             case 1: //Normal
                 Debug.Log(actor.name + "  try shitposting " + enemy.name + ". It's a success.");
                 Debug.Log(enemy.name + " anger has reduced by " + reducedAnger);
-                enemy.reducedAnger(reducedAnger);
+                enemy.ReduceAnger(reducedAnger);
                 break;
         }
 

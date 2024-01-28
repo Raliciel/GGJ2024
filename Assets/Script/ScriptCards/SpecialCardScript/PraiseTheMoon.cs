@@ -17,20 +17,20 @@ public class PraiseTheMoon : CardSO
 
         int index;
 
-        actor.payAngerCost(angerCost);
+        actor.PayAngerCost(angerCost);
 
         if (randomized == null) index = Randomizer.random(chance);
         else index = randomized[0];
     
         switch(index) {
             case 0: //Miss
-                DialogueSystem.Log(actor.name + " praise the moon and failed.");
+                DialogueSystem.DisplayDialogue(actor.name + " praise the moon and failed.");
                 break;
 
             case 1:
-                DialogueSystem.Log(actor.name + " praise the moon. " + enemy.name + " become calmer.");
+                DialogueSystem.DisplayDialogue(actor.name + " praise the moon. " + enemy.name + " become calmer.");
                 Debug.Log(enemy.name + " anger has reduced by " + reducedAnger);
-                enemy.reducedAnger(reducedAnger);
+                enemy.ReduceAnger(reducedAnger);
                 break;
         }
 

@@ -19,20 +19,20 @@ public class MonkeBall : CardSO
 
         int index;
 
-        actor.payAngerCost(angerCost);
+        actor.PayAngerCost(angerCost);
 
         if(randomized == null) index = Randomizer.random(chance);
         else index = randomized[0];
 
         switch(index) {
             case 0: //Miss
-                DialogueSystem.Log( $"{actor.name} uses MonkeBall, and the Monke doesn't come out.");
+                DialogueSystem.DisplayDialogue( $"{actor.name} uses MonkeBall, and the Monke doesn't come out.");
                 break;
 
             case 1: //Normal
-                DialogueSystem.Log($"{actor.name} uses MonkeBall. It came out with a bat and hit it into {enemy.name} face");
+                DialogueSystem.DisplayDialogue($"{actor.name} uses MonkeBall. It came out with a bat and hit it into {enemy.name} face");
                 Debug.Log($"{actor.name} damage {damage} to {enemy.name}");
-                enemy.receivedDamage(damage);
+                enemy.ReduceHP(damage);
                 break;
 
         }
