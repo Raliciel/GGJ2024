@@ -21,7 +21,7 @@ MonoBehaviour:
   mfUse: {fileID: 21300000, guid: e84b2f7786e0990499170a6c7f6b2613, type: 3}
   mfReact1: {fileID: 21300000, guid: 1ce332d2aa79f5c479f1e17bb799d072, type: 3}
   mfReact2: {fileID: 21300000, guid: 8d7d7081a03a10f47a08050c5162bbe6, type: 3}
-  sfx: {fileID: 0}
+  sfx: {fileID: 8300000, guid: bebceb048c1973b4983dbfcdb454965d, type: 3}
   reducedAnger: 5
   receivedAnger: 15
   chance: 3c00000028000000

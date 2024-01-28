@@ -21,6 +21,6 @@ MonoBehaviour:
   mfUse: {fileID: 21300000, guid: fba9ecc0fcfd68a40bcef07174b0159b, type: 3}
   mfReact1: {fileID: 21300000, guid: 2f9d4dc025f5a8a47823a1d43d17f1b8, type: 3}
   mfReact2: {fileID: 21300000, guid: 2f9d4dc025f5a8a47823a1d43d17f1b8, type: 3}
-  sfx: {fileID: 0}
+  sfx: {fileID: 8300000, guid: 8805c4ceb68e5824098c1d3b144793f7, type: 3}
   angerCost: 15
   hpRecover: 10

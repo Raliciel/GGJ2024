@@ -14,13 +14,13 @@ public class ApeWithMachineGun : CardSO
 
     public int recoil = 5;
 
-    SetAudioSound audio = SetAudioSound.instance;
+    
 
     public override int[] DoAction(Unit actor, Unit enemy, out float timeSpent, int[] randomized = null)
     {
         timeSpent = 2;
         
-        if (base.sfx != null) audio.PlaySFX(base.sfx);
+        if (base.sfx != null) SetAudioSound.instance.PlaySFX(base.sfx);
         actor.ChangeSprite(this, PoseCatagory.use);
         if(randomized != null && randomized.Length != 2) { return null; }
 

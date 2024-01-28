@@ -22,6 +22,6 @@ MonoBehaviour:
   mfUse: {fileID: 21300000, guid: 4d3d240b975836a4e80c4866ea9bcbe9, type: 3}
   mfReact1: {fileID: 21300000, guid: 754e317b309a75e4aa52ebd5e05a57d6, type: 3}
   mfReact2: {fileID: 21300000, guid: c9ae863011840a14cae58ae9b466fa0b, type: 3}
-  sfx: {fileID: 0}
+  sfx: {fileID: 8300000, guid: fd5a70e5c0d915947827c5f882a9ac43, type: 3}
   damage: 10
   chance: 210000002200000021000000
