@@ -14,6 +14,7 @@ public class MonkeBreaker : CardSO
         timeSpent = 2;
 
         if (base.sfx != null) SetAudioSound.instance.PlaySFX(base.sfx);
+        actor.ChangeSprite(this, PoseCatagory.use);
         if (randomized != null && randomized.Length != 1) { return null; }
 
         int index;
@@ -25,12 +26,14 @@ public class MonkeBreaker : CardSO
 
         switch(index) {
             case 0: //Miss
+                enemy.ChangeSprite(this, PoseCatagory.react2);
                 DialogueSystem.DisplayDialogue($"{actor.name} uses MonkeBreaker into {enemy.name}, yet the punch is too soft to even felt.");
                 Debug.Log($"{enemy.name} anger has reduced by {reducedAnger}.");
                 enemy.ReduceAnger(reducedAnger);
                 break;
 
             case 1:
+                enemy.ChangeSprite(this, PoseCatagory.react1);
                 DialogueSystem.DisplayDialogue($"{actor.name} uses MonkeBreaker into {enemy.name}.");
                 Debug.Log($"{actor.name} damage {damage} hp to {enemy.name}, receiving {receivedAnger} anger.");
                 enemy.ReduceHP(damage);

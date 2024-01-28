@@ -14,7 +14,6 @@ public class YouShallNotPass : CardSO
         timeSpent = 2;
 
         if (base.sfx != null) SetAudioSound.instance.PlaySFX(base.sfx);
-        actor.ChangeSprite(this, PoseCatagory.use);
         if (randomized != null && randomized.Length != 1) { return null; }
 
         int index;
@@ -32,6 +31,7 @@ public class YouShallNotPass : CardSO
                 break;
 
             case 1:
+                actor.ChangeSprite(this, PoseCatagory.use);
                 DialogueSystem.DisplayDialogue($"With the power of Gandalf in {actor.name}'s hand, {enemy.name} shall not pass.");
                 actor.SetDefendState(true);
                 break;

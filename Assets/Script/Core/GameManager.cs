@@ -1,16 +1,15 @@
 using System.Collections;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Reflection;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    enum EndType { hp, anger}
+
     public Unit playerUnit;
     public Unit enemyUnit;
-    public GameObject endingCanvasPref;
+    public GameObject hpEndingCanvasPref;
+    public GameObject angerEndingCanvasPref;
     public GameObject endingPad;
 
     private static GameManager _instance;
@@ -27,19 +26,29 @@ public class GameManager : MonoBehaviour
 
         playerUnit.OnDeath += () => { OnUnitDeath(enemyUnit, playerUnit); };
         enemyUnit.OnDeath += () => { OnUnitDeath(playerUnit, enemyUnit); };
-        playerUnit.OnLaugh += () => { OnUnitDeath(enemyUnit, playerUnit); };
-        enemyUnit.OnLaugh += () => { OnUnitDeath(playerUnit, enemyUnit); };
+        playerUnit.OnLaugh += () => { OnUnitLaugh(enemyUnit, playerUnit); };
+        enemyUnit.OnLaugh += () => { OnUnitLaugh(playerUnit, enemyUnit); };
     }
-    public void EndGame(Unit winner = null)
+    private void EndGame(Unit winner = null, EndType ending = EndType.hp)
     {
         Turn.get.StopTurn();
-        StartCoroutine(DelayedEnd(winner));
+        StartCoroutine(DelayedEnd(winner, ending));
     }
 
-    IEnumerator DelayedEnd(Unit winner)
+    IEnumerator DelayedEnd(Unit winner, EndType ending)
     {
         yield return new WaitForSeconds(1f);
-        Instantiate(endingCanvasPref);
+
+        if (ending == EndType.hp)
+        {
+            Instantiate(hpEndingCanvasPref);
+            SetAudioSound.instance.PlayBGMByIndex(3);
+        }
+        else
+        {
+            Instantiate(angerEndingCanvasPref);
+            SetAudioSound.instance.PlayBGMByIndex(2);
+        }
 
         TMP_Text retryText = endingPad.transform.GetChild(0).GetComponentInChildren<TMP_Text>();
         if (winner == playerUnit) retryText.text = "Next Battle";
@@ -53,11 +62,17 @@ public class GameManager : MonoBehaviour
     public void OnUnitDeath(Unit winner, Unit loser)
     {
         Debug.Log(winner.name + " win!, on death");
-        EndGame(winner);
+        EndGame(winner,EndType.hp);
+    }
+    public void OnUnitLaugh(Unit winner, Unit loser)
+    {
+        Debug.Log(winner.name + " win!, on laugh");
+        EndGame(winner, EndType.anger);
     }
 
     private void StartGame()
     {
+        SetAudioSound.instance.PlayBGMByIndex(1);
         //CardFlyAnimator.get.ClearFalledCards();
         Turn.get.InitTurnUnits(playerUnit,enemyUnit);
         playerUnit.ResetState();

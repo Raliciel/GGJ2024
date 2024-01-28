@@ -16,10 +16,10 @@ MonoBehaviour:
   cardFlavor: []
   ngUse: {fileID: 21300000, guid: a347db1fbdc439f47a4119458273873f, type: 3}
   ngReact1: {fileID: 21300000, guid: 0cca57eca8356ae4f9e8029e44497ee6, type: 3}
-  ngReact2: {fileID: 0}
+  ngReact2: {fileID: 21300000, guid: d5071251b6673c342bceb51547353c71, type: 3}
   mfUse: {fileID: -1177183817, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
   mfReact1: {fileID: 1898772496, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
-  mfReact2: {fileID: 0}
+  mfReact2: {fileID: -622639784, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
   sfx: {fileID: 8300000, guid: 0d78b3c133a288a48938e111a69591d5, type: 3}
   damage: 15
   angerCost: 7

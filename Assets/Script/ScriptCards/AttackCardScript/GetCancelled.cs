@@ -28,14 +28,17 @@ public class GetCancelled : CardSO
 
         switch(index) {
             case 0: // Drama Backfire
-                Debug.Log($"{actor.name} try to cancel {enemy.name}. However, the plan backfire and the social cancelled him instead.");
+                actor.ChangeSprite(this, PoseCatagory.react2);
+                DialogueSystem.DisplayDialogue($"{actor.name} try to cancel {enemy.name}. However, the plan backfire and the social cancelled him instead.");
                 Debug.Log($"{actor.name} damage {damage} to {actor.name} and received {receivedAnger} anger.");
                 actor.ReduceHP(damage);
                 actor.RecoverAnger(receivedAnger);
                 break;
 
             case 1: // Normal
-                Debug.Log($"With the help of social networks, {actor.name} successfully cancel {enemy.name}.");
+                actor.ChangeSprite(this, PoseCatagory.use);
+                enemy.ChangeSprite(this, PoseCatagory.react1);
+                DialogueSystem.DisplayDialogue($"With the help of social networks, {actor.name} successfully cancel {enemy.name}.");
                 Debug.Log($"{actor.name} damage {damage} to {enemy.name}, receiving {receivedAnger} anger.");
                 enemy.ReduceHP(damage);
                 enemy.RecoverAnger(receivedAnger);

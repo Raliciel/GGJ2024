@@ -13,6 +13,7 @@ public class PraiseTheMoon : CardSO
         timeSpent = 2;
 
         if (base.sfx != null) SetAudioSound.instance.PlaySFX(base.sfx);
+        actor.ChangeSprite(this, PoseCatagory.use);
         if (randomized != null && randomized.Length != 1) { return null; }
 
         int index;
@@ -28,6 +29,7 @@ public class PraiseTheMoon : CardSO
                 break;
 
             case 1:
+                enemy.ChangeSprite(this, PoseCatagory.react1);
                 DialogueSystem.DisplayDialogue(actor.name + " praise the moon. " + enemy.name + " become calmer.");
                 Debug.Log(enemy.name + " anger has reduced by " + reducedAnger);
                 enemy.ReduceAnger(reducedAnger);
