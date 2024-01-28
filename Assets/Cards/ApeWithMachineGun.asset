@@ -23,7 +23,7 @@ MonoBehaviour:
   mfUse: {fileID: 21300000, guid: 4d4bff6cf5c5112468a2d63e2b43b650, type: 3}
   mfReact1: {fileID: 21300000, guid: 0cca57eca8356ae4f9e8029e44497ee6, type: 3}
   mfReact2: {fileID: 21300000, guid: 8d7d7081a03a10f47a08050c5162bbe6, type: 3}
-  sfx: {fileID: 0}
+  sfx: {fileID: 8300000, guid: c4a4dcf7065117147acae3806fbd34b6, type: 3}
   damage: 3
   totalHit: 10
   angerCost: 8

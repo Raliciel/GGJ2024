@@ -8,12 +8,12 @@ public class SplitAttack : CardSO
     public int angerCost = 7;
     public int[] chance = new int[3] {15, 60, 25};
     public int[] addHit = new int[3] {60, 30, 10};
-    SetAudioSound audio = SetAudioSound.instance;
+    
     public override int[] DoAction(Unit actor, Unit enemy, out float timeSpent, int[] randomized = null)
     {
         timeSpent = 2;
 
-        if (base.sfx != null) audio.PlaySFX(base.sfx);
+        if (base.sfx != null) SetAudioSound.instance.PlaySFX(base.sfx);
         if (randomized != null && randomized.Length != 2) { return null; }
         
         int index;

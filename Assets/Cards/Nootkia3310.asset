@@ -22,7 +22,7 @@ MonoBehaviour:
   mfUse: {fileID: 21300000, guid: 5efcdb3cdf00a9f4c9b92d6011a01bad, type: 3}
   mfReact1: {fileID: 21300000, guid: 2f9d4dc025f5a8a47823a1d43d17f1b8, type: 3}
   mfReact2: {fileID: 21300000, guid: 2f9d4dc025f5a8a47823a1d43d17f1b8, type: 3}
-  sfx: {fileID: 0}
+  sfx: {fileID: 8300000, guid: d252b833c605fc340b1ecf0e4ebe2224, type: 3}
   hpCost: 10
   receivedAnger: 5
   chance: 1e00000046000000

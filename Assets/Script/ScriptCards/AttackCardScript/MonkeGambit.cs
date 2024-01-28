@@ -4,13 +4,13 @@ public class MonkeGambit : CardSO
 {
     public int damage = 10;
     public int[] chance = new int[3] {33, 34, 33};
-    SetAudioSound audio = SetAudioSound.instance;
+    
 
     public override int[] DoAction(Unit actor, Unit enemy, out float timeSpent, int[] randomized = null) 
     {
         timeSpent = 2;
 
-        if (base.sfx != null) audio.PlaySFX(base.sfx);
+        if (base.sfx != null) SetAudioSound.instance.PlaySFX(base.sfx);
 
         if (randomized != null && randomized.Length != 1) { return null; }
 
