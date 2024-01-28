@@ -23,4 +23,4 @@ MonoBehaviour:
   sfx: {fileID: 0}
   angerCost: 10
   reducedAnger: 15
-  chance: 1e00000082000000
+  chance: 1e00000046000000

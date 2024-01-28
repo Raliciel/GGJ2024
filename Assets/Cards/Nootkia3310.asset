@@ -24,4 +24,4 @@ MonoBehaviour:
   sfx: {fileID: 0}
   hpCost: 10
   receivedAnger: 5
-  chance: 1e000000dc000000
+  chance: 1e00000046000000

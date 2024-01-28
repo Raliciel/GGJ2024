@@ -27,5 +27,5 @@ MonoBehaviour:
   totalHit: 10
   angerCost: 8
   receivedAnger: 1.3
-  chance: 0a000000a4010000
+  chance: 0a0000005a000000
   recoil: 5
