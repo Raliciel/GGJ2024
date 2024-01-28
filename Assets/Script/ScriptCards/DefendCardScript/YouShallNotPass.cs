@@ -19,7 +19,7 @@ public class YouShallNotPass : CardSO
 
         int index;
 
-        actor.payAngerCost(angerCost);
+        actor.PayAngerCost(angerCost);
 
         if (randomized == null) index = Randomizer.random(chance);
         else index = randomized[0];
@@ -27,13 +27,13 @@ public class YouShallNotPass : CardSO
         switch(index) {
             case 0:
                 actor.ChangeSprite(this, PoseCatagory.react1);
-                DialogueSystem.Log($"{actor.name} try to summon Gandalf for help, and {enemy.name} not allow it.");
-                enemy.receivedAnger(receivedAnger);
+                DialogueSystem.DisplayDialogue($"{actor.name} try to summon Gandalf for help, and {enemy.name} not allow it.");
+                enemy.RecoverAnger(receivedAnger);
                 break;
 
             case 1:
-                DialogueSystem.Log($"With the power of Gandalf in {actor.name}'s hand, {enemy.name} shall not pass.");
-                actor.setIsDefend(true);
+                DialogueSystem.DisplayDialogue($"With the power of Gandalf in {actor.name}'s hand, {enemy.name} shall not pass.");
+                actor.SetDefendState(true);
                 break;
         }
 

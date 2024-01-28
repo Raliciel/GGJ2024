@@ -12,7 +12,7 @@ public class InternDesign: CardSO
         actor.ChangeSprite(this, PoseCatagory.use);
         if(randomized != null) return null;
 
-        DialogueSystem.Log($"Upon interference of some interns, {actor.name} Hp and Anger are reseted");
+        DialogueSystem.DisplayDialogue($"Upon interference of some interns, {actor.name} Hp and Anger are reseted");
         actor.SetCurrentAngerPoint(actor.angerPoint);
         actor.SetCurrentHealthPoint(actor.healthPoint);
     

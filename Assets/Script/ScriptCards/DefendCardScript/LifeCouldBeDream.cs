@@ -16,9 +16,9 @@ public class LifeCouldBeDream : CardSO
         enemy.ChangeSprite(this, PoseCatagory.react1);
         if (randomized != null) return null;
 
-        actor.payAngerCost(angerCost);
-        actor.setIsDefend(true);
-        DialogueSystem.Log($"{actor.name} transform into a cube that can take you to a paradise up above.");
+        actor.PayAngerCost(angerCost);
+        actor.SetDefendState(true);
+        DialogueSystem.DisplayDialogue($"{actor.name} transform into a cube that can take you to a paradise up above.");
 
         return null;
     }

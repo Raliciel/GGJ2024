@@ -16,7 +16,7 @@ public class MonkeNotSugarcoat: CardSO
 
         int hit;
 
-        actor.payAngerCost(angerCost);
+        actor.PayAngerCost(angerCost);
 
         if(randomized == null) {
             hit = 0;
@@ -28,10 +28,10 @@ public class MonkeNotSugarcoat: CardSO
             }
         } else hit = randomized[0];
 
-        DialogueSystem.Log($"{actor.name} decides he is not gonna sugarcoat it.");
+        DialogueSystem.DisplayDialogue($"{actor.name} decides he is not gonna sugarcoat it.");
         Debug.Log($"{actor.name} damage {damage * hit} to {enemy.name}, receiving {receivedAnger * hit} anger.");
-        enemy.receivedDamage(damage * hit);
-        enemy.receivedAnger(receivedAnger * hit);
+        enemy.ReduceHP(damage * hit);
+        enemy.RecoverAnger(receivedAnger * hit);
     
         return new int[1] {hit};
     }

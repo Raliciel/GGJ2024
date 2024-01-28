@@ -13,6 +13,7 @@ public enum PoseCatagory
 
 public abstract class CardSO: ScriptableObject {
     public string cardName;
+    [TextArea(2, 6)]
     public List<string> cardFlavor = new List<string>();
     //public Sprite spriteAnimation;  //Should not be this, as animations may be implementeted
     //Animations are just sprite swappings so...
@@ -41,11 +42,6 @@ public abstract class CardSO: ScriptableObject {
             return "No context";
         int r = UnityEngine.Random.Range(0, cardFlavor.Count);
         return cardFlavor[r];
-    }
-
-     protected void ChangeSprite(Unit actor, PoseCatagory pose)
-    {
-        actor.ChangeSprite(this, pose);
     }
 }
 

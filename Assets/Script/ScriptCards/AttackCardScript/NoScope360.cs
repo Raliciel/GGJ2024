@@ -17,25 +17,28 @@ public class NoScope360 : CardSO
         timeSpent = 2;
 
         if (base.sfx != null) audio.PlaySFX(base.sfx);
+        actor.ChangeSprite(this, PoseCatagory.use);
         if (randomized != null && randomized.Length != 1) { return null; }
 
         int index;
 
-        actor.payAngerCost(angerCost);
+        actor.PayAngerCost(angerCost);
 
         if(randomized == null) index = Randomizer.random(chance);
         else index = randomized[0];
 
         switch(index) {
             case 0: //Miss
-                DialogueSystem.Log($"Nice attempt of 360 No Scope by {actor.name}, but he missed.");
-                actor.reducedAnger(reducedAnger);
+                enemy.ChangeSprite(this, PoseCatagory.react2);
+                DialogueSystem.DisplayDialogue($"Nice attempt of 360 No Scope by {actor.name}, but he missed.");
+                actor.ReduceAnger(reducedAnger);
                 break;
             
             case 1:
-                DialogueSystem.Log($"360 No Scope into {enemy.name}'s head by {actor.name}, what a spectacular.");
-                enemy.receivedDamage(damage);
-                enemy.receivedAnger(receivedAnger);
+                enemy.ChangeSprite(this, PoseCatagory.react1);
+                DialogueSystem.DisplayDialogue($"360 No Scope into {enemy.name}'s head by {actor.name}, what a spectacular.");
+                enemy.ReduceHP(damage);
+                enemy.RecoverAnger(receivedAnger);
                 break;
 
         }

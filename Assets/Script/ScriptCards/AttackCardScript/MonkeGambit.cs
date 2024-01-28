@@ -22,19 +22,19 @@ public class MonkeGambit : CardSO
         switch(index) {
             case 0:
                 actor.ChangeSprite(this, PoseCatagory.react1);
-                DialogueSystem.Log($"{actor.name} shot a gambit into himself, unlucky, he got shotted.");
-                actor.receivedDamage(damage);
+                DialogueSystem.DisplayDialogue($"{actor.name} shot a gambit into himself, unlucky, he got shotted.");
+                actor.ReduceHP(damage);
                 break;
 
             case 1:
                 actor.ChangeSprite(this, PoseCatagory.use);
-                DialogueSystem.Log($"{actor.name} shot a gambit and no one got hit.");
+                DialogueSystem.DisplayDialogue($"{actor.name} shot a gambit and no one got hit.");
                 break;
 
             case 2:
                 enemy.ChangeSprite(this, PoseCatagory.react1);
-                DialogueSystem.Log($"{actor.name} shot a gambit into {enemy.name} his knee, goddamn.");
-                enemy.receivedDamage(damage);
+                DialogueSystem.DisplayDialogue($"{actor.name} shot a gambit into {enemy.name} his knee, goddamn.");
+                enemy.ReduceHP(damage);
                 break;
 
         }

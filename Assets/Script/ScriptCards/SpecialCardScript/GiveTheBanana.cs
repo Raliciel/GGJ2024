@@ -18,7 +18,7 @@ public class GiveTheBanana : CardSO
 
         int index;
 
-        actor.payAngerCost(angerCost);
+        actor.PayAngerCost(angerCost);
         
         if (randomized == null) index = Randomizer.random(chance);
         else index = randomized[0];
@@ -26,16 +26,16 @@ public class GiveTheBanana : CardSO
         switch(index) {
             case 0: //Rotten banana
                 enemy.ChangeSprite(this, PoseCatagory.react2);
-                DialogueSystem.Log(actor.name + " gives " + enemy.name + " a banana. Sadly, it's rotten.");
+                DialogueSystem.DisplayDialogue(actor.name + " gives " + enemy.name + " a banana. Sadly, it's rotten.");
                 Debug.Log(enemy.name + " received " + receivedAnger + " anger.");
-                enemy.receivedAnger(receivedAnger);
+                enemy.RecoverAnger(receivedAnger);
                 break;
             
             case 1: //Normal
                 enemy.ChangeSprite(this, PoseCatagory.react1);
-                DialogueSystem.Log(actor.name + " gives " + enemy.name + " a banana.");
+                DialogueSystem.DisplayDialogue(actor.name + " gives " + enemy.name + " a banana.");
                 Debug.Log(enemy.name + " anger has reduced by " + reducedAnger);
-                enemy.reducedAnger(reducedAnger);
+                enemy.ReduceAnger(reducedAnger);
                 break;
         }
     

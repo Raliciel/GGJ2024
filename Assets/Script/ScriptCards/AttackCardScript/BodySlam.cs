@@ -21,7 +21,7 @@ public class BodySlam : CardSO
 
         int index;
 
-        actor.payAngerCost(angerCost);
+        actor.PayAngerCost(angerCost);
 
         if (randomized == null) index = Randomizer.random(chance);
         else index = randomized[0];
@@ -31,18 +31,18 @@ public class BodySlam : CardSO
                 actor.ChangeSprite(this, PoseCatagory.react2);
                 Debug.Log($"{actor.name} body slams the ground so hard.");
                 Debug.Log($"{actor.name} damage {recoil * 2} hp to {actor.name}");
-                actor.receivedDamage(recoil * 2);
+                actor.ReduceHP(recoil * 2);
                 break;
             
             case 1:
                 enemy.ChangeSprite(this, PoseCatagory.react1);
                 Debug.Log($"{actor.name} body slams into {enemy.name} so hard they roll altogether.");
                 Debug.Log($"{actor.name} damage {damage} hp to {enemy.name}, receiving {receivedAnger} anger.");
-                enemy.receivedDamage(damage);
-                enemy.receivedAnger(receivedAnger);
+                enemy.ReduceHP(damage);
+                enemy.RecoverAnger(receivedAnger);
 
                 Debug.Log($"{actor.name} damage {recoil} hp to {actor.name}");
-                actor.receivedDamage(recoil);
+                actor.ReduceHP(recoil);
                 break;
         }
 

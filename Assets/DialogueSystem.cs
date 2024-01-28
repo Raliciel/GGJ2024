@@ -23,14 +23,14 @@ public class DialogueSystem : MonoBehaviour
     }
 
     // Update is called once per frame
-    public static void Log(string show)
+    public static void DisplayDialogue(string textToShow)
     {
-        dialogue.text = show;
+        dialogue.text = textToShow;
         if (dialogue == null && dialog == null) return;
         dialog.MoveIn();
     }
 
-    public static void CloseLog()
+    public static void HideDialogue()
     {
         if (dialogue == null && dialog == null) return;
         dialog.MoveOut();

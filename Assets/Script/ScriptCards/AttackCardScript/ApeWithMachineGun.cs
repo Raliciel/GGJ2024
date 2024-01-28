@@ -27,7 +27,7 @@ public class ApeWithMachineGun : CardSO
         int index;
         int hit;
 
-        actor.payAngerCost(angerCost);
+        actor.PayAngerCost(angerCost);
 
         if(randomized == null) {
             index = Randomizer.random(chance);
@@ -45,17 +45,20 @@ public class ApeWithMachineGun : CardSO
         switch(index) {
             case 0: //Miss
                 enemy.ChangeSprite(this, PoseCatagory.react2);
-                DialogueSystem.Log($"{actor.name} use machine gun, but recoil of the gun is so hard it bounce back and hit his face.");
+                DialogueSystem.DisplayDialogue($"{actor.name} use machine gun, but recoil of the gun is so hard it bounce back and hit his face.");
                 Debug.Log($"{actor.name} damage {recoil} to {actor.name}.");
-                actor.receivedDamage(recoil);
+                actor.ReduceHP(recoil);
                 break;
             
             case 1: //Normal
-                enemy.ChangeSprite(this, PoseCatagory.react1);
-                DialogueSystem.Log($"{actor.name} use machine gun and hit {hit} out of {totalHit} shot.");
+                DialogueSystem.DisplayDialogue($"{actor.name} use machine gun and hit {hit} out of {totalHit} shot.");
                 Debug.Log($"{actor.name} damage {damage * hit} to {enemy.name}, receiving {(int)Mathf.Ceil(receivedAnger * hit)} anger.");
-                enemy.receivedDamage(damage * hit);
-                enemy.receivedAnger((int)Mathf.Ceil(receivedAnger * hit));
+
+                for(int i = 0; i < hit; i++) {
+                    enemy.ChangeSprite(this, PoseCatagory.react1, 0.1f);
+                    enemy.ReduceHP(damage);
+                }
+                enemy.RecoverAnger((int)Mathf.Ceil(receivedAnger * hit));
 
                 timeSpent = 4;
                 break;

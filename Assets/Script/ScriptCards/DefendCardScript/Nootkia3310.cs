@@ -20,19 +20,19 @@ public class Nootkia3310 : CardSO
 
         int index;
 
-        actor.payHPCost(hpCost);
+        actor.PayHPCost(hpCost);
         
         if (randomized == null) index = Randomizer.random(chance);
         else index = randomized[0];
 
         switch(index) {
             case 0:
-                DialogueSystem.Log($"{actor.name} try to contact Nootkia3310, got shocked instead.");
+                DialogueSystem.DisplayDialogue($"{actor.name} try to contact Nootkia3310, got shocked instead.");
                 break;
             case 1:
-                DialogueSystem.Log($"{actor.name} obtains Nootkia3310, the material is so hard.");
-                actor.setIsDefend(true);
-                actor.receivedAnger(receivedAnger);
+                DialogueSystem.DisplayDialogue($"{actor.name} obtains Nootkia3310, the material is so hard.");
+                actor.SetDefendState(true);
+                actor.RecoverAnger(receivedAnger);
                 break;
         }
 

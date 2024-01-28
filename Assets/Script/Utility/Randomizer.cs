@@ -4,7 +4,7 @@ public static class Randomizer
 {
     public static int random (int[] weight) {
         int total = 0;
-        for(int i = 1; i < weight.Length; i++) {
+        for(int i = 0; i < weight.Length; i++) {
             total += weight[i];
         }
         //[20, 25, 30, 25] => total: 100

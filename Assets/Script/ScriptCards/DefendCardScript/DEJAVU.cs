@@ -16,13 +16,12 @@ public class DEJAVU : CardSO
         timeSpent = 2;
 
         if (base.sfx != null) audio.PlaySFX(base.sfx);
-        actor.ChangeSprite(this, PoseCatagory.use);
         if (randomized != null && randomized.Length != 1) { return null; }
 
         int index;
 
-        actor.payAngerCost(angerCost);
-        actor.payHPCost(hpCost);
+        actor.PayAngerCost(angerCost);
+        actor.PayHPCost(hpCost);
 
         if (randomized == null) index = Randomizer.random(chance);
         else index = randomized[0];
@@ -30,18 +29,20 @@ public class DEJAVU : CardSO
         switch(index) {
             case 0: //Fail
                 actor.ChangeSprite(this, PoseCatagory.react2);
-                DialogueSystem.Log($"Despite feeling DEJA VU, {actor.name} drive too fast and crash into the fence.");
-                actor.receivedDamage(recoil);
+                DialogueSystem.DisplayDialogue($"Despite feeling DEJA VU, {actor.name} drive too fast and crash into the fence.");
+                actor.ReduceHP(recoil);
                 break;
             case 1: //Deja Vu
-                DialogueSystem.Log($"While feeling DEJA VU, {actor.name} drive too fast for {enemy.name} to catch.");
-                actor.setIsDefend(true);
+                actor.ChangeSprite(this, PoseCatagory.use);
+                DialogueSystem.DisplayDialogue($"While feeling DEJA VU, {actor.name} drive too fast for {enemy.name} to catch.");
+                actor.SetDefendState(true);
                 break;
             case 2: //Kanzen DORIFUTO
+                actor.ChangeSprite(this, PoseCatagory.use);
                 enemy.ChangeSprite(this, PoseCatagory.react1);
-                DialogueSystem.Log($"Kanzen DORIFUTO! With perfect drive, {actor.name} conquers the road and leaves everyone in awe.");
-                actor.setIsDefend(true);
-                enemy.reducedAnger(reducedAnger);
+                DialogueSystem.DisplayDialogue($"Kanzen DORIFUTO! With perfect drive, {actor.name} conquers the road and leaves everyone in awe.");
+                actor.SetDefendState(true);
+                enemy.ReduceAnger(reducedAnger);
                 break;
         }
 

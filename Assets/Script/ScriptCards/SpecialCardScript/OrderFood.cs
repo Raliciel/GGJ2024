@@ -15,33 +15,34 @@ public class OrderFood : CardSO
         timeSpent = 2;
 
         if (base.sfx != null) audio.PlaySFX(base.sfx);
-        ChangeSprite(actor, PoseCatagory.use);
+        actor.ChangeSprite(this, PoseCatagory.use);
 
         if (randomized != null && randomized.Length != 1) { return null; }
 
         int index;
 
-        actor.payAngerCost(angerCost);
+        actor.PayAngerCost(angerCost);
         
         if (randomized == null) index = Randomizer.random(chance);
         else index = randomized[0];
 
         switch(index) {
             case 0: //Fail
-                DialogueSystem.Log($"{actor.name} orders food to eat, but seem he has to eat alone.");
+                DialogueSystem.DisplayDialogue($"{actor.name} orders food to eat, but seem he has to eat alone.");
                 Debug.Log($"{enemy.name} received {receivedAnger} anger.");
-                enemy.receivedAnger(receivedAnger);
+                enemy.RecoverAnger(receivedAnger);
                 Debug.Log($"{actor.name} has recovered {failedHpRecover} HP.");
-                actor.hpRecover(failedHpRecover);
+                actor.RecoverHP(failedHpRecover);
                 break;
 
             case 1: //Success
-                DialogueSystem.Log($"{actor.name} orders food to eat with {enemy.name}, both seem enjoyed.");
+                enemy.ChangeSprite(this, PoseCatagory.use);
+                DialogueSystem.DisplayDialogue($"{actor.name} orders food to eat with {enemy.name}, both seem enjoyed.");
                 Debug.Log($"{enemy.name} anger has reduced by {reducedAnger}.");
-                enemy.reducedAnger(reducedAnger);
+                enemy.ReduceAnger(reducedAnger);
                 Debug.Log($"Both units recover {successHpRecover} HP.");
-                actor.hpRecover(successHpRecover);
-                enemy.hpRecover(successHpRecover);
+                actor.RecoverHP(successHpRecover);
+                enemy.RecoverHP(successHpRecover);
                 break;
         }
 

@@ -13,7 +13,11 @@ MonoBehaviour:
   m_Name: BSOD
   m_EditorClassIdentifier: 
   cardName: BSOD
-  cardFlavor: []
+  cardFlavor:
+  - 'Stop code: CRITICAL_PROCESS_DIED'
+  - 'Stop code: MONKE_CHECK_EXCEPTION'
+  - 'Stop code: DPC_MONKE_VIOLATIONS'
+  - 'Stop code: MONKE_OVERFLOW'
   ngUse: {fileID: -1626236957, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
   ngReact1: {fileID: 1372921150, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
   ngReact2: {fileID: 128470283, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
