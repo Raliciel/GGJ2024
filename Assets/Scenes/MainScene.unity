@@ -501,7 +501,7 @@ MonoBehaviour:
   - {fileID: 1185006690}
   - {fileID: 145883991}
   cardPool:
-  - {fileID: 11400000, guid: c46fb4edae52c074aa9cd005d9d90a59, type: 2}
+  - {fileID: 11400000, guid: 14961751baefb9744a0fffd651d6d747, type: 2}
   cardPanel: {fileID: 1517583760}
 --- !u!4 &136884099
 Transform:

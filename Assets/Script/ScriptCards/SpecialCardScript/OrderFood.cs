@@ -15,7 +15,7 @@ public class OrderFood : CardSO
         timeSpent = 2;
 
         if (base.sfx != null) audio.PlaySFX(base.sfx);
-        ChangeSprite(actor, PoseCatagory.use);
+        actor.ChangeSprite(this, PoseCatagory.use);
 
         if (randomized != null && randomized.Length != 1) { return null; }
 
@@ -36,6 +36,7 @@ public class OrderFood : CardSO
                 break;
 
             case 1: //Success
+                enemy.ChangeSprite(this, PoseCatagory.use);
                 DialogueSystem.DisplayDialogue($"{actor.name} orders food to eat with {enemy.name}, both seem enjoyed.");
                 Debug.Log($"{enemy.name} anger has reduced by {reducedAnger}.");
                 enemy.ReduceAnger(reducedAnger);

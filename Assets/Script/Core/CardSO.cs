@@ -43,10 +43,5 @@ public abstract class CardSO: ScriptableObject {
         int r = UnityEngine.Random.Range(0, cardFlavor.Count);
         return cardFlavor[r];
     }
-
-     protected void ChangeSprite(Unit actor, PoseCatagory pose)
-    {
-        actor.ChangeSprite(this, pose);
-    }
 }
 

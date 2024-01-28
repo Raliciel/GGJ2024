@@ -15,7 +15,7 @@ MonoBehaviour:
   cardName: MonkeBall
   cardFlavor:
   - Monke! I Choose YOU
-  - Monke! Use the bat !!!!
+  - Monke! Use the "bat" attack !!!!
   ngUse: {fileID: -1845465509, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
   ngReact1: {fileID: -31423135, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
   ngReact2: {fileID: 128470283, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
