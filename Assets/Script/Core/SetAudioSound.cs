@@ -55,6 +55,17 @@ public class SetAudioSound : MonoBehaviour
         BGMaudio.Stop();
     }
 
+    public void DelayedPlaySFX(AudioClip clip, float delay)
+    {
+        StartCoroutine(PlaySFXRoutine(clip,delay));
+    }
+
+    IEnumerator PlaySFXRoutine(AudioClip clip, float delay)
+    { 
+        yield return new WaitForSeconds(delay);
+        PlaySFX(clip);
+    }
+
     public void PlaySFX(AudioClip clip)
     {
         SFXaudio.clip = clip;
