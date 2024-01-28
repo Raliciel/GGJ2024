@@ -40,6 +40,8 @@ public class Replay : MonoBehaviour
         Unit actor = replay[0].actor;
         Unit enemy = replay[0].enemy;
 
+        SetAudioSound.instance.PlayBGMByIndex(1);
+
         actor.ResetState();
         actor.ResetStats();
         enemy.ResetState();

@@ -17,6 +17,8 @@ public class SetAudioSound : MonoBehaviour
         if (instance == null) instance = this;
         else Destroy(gameObject);
         so = AudioSO.instance;
+
+        PlayBGMByIndex(0);
     }
     public void Update()
     {
@@ -27,7 +29,12 @@ public class SetAudioSound : MonoBehaviour
     private void OnLevelWasLoaded(int level)
     {
         l = SceneManager.GetActiveScene().buildIndex;
-        switch (l)
+        PlayBGMByIndex(l);
+    }
+
+    public void PlayBGMByIndex(int index)
+    {
+        switch (index)
         {
             case (0): BGMaudio.clip = so.bgm; break;
             case (1): BGMaudio.clip = so.bgmFight; break;
