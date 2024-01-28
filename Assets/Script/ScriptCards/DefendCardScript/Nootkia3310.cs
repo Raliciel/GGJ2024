@@ -15,7 +15,6 @@ public class Nootkia3310 : CardSO
         timeSpent = 2;
 
         if (base.sfx != null) SetAudioSound.instance.PlaySFX(base.sfx);
-        actor.ChangeSprite(this, PoseCatagory.use);
         if (randomized != null && randomized.Length != 1) { return null; }
 
         int index;
@@ -27,9 +26,11 @@ public class Nootkia3310 : CardSO
 
         switch(index) {
             case 0:
+                actor.ChangeSprite(this, PoseCatagory.react1);
                 DialogueSystem.DisplayDialogue($"{actor.name} try to contact Nootkia3310, got shocked instead.");
                 break;
             case 1:
+                actor.ChangeSprite(this, PoseCatagory.use);
                 DialogueSystem.DisplayDialogue($"{actor.name} obtains Nootkia3310, the material is so hard.");
                 actor.SetDefendState(true);
                 actor.RecoverAnger(receivedAnger);
