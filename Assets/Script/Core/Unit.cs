@@ -82,6 +82,27 @@ public class Unit : MonoBehaviour
         CheckIfUnitDie();
     }
 
+    public IEnumerator DelayedReduceHP(int damage, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        ReduceHP(damage);
+    }
+    public IEnumerator DelayedRecoverHP(int amount, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        RecoverHP(amount);
+    }
+    public IEnumerator DelayedReduceAnger(int amount, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        ReduceAnger(amount);
+    }
+    public IEnumerator DelayedRecoverAnger(int amount, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        RecoverAnger(amount);
+    }
+
     public void ReduceHP(int damage) {
         if (isDefending)
             return;
