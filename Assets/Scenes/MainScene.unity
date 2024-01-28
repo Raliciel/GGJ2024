@@ -184,7 +184,7 @@ MonoBehaviour:
   m_text: Test Dialogue
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: edac7da7f97e0b04dafa0a06b0a68ca8, type: 2}
-  m_sharedMaterial: {fileID: 4320822626425951264, guid: edac7da7f97e0b04dafa0a06b0a68ca8, type: 2}
+  m_sharedMaterial: {fileID: 2872063734055237867, guid: edac7da7f97e0b04dafa0a06b0a68ca8, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -500,8 +500,7 @@ MonoBehaviour:
   - {fileID: 470813202}
   - {fileID: 1185006690}
   - {fileID: 145883991}
-  cardPool:
-  - {fileID: 11400000, guid: 14961751baefb9744a0fffd651d6d747, type: 2}
+  cardPool: {fileID: 11400000, guid: 138ce7f084e053541805e441ce9b7b3a, type: 2}
   cardPanel: {fileID: 1517583760}
 --- !u!4 &136884099
 Transform:
@@ -780,7 +779,7 @@ MonoBehaviour:
   m_text: Battle Replay
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: edac7da7f97e0b04dafa0a06b0a68ca8, type: 2}
-  m_sharedMaterial: {fileID: 4320822626425951264, guid: edac7da7f97e0b04dafa0a06b0a68ca8, type: 2}
+  m_sharedMaterial: {fileID: 2872063734055237867, guid: edac7da7f97e0b04dafa0a06b0a68ca8, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2355,7 +2354,7 @@ MonoBehaviour:
   m_text: Fight Again
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: edac7da7f97e0b04dafa0a06b0a68ca8, type: 2}
-  m_sharedMaterial: {fileID: 4320822626425951264, guid: edac7da7f97e0b04dafa0a06b0a68ca8, type: 2}
+  m_sharedMaterial: {fileID: 2872063734055237867, guid: edac7da7f97e0b04dafa0a06b0a68ca8, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
