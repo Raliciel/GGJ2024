@@ -16,6 +16,7 @@ MonoBehaviour:
   cardFlavor:
   - Do you dare to punch a friend !?
   - Eat the fist, my friend.
+  - With your barehands
   ngUse: {fileID: -1114854290, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
   ngReact1: {fileID: 1898772496, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
   ngReact2: {fileID: -52120991, guid: 2fa8b583817567e41892b69073c6b378, type: 3}

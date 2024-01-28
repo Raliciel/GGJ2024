@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: SplitAttack
   m_EditorClassIdentifier: 
   cardName: Split Attack
-  cardFlavor: []
+  cardFlavor:
+  - No monke can escape this attack.
   ngUse: {fileID: -1596444624, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
   ngReact1: {fileID: 1898772496, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
   ngReact2: {fileID: 728764579, guid: 2fa8b583817567e41892b69073c6b378, type: 3}

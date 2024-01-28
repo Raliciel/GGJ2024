@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: YouShallNotPass
   m_EditorClassIdentifier: 
   cardName: YOU SHALL NOT PASS
-  cardFlavor: []
+  cardFlavor:
+  - You know what would happen.
   ngUse: {fileID: -734407533, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
   ngReact1: {fileID: -52120991, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
   ngReact2: {fileID: 128470283, guid: 2fa8b583817567e41892b69073c6b378, type: 3}

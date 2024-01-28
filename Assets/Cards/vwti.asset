@@ -17,6 +17,7 @@ MonoBehaviour:
   - ?????
   - Shitposting in real time.
   - Tag other with shitposts.
+  - Show him what you got.
   ngUse: {fileID: 2083357327, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
   ngReact1: {fileID: 598146730, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
   ngReact2: {fileID: 728764579, guid: 2fa8b583817567e41892b69073c6b378, type: 3}

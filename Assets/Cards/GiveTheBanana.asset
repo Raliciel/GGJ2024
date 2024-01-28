@@ -15,7 +15,7 @@ MonoBehaviour:
   cardName: GiveTheBanana
   cardFlavor:
   - Woe! Banana be apon ye.
-  - Giving is sharing.
+  - Rotat o banan a.
   ngUse: {fileID: 1912575211, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
   ngReact1: {fileID: 1141020799, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
   ngReact2: {fileID: -52120991, guid: 2fa8b583817567e41892b69073c6b378, type: 3}

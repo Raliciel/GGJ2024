@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: MonkeBreaker
   m_EditorClassIdentifier: 
   cardName: Monke Breaka
-  cardFlavor: []
+  cardFlavor:
+  - Unleash the power
   ngUse: {fileID: 21300000, guid: a347db1fbdc439f47a4119458273873f, type: 3}
   ngReact1: {fileID: 21300000, guid: 0cca57eca8356ae4f9e8029e44497ee6, type: 3}
   ngReact2: {fileID: 21300000, guid: d5071251b6673c342bceb51547353c71, type: 3}
