@@ -634,13 +634,13 @@ MonoBehaviour:
     Nong Guay'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: edac7da7f97e0b04dafa0a06b0a68ca8, type: 2}
-  m_sharedMaterial: {fileID: 4320822626425951264, guid: edac7da7f97e0b04dafa0a06b0a68ca8, type: 2}
+  m_sharedMaterial: {fileID: 2872063734055237867, guid: edac7da7f97e0b04dafa0a06b0a68ca8, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 956301311
+    rgba: 33554431
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -1192,13 +1192,13 @@ MonoBehaviour:
   m_text: ...But it wasn't spicy.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: edac7da7f97e0b04dafa0a06b0a68ca8, type: 2}
-  m_sharedMaterial: {fileID: 4320822626425951264, guid: edac7da7f97e0b04dafa0a06b0a68ca8, type: 2}
+  m_sharedMaterial: {fileID: 2872063734055237867, guid: edac7da7f97e0b04dafa0a06b0a68ca8, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 738197503
+    rgba: 16777215
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -1507,7 +1507,7 @@ MonoBehaviour:
   m_text: Game
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: edac7da7f97e0b04dafa0a06b0a68ca8, type: 2}
-  m_sharedMaterial: {fileID: 4320822626425951264, guid: edac7da7f97e0b04dafa0a06b0a68ca8, type: 2}
+  m_sharedMaterial: {fileID: 2872063734055237867, guid: edac7da7f97e0b04dafa0a06b0a68ca8, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2304,13 +2304,13 @@ MonoBehaviour:
   m_text: And S0n1c The Hedgehog
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: edac7da7f97e0b04dafa0a06b0a68ca8, type: 2}
-  m_sharedMaterial: {fileID: 4320822626425951264, guid: edac7da7f97e0b04dafa0a06b0a68ca8, type: 2}
+  m_sharedMaterial: {fileID: 2872063734055237867, guid: edac7da7f97e0b04dafa0a06b0a68ca8, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 16777215
+    rgba: 33554431
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -2512,16 +2512,18 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: In one night, they decided to cook.
+  m_text: 'One night,
+
+    MF and NG decided to cook.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: edac7da7f97e0b04dafa0a06b0a68ca8, type: 2}
-  m_sharedMaterial: {fileID: 4320822626425951264, guid: edac7da7f97e0b04dafa0a06b0a68ca8, type: 2}
+  m_sharedMaterial: {fileID: 2872063734055237867, guid: edac7da7f97e0b04dafa0a06b0a68ca8, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 2466250751
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -2764,7 +2766,7 @@ MonoBehaviour:
   m_text: In the tall forest, stand three creatures.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: edac7da7f97e0b04dafa0a06b0a68ca8, type: 2}
-  m_sharedMaterial: {fileID: 4320822626425951264, guid: edac7da7f97e0b04dafa0a06b0a68ca8, type: 2}
+  m_sharedMaterial: {fileID: 2872063734055237867, guid: edac7da7f97e0b04dafa0a06b0a68ca8, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2975,13 +2977,13 @@ MonoBehaviour:
   m_text: NG made a Pad Thai,
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: edac7da7f97e0b04dafa0a06b0a68ca8, type: 2}
-  m_sharedMaterial: {fileID: 4320822626425951264, guid: edac7da7f97e0b04dafa0a06b0a68ca8, type: 2}
+  m_sharedMaterial: {fileID: 2872063734055237867, guid: edac7da7f97e0b04dafa0a06b0a68ca8, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 2264924159
+    rgba: 16777215
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -4123,13 +4125,13 @@ MonoBehaviour:
     Ma Fueng'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: edac7da7f97e0b04dafa0a06b0a68ca8, type: 2}
-  m_sharedMaterial: {fileID: 4320822626425951264, guid: edac7da7f97e0b04dafa0a06b0a68ca8, type: 2}
+  m_sharedMaterial: {fileID: 2872063734055237867, guid: edac7da7f97e0b04dafa0a06b0a68ca8, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 33554431
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -4957,6 +4959,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BGMaudio: {fileID: 1897163948}
   SFXaudio: {fileID: 1897163950}
+  so: {fileID: 0}
 --- !u!82 &1897163950
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5302,7 +5305,7 @@ MonoBehaviour:
     Setting'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: edac7da7f97e0b04dafa0a06b0a68ca8, type: 2}
-  m_sharedMaterial: {fileID: 4320822626425951264, guid: edac7da7f97e0b04dafa0a06b0a68ca8, type: 2}
+  m_sharedMaterial: {fileID: 2872063734055237867, guid: edac7da7f97e0b04dafa0a06b0a68ca8, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

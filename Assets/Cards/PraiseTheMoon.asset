@@ -12,14 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 049194f3e2835c54499644abe9a6f20c, type: 3}
   m_Name: PraiseTheMoon
   m_EditorClassIdentifier: 
-  cardName: 
-  cardFlavor: []
-  ngUse: {fileID: 0}
-  ngReact1: {fileID: 0}
-  ngReact2: {fileID: 0}
-  mfUse: {fileID: 0}
-  mfReact1: {fileID: 0}
-  mfReact2: {fileID: 0}
+  cardName: Praise The Moon
+  cardFlavor:
+  - HHHHHAAAA LELUJA
+  ngUse: {fileID: -1046655102, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
+  ngReact1: {fileID: -1046655102, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
+  ngReact2: {fileID: 128470283, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
+  mfUse: {fileID: 21300000, guid: c025e223d4877ac4688324843d5d49d1, type: 3}
+  mfReact1: {fileID: 21300000, guid: c025e223d4877ac4688324843d5d49d1, type: 3}
+  mfReact2: {fileID: 21300000, guid: 2f9d4dc025f5a8a47823a1d43d17f1b8, type: 3}
   sfx: {fileID: 8300000, guid: e6702b610765f2f42b6d83690979a05a, type: 3}
   angerCost: 7
   reducedAnger: 15

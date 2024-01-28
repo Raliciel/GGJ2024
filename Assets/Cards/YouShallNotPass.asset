@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb01ba3f4ff1ba84da974fe40b5b44dc, type: 3}
   m_Name: YouShallNotPass
   m_EditorClassIdentifier: 
-  cardName: 
+  cardName: YOU SHALL NOT PASS
   cardFlavor: []
-  ngUse: {fileID: 0}
-  ngReact1: {fileID: 0}
-  ngReact2: {fileID: 0}
-  mfUse: {fileID: 0}
-  mfReact1: {fileID: 0}
-  mfReact2: {fileID: 0}
+  ngUse: {fileID: -734407533, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
+  ngReact1: {fileID: -52120991, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
+  ngReact2: {fileID: 128470283, guid: 2fa8b583817567e41892b69073c6b378, type: 3}
+  mfUse: {fileID: 21300000, guid: ca64037d01f7fba4da2058487ebf032d, type: 3}
+  mfReact1: {fileID: 21300000, guid: 4fed585b551efba4cb4bbd2669bda4cc, type: 3}
+  mfReact2: {fileID: 21300000, guid: 2f9d4dc025f5a8a47823a1d43d17f1b8, type: 3}
   sfx: {fileID: 8300000, guid: 5ad4f7d9e0a712b48a3d7741148c1245, type: 3}
   angerCost: -15
   receivedAnger: 5
